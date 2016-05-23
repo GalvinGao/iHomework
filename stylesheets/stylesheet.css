@@ -61,15 +61,15 @@ a {
 
 @media screen and (min-width: 64em) {
   .page-header {
-    padding: device-height 24rem; } }
+    padding: 23rem 24rem; } }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .page-header {
-    padding: 14rem 16rem; } }
+    padding: 15rem 16rem; } }
 
 @media screen and (max-width: 42em) {
   .page-header {
-    padding: 12rem 4rem; } }
+    padding: 13rem 4rem; } }
 
 .project-name {
   margin-top: 0;
