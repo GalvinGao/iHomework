@@ -9,6 +9,16 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" /> 
   <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen" />  
   <script type="text/javascript" src="js/piecon.min.js"></script>
+  <script>
+  (function(){
+    var count = 0;
+    Piecon.setOptions({fallback: 'force'});
+    var i = setInterval(function(){
+      if (++count > 100) { Piecon.reset(); clearInterval(i); return false; }
+      Piecon.setProgress(count);
+    }, 250);
+  })();
+  </script>
  </head> 
  <body> 
   <script type="text/javascript"> (function(m, ei, q, i, a, j, s) {
