@@ -20,23 +20,5 @@ var d = Math.floor(t / 1000 / 60 / 60 / 24);
     document.getElementById("t_h").innerHTML = h + "时";
     document.getElementById("t_m").innerHTML = m + "分";
     document.getElementById("t_s").innerHTML = s + "秒";
-
-    if (d == 0 && h == 0 && m == 0 && s == 0)
-    {
-        alert("1");
-
-    }
-    else if (s < 0)
-    {
-        alert("2");
-
-    }
-    else
-    {
-        alert("3");
-
-    }
-
-    
-
 }
+setInterval(getRTime, 1000)
