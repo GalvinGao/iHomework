@@ -23,18 +23,20 @@ var d = Math.floor(t / 1000 / 60 / 60 / 24);
 
     if (d == 0 && h == 0 && m == 0 && s == 0)
     {
-        document.getElementById("autolink").innerHTML = "d";
+        alert("1");
 
     }
     else if (s < 0)
     {
-        document.getElementById("autolink").innerHTML = "f";
+        alert("2");
 
     }
     else
     {
-        document.getElementById("autolink").innerHTML = "g";
+        alert("3");
 
     }
+
+    
 
 }
