@@ -38,5 +38,6 @@ else if (s<=0)
    }
 else
    {
-   document.getElementById("autolink").innerHTML = "Unavailable";
+   document.getElementById("autolink").innerHTML = "<a class=\"btn-large disabled\"><i class=\"material-icons left\">cloud</i>iHomework 于暑假阶段不可用</a>
+";
    }
