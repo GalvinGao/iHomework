@@ -26,7 +26,7 @@ else if (m=0)
    }
 else if (s=0)
    {
-   document.getElementById("autolink").innerHTML = "<a target="_black" class="waves-effect waves-light btn-large modal-trigger" href="http://ihomeworkkhs.applinzi.com/ihomework_cdn.php"><i class="material-icons left">cloud</i>点我到 iHomework<script type="text/javascript">mixpanel.track("CDN Redirect");</script></a>"; 
+   document.getElementById("autolink").innerHTML = "<a target=\"_black\" class=\"waves-effect waves-light btn-large modal-trigger\" href=\"http://ihomeworkkhs.applinzi.com/ihomework_cdn.php\"><i class=\"material-icons left\">cloud</i>点我到 iHomework<script type=\"text/javascript\">mixpanel.track(\"CDN Redirect\");</script></a>"; 
    }
 else
    {
