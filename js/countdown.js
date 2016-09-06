@@ -19,10 +19,6 @@ document.getElementById("t_d").innerHTML = d + "天";
 document.getElementById("t_h").innerHTML = h + "时"; 
 document.getElementById("t_m").innerHTML = m + "分"; 
 document.getElementById("t_s").innerHTML = s + "秒"; 
-} 
-setInterval(getRTime,1000); 
-
-function getStatus(){
 
 if (d==0 && h==0 && m==0 && s==0) 
    {
@@ -36,5 +32,4 @@ else
    {
    document.getElementById("autolink").innerHTML = "<a class=\"btn-large disabled\"><i class=\"material-icons left\">cloud</i>iHomework 于暑假阶段不可用</a>";
    }
-setInterval(getStatus, 1000)
 }
