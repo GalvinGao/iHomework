@@ -23,17 +23,9 @@ document.getElementById("t_s").innerHTML = s + "秒";
 setInterval(getRTime,1000); 
 
 
-if (d==0) 
+if (d==0 && h==0 && m==0 && s==0) 
    {
    document.getElementById("autolink").innerHTML = "d"
-   }
-else if (h==0)
-   {
-   document.getElementById("autolink").innerHTML = "h"
-   }
-else if (m==0)
-   {
-   document.getElementById("autolink").innerHTML = "m"
    }
 else if (s==0)
    {
