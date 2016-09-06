@@ -25,12 +25,15 @@ setInterval(getRTime,1000);
 
 if (d==0) 
    {
+   document.getElementById("autolink").innerHTML = "d"
    }
 else if (h==0)
    {
+   document.getElementById("autolink").innerHTML = "h"
    }
 else if (m==0)
    {
+   document.getElementById("autolink").innerHTML = "m"
    }
 else if (s==0)
    {
