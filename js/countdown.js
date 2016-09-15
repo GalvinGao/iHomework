@@ -24,7 +24,7 @@ setInterval(getRTime,1000);
 
 
 function getRTime2(){ 
-var EndTime2= new Date('2016/9/14 17:00:00'); //截止时间 
+var EndTime2= new Date('2016/9/18 08:00:00'); //截止时间 
 var NowTime2 = new Date(); 
 var t =EndTime2.getTime() - NowTime2.getTime(); 
 /*var d=Math.floor(t/1000/60/60/24); 
