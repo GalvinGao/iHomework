@@ -1,5 +1,5 @@
 function getRTime(){ 
-var EndTime= new Date('2016/9/30 17:00:00'); //截止时间 
+var EndTime= new Date('2016/10/14 17:00:00'); //截止时间 
 var NowTime = new Date(); 
 var t =EndTime.getTime() - NowTime.getTime(); 
 /*var d=Math.floor(t/1000/60/60/24); 
@@ -24,7 +24,7 @@ setInterval(getRTime,1000);
 
 
 function getRTime2(){ 
-var EndTime2= new Date('2016/10/1 00:00:00'); //截止时间 
+var EndTime2= new Date('2016/10/7 00:00:00'); //截止时间 
 var NowTime2 = new Date(); 
 var t =EndTime2.getTime() - NowTime2.getTime(); 
 /*var d=Math.floor(t/1000/60/60/24); 
