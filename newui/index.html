@@ -200,7 +200,7 @@
                     var latlng = new google.maps.LatLng(lat, lon);
                     var geocoder = new google.maps.Geocoder();
                     $.ajax({
-                        url: '//'?units=si',
+                        url: '//api.forecast.io/forecast/219588ba41dedc2f1019684e8ac393ad/'+pos+'?units=si',
                         dataType: 'jsonp',
                         success: function(data){
                             //do whatever you want with the data here
