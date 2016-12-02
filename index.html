@@ -55,7 +55,6 @@
         }
 
         a,div{-webkit-tap-highlight-color: rgba(0,0,0,0);}
-        body{background-image: url(http://i1.piimg.com/558831/0581ef45ddf0f5b9.jpg);}
     </style>
 
     <script>
@@ -172,10 +171,16 @@
                 showSettings();
             });
         });
+
+function(gocdn){
+$.get("http://raw.githubusercontent.com/GalvinGao/iHomework/master/weeknum.txt",function(data){
+alert("Data: " + data);
+};
+});
     </script>
 
 </head>
-<body style="overflow-y: hidden; background-image: url(http://i1.piimg.com/558831/0581ef45ddf0f5b9.jpg);">
+<body style="overflow-y: hidden;">
     <div data-role="charm" id="charmSettings" data-position="top">
         <h1 class="text-light">色彩样式设置</h1>
         <hr class="thin"/>
@@ -217,7 +222,7 @@
 
             <div class="tile-container">
 
-                <div class="tile-wide bg-indigo fg-white" data-role="tile" onclick="document.location.href='http://ihomeworkkhs.applinzi.com/ihomework_cdn.php'">
+                <div class="tile-wide bg-indigo fg-white" data-role="tile" onclick="gocdn">
                     <div class="tile-content iconic">
                         <span class="icon mif-cloud"></span>
                     </div>
@@ -254,17 +259,15 @@
                     </div>
                     <div class="tile-label">每日一骚</div>
                 </div>
+                <div onclick="document.location.href='http://electro.proj.galvingao.xyz/'" class="tile bg-teal fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-music"></span>
+                    </div>
+                    <span class="tile-label">原创拔丝电音</span>
+                </div>
             </div>
         </div>
     </div>
-
-        <div data-role="dialog" id="saoit" class="padding20 dialog" data-close-button="true" data-overlay="true" data-overlay-color="op-dark" data-overlay-click-close="true" style="width: auto; height: auto; visibility: hidden; left: 399.5px; top: 290px;">
-            <h1>每日一骚</h1>
-            <p>
-                <span id="saohua"></span>
-                <button onclick="document.location.href='http://ihomeworkkhs.applinzi.com/ihomework_cdn.php'" class="button warning block-shadow-warning text-shadow">不骚啦，我要写作业</button>
-            </p>
-        <span class="dialog-close-button"></span></div>
 
 	<script src="js/new-sao.js"></script>
 
