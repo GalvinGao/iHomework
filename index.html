@@ -17,7 +17,8 @@ function browserRedirect() {
     var bIsAndroid = sUserAgent.match(/android/i) == "android";
     var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
     var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-    if (bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM){
+    var bIsWechat = sUserAgent.match(/WECHAT/i) == "WECHAT";
+    if (bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM || bIsWechat){
         window.location.href="http://m.ihomework.top/";
     }
 }
