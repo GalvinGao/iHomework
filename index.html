@@ -18,9 +18,7 @@ function browserRedirect() {
     var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
     var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
     var bIsWechat = sUserAgent.match(/wechat/i) == "wechat";
-    if (bIsWechat){
-        window.location.href="http://ihomework.top/wechat.html";
-    }else if(bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM){
+    if (bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM || bIsWechat){
         window.location.href="http://m.ihomework.top/";
     }
 }
@@ -204,49 +202,42 @@ browserRedirect();
             });
         });
         
-        function getcdn(){            $.get("https://raw.githubusercontent.com/GalvinGao/iHomework/master/weeknum.txt", function(data){var url = "http://ihomework.cdn.sinacloud.net/iHomework-wkhw_wk" + data + ".pdf";window.location=url;});
+        function getcdn(){ $.get("https://raw.githubusercontent.com/GalvinGao/iHomework/master/weeknum.txt", function(data){var url = "http://ihomework.cdn.sinacloud.net/iHomework-wkhw_wk" + data + ".pdf";window.location=url;});
         }
         
-        function getbkup(){            $.get("https://raw.githubusercontent.com/GalvinGao/iHomework/master/weeknum.txt", function(data){var url = "http://ihomework.sinacloud.net/iHomework-wkhw_wk" + data + ".pdf";window.location=url;});
+        function getbkup(){ $.get("https://raw.githubusercontent.com/GalvinGao/iHomework/master/weeknum.txt", function(data){var url = "http://ihomework.sinacloud.net/iHomework-wkhw_wk" + data + ".pdf";window.location=url;});
         }
     </script>
+    
+      <script>
+        var bodyBgs = [];
+        bodyBgs[0] = "http://p1.bpimg.com/558831/835d4ce148fdfaf7.jpg";
+        bodyBgs[1] = "http://p1.bpimg.com/558831/c76006911f353711.jpg";
+        bodyBgs[2] = "http://p1.bpimg.com/558831/79814d7c9e8f5841.jpg";
+        bodyBgs[3] = "http://p1.bpimg.com/558831/a6d06133fc058e7a.jpg";
+        bodyBgs[4] = "http://p1.bpimg.com/558831/b37ef125793b7cf6.jpg";
+        bodyBgs[5] = "http://p1.bpimg.com/558831/4fc3668c5eebe5d3.jpg";
+        bodyBgs[6] = "http://p1.bpimg.com/558831/9ad99a82e3269b84.jpg";
+        bodyBgs[7] = "http://p1.bpimg.com/558831/19e72d2829f4f877.jpg";
+        bodyBgs[8] = "http://p1.bpimg.com/558831/ffcbb76ead3d4699.jpg";
+        bodyBgs[9] = "http://p1.bpimg.com/558831/b37ef125793b7cf6.jpg";
+        bodyBgs[10] = "http://p1.bpimg.com/558831/004bbed3afee6f26.jpg";
+        bodyBgs[11] = "http://p1.bpimg.com/558831/850a10070db56310.jpg";
+        bodyBgs[12] = "http://p1.bpimg.com/558831/aa18a9ecfa2596bf.jpg";
+        bodyBgs[13] = "http://p1.bpimg.com/558831/01019265e4b84e85.jpg";
+        bodyBgs[14] = "http://p1.bpimg.com/558831/bbc8321cebdc0df2.jpg";
+        var randomBgIndex = Math.round( Math.random() * 9 );
+        
+        document.write('<style>body{background:url(' + bodyBgs[randomBgIndex] + ')}</style>');
+      </script>
 
 </head>
 <body style="overflow-y: hidden;">
-    <div data-role="charm" id="charmSettings" data-position="top">
-        <h1 class="text-light">色彩样式设置</h1>
-        <hr class="thin"/>
-        <br />
-        <div class="schemeButtons">
-            <div class="button square-button tile-area-scheme-dark" data-scheme="dark"></div>
-            <div class="button square-button tile-area-scheme-darkBrown" data-scheme="darkBrown"></div>
-            <div class="button square-button tile-area-scheme-darkCrimson" data-scheme="darkCrimson"></div>
-            <div class="button square-button tile-area-scheme-darkViolet" data-scheme="darkViolet"></div>
-            <div class="button square-button tile-area-scheme-darkMagenta" data-scheme="darkMagenta"></div>
-            <div class="button square-button tile-area-scheme-darkCyan" data-scheme="darkCyan"></div>
-            <div class="button square-button tile-area-scheme-darkCobalt" data-scheme="darkCobalt"></div>
-            <div class="button square-button tile-area-scheme-darkTeal" data-scheme="darkTeal"></div>
-            <div class="button square-button tile-area-scheme-darkEmerald" data-scheme="darkEmerald"></div>
-            <div class="button square-button tile-area-scheme-darkGreen" data-scheme="darkGreen"></div>
-            <div class="button square-button tile-area-scheme-darkOrange" data-scheme="darkOrange"></div>
-            <div class="button square-button tile-area-scheme-darkRed" data-scheme="darkRed"></div>
-            <div class="button square-button tile-area-scheme-darkPink" data-scheme="darkPink"></div>
-            <div class="button square-button tile-area-scheme-darkIndigo" data-scheme="darkIndigo"></div>
-            <div class="button square-button tile-area-scheme-darkBlue" data-scheme="darkBlue"></div>
-            <div class="button square-button tile-area-scheme-lightBlue" data-scheme="lightBlue"></div>
-            <div class="button square-button tile-area-scheme-lightTeal" data-scheme="lightTeal"></div>
-            <div class="button square-button tile-area-scheme-lightOlive" data-scheme="lightOlive"></div>
-            <div class="button square-button tile-area-scheme-lightOrange" data-scheme="lightOrange"></div>
-            <div class="button square-button tile-area-scheme-lightPink" data-scheme="lightPink"></div>
-            <div class="button square-button tile-area-scheme-grayed" data-scheme="grayed"></div>
-        </div>
-    </div>
 
     <div class="tile-area tile-area-scheme-dark fg-white" style="height: 100%; max-height: 100% !important;">
         <h1 class="tile-area-title">开始 › iHomework</h1>
         <div class="tile-area-controls">
-            <button class="image-button icon-right bg-transparent fg-white bg-grayDark bg-hover-dark no-border"><span class="sub-header no-margin text-light">Guest</span> <span class="icon mif-user"></span></button>
-            <button class="square-button bg-transparent fg-white bg-grayDark bg-hover-dark no-border" onclick="showCharms('#charmSettings')"><span class="mif-cog"></span></button>
+            <button class="image-button icon-right bg-transparent fg-white bg-grayDark bg-hover-dark no-border"><span class="sub-header no-margin text-light">iHomework v4.1.0-alpha.4</span><span class="icon mif-info"></span></button>
         </div>
 
         <div class="tile-group double">
@@ -294,6 +285,39 @@ browserRedirect();
                 </div>
             </div>
         </div>
+        
+        <div class="tile-group double">
+            <span class="tile-group-title">常用站点</span>
+            <div class="tile-container">
+            <div onclick="document.location.href='https://www.wolframalpha.com/'" class="tile bg-darkViolet fg-white" data-role="tile">
+                <div class="tile-content iconic">
+                    <span class="icon mif-calculator"></span>
+                </div>
+                <span class="tile-label">WolframAlpha <span class="mif-link"></span></span>
+            </div>
+                
+            <div onclick="document.location.href='http://phaidu.com/'" class="tile bg-lightBlue fg-white" data-role="tile">
+                <div class="tile-content iconic">
+                    <span class="icon mif-info"></span>
+                </div>
+                <span class="tile-label">Phaidu.com <span class="mif-link"></span></span>
+            </div>
+                
+            <div onclick="document.location.href='http://www.best-intl-school.com/shipu/shipu.html'" class="tile bg-darkOrange fg-white" data-role="tile">
+                <div class="tile-content iconic">
+                    <span class="icon mif-spoon-fork"></span>
+                </div>
+                <span class="tile-label">本周食谱 <span class="mif-link"></span></span>
+            </div>
+                
+            <div onclick="document.location.href='http://www.best-intl-school.com/zongwu/newslist.php?lb=9'" class="tile bg-darkCobalt fg-white" data-role="tile">
+                <div class="tile-content iconic">
+                    <span class="icon mif-earth2"></span>
+                </div>
+                <span class="tile-label">学校网站新闻 <span class="mif-link"></span></span>
+            </div>
+            </div>
+        </div>
 
         <div class="tile-group double">
             <span class="tile-group-title">小游戏</span>
@@ -304,14 +328,13 @@ browserRedirect();
                     </div>
                     <span class="tile-label">2048</span>
                 </div>
-            </div>
-            <div class="tile-container">
-                <div onclick="document.location.href='http://fruit.games.ihomework.top/'" class="tile bg-green fg-white" data-role="tile">
-                    <div class="tile-content iconic">
-                        <span class="icon mif-gamepad"></span>
-                    </div>
-                    <span class="tile-label">水果忍者</span>
+            
+            <div onclick="document.location.href='http://fruit.games.ihomework.top/'" class="tile bg-green fg-white" data-role="tile">
+                <div class="tile-content iconic">
+                    <span class="icon mif-gamepad"></span>
                 </div>
+                <span class="tile-label">水果忍者</span>
+            </div>
             </div>
         </div>
     </div>
@@ -322,7 +345,7 @@ browserRedirect();
     <link href="http://cdn.bootcss.com/metro/3.0.15/css/metro-colors.min.css" rel="stylesheet">
 
     <script src="http://cdn.bootcss.com/metro/3.0.15/js/metro.min.js"></script>
-    <link href="http://ofcdecuts.bkt.clouddn.com/metro.css?v=201612031755" rel="stylesheet">
+    <link href="http://ofcdecuts.bkt.clouddn.com/metro.css?v=201612040445" rel="stylesheet">
 
 <script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.thinkpage.cn/widget/chameleon.js"))</script>
 <script>tpwidget("init", {
