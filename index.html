@@ -207,6 +207,11 @@ browserRedirect();
         
         function getbkup(){ $.get("https://raw.githubusercontent.com/GalvinGao/iHomework/master/weeknum.txt", function(data){var url = "http://ihomework.sinacloud.net/iHomework-wkhw_wk" + data + ".pdf";window.location=url;});
         }
+        
+    function showDialog(id){
+        var dialog = $(id).data('dialog');
+        dialog.open();
+    }
     </script>
     
       <script>
@@ -234,10 +239,40 @@ browserRedirect();
 </head>
 <body style="overflow-y: hidden;">
 
+<!-- Charm/Dialog -->
+    
+    <div data-role="dialog" id="searchNews" data-close-button="true" data-windows-style="true">
+        <div class="container"><br>
+        <h1>搜索校网新闻</h1><br>
+        <form name="searchNews" action="http://www.best-intl-school.com/zongwu/newslist.php" method="get" target="_blank">
+            <div class="input-control text">
+                <input type="text" name="bt">
+            </div>
+        <button class="button"><span class="mif-search"></span></button>
+        </form><br>
+        </div>
+    </div>
+    
+    <div data-role="dialog" id="saoit" data-close-button="true" data-windows-style="true" data-height=400 >
+        <div class="container"><br>
+        <h1>每日一骚</h1>
+            <p><br>
+            <span id="saohua"></span>
+            <blockquote>
+                <p>集天地之蛇皮骚、</p>
+                <small>PDD</small>
+            </blockquote>
+        </p>
+        </div>
+    </div>
+    
+<!-- End Charm/Dialog -->
+    
     <div class="tile-area tile-area-scheme-dark fg-white" style="height: 100%; max-height: 100% !important;">
         <h1 class="tile-area-title">开始 › iHomework</h1>
         <div class="tile-area-controls">
             <button class="image-button icon-right bg-transparent fg-white bg-grayDark bg-hover-dark no-border"><span class="sub-header no-margin text-light">iHomework v4.1.0-alpha.4</span><span class="icon mif-info"></span></button>
+            <button class="square-button bg-transparent fg-white bg-grayDark bg-hover-dark no-border" onclick="showCharms('#searchNews')"><span class="mif-search"></span></button>
         </div>
 
         <div class="tile-group double">
@@ -273,7 +308,7 @@ browserRedirect();
                 </a>
                 <div onclick="showDialog('#saoit')" class="tile bg-cyan fg-white" data-role="tile">
                     <div class="tile-content iconic">
-                        <span id="saohua"></script>
+                        <span class="icon mif-battery-full"></span>
                     </div>
                     <div class="tile-label">每日一骚</div>
                 </div>
@@ -310,11 +345,11 @@ browserRedirect();
                 <span class="tile-label">本周食谱 <span class="mif-link"></span></span>
             </div>
                 
-            <div onclick="document.location.href='http://www.best-intl-school.com/zongwu/newslist.php?lb=9'" class="tile bg-darkCobalt fg-white" data-role="tile">
+            <div onclick="searchNews" class="tile bg-darkCobalt fg-white" data-role="tile">
                 <div class="tile-content iconic">
-                    <span class="icon mif-earth2"></span>
+                    <span class="icon mif-search"></span>
                 </div>
-                <span class="tile-label">学校网站新闻 <span class="mif-link"></span></span>
+                <span class="tile-label">学校网站新闻搜索 <span class="mif-link"></span></span>
             </div>
             </div>
         </div>
