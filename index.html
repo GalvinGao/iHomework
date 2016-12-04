@@ -259,11 +259,19 @@ browserRedirect();
             <p><br>
             <span id="saohua"></span>
             <blockquote>
-                <p>集天地之蛇皮骚、</p>
+                <p>集天地蛇皮之折耳根香油骚、</p>
                 <small>PDD</small>
             </blockquote>
         </p>
         </div>
+    </div>
+    
+    <div data-role="charm" data-position="right" id="iHomeworkInfo" style="padding: 25px;">
+        <h2>iHomework 信息</h2><br>
+        <p class=".text-accent">版本：<span id="ihi-version"></span></p>
+        <p class=".text-accent">最后更新：<span id="ihi-update"></span></p>
+        <!--<p class=".text-accent">最后 Commit SHA：<code><span id="ihi-update"></span></code></p>--><br>
+        <h4>&copy; Copyright 2016 Galvin.G</h4><br>
     </div>
     
 <!-- End Charm/Dialog -->
@@ -271,8 +279,7 @@ browserRedirect();
     <div class="tile-area tile-area-scheme-dark fg-white" style="height: 100%; max-height: 100% !important;">
         <h1 class="tile-area-title">开始 › iHomework</h1>
         <div class="tile-area-controls">
-            <button class="image-button icon-right bg-transparent fg-white bg-grayDark bg-hover-dark no-border"><span class="sub-header no-margin text-light">iHomework v4.1.0-alpha.4</span><span class="icon mif-info"></span></button>
-            <button class="square-button bg-transparent fg-white bg-grayDark bg-hover-dark no-border" onclick="showCharms('#searchNews')"><span class="mif-search"></span></button>
+            <button class="image-button icon-right bg-transparent fg-white bg-grayDark bg-hover-dark no-border" onclick="showCharms('#iHomeworkInfo')"><span class="sub-header no-margin text-light">iHomework v4.1.0-alpha.4</span><span class="icon mif-info"></span></button>
         </div>
 
         <div class="tile-group double">
@@ -345,7 +352,7 @@ browserRedirect();
                 <span class="tile-label">本周食谱 <span class="mif-link"></span></span>
             </div>
                 
-            <div onclick="searchNews" class="tile bg-darkCobalt fg-white" data-role="tile">
+            <div onclick="showDialog('#searchNews')" class="tile bg-darkCobalt fg-white" data-role="tile">
                 <div class="tile-content iconic">
                     <span class="icon mif-search"></span>
                 </div>
@@ -355,7 +362,7 @@ browserRedirect();
         </div>
 
         <div class="tile-group double">
-            <span class="tile-group-title">小游戏</span>
+            <span class="tile-group-title">HTML5 小游戏</span>
             <div class="tile-container">
                 <div onclick="document.location.href='http://2048.ihomework.top/'" class="tile bg-amber fg-white" data-role="tile">
                     <div class="tile-content iconic">
@@ -380,7 +387,7 @@ browserRedirect();
     <link href="http://cdn.bootcss.com/metro/3.0.15/css/metro-colors.min.css" rel="stylesheet">
 
     <script src="http://cdn.bootcss.com/metro/3.0.15/js/metro.min.js"></script>
-    <link href="http://ofcdecuts.bkt.clouddn.com/metro.css?v=201612040445" rel="stylesheet">
+    <link href="qiniudn/metro.css" rel="stylesheet">
 
 <script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.thinkpage.cn/widget/chameleon.js"))</script>
 <script>tpwidget("init", {
@@ -396,6 +403,8 @@ browserRedirect();
     "hash": "abfc422f3d026db54996c86b14ee3a01"
 });
 tpwidget("show");</script>
+    
+    <script src="js/ihi.js"></script>
 
 </body>
 </html>
