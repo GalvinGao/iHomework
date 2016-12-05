@@ -231,7 +231,7 @@ browserRedirect();
         bodyBgs[12] = "http://p1.bpimg.com/558831/aa18a9ecfa2596bf.jpg";
         bodyBgs[13] = "http://p1.bpimg.com/558831/01019265e4b84e85.jpg";
         bodyBgs[14] = "http://p1.bpimg.com/558831/bbc8321cebdc0df2.jpg";
-        var randomBgIndex = Math.round( Math.random() * 9 );
+        var randomBgIndex = Math.round( Math.random() * 14 );
         
         document.write('<style>body{background:url(' + bodyBgs[randomBgIndex] + ')}</style>');
       </script>
@@ -255,11 +255,12 @@ browserRedirect();
     
     <div data-role="dialog" id="saoit" data-close-button="true" data-windows-style="true" data-height=400 >
         <div class="container"><br>
-        <h1>每日一骚</h1>
+        <h1>每日一sāoáoǎoàoo</h1>
             <p><br>
             <span id="saohua"></span>
             <blockquote>
-                <p>集天地蛇皮之折耳根香油骚、</p>
+                <p>集天地终极蛇怪铁蛋火车侠威猛先生无敌风火轮，<br>
+                   臭嗨香蕉船皮皮怪稀巴烂一片太平洋之精华。</p>
                 <small>PDD</small>
             </blockquote>
         </p>
@@ -272,6 +273,18 @@ browserRedirect();
         <p class=".text-accent">最后更新：<span id="ihi-update"></span></p>
         <!--<p class=".text-accent">最后 Commit SHA：<code><span id="ihi-update"></span></code></p>--><br>
         <h4>&copy; Copyright 2016 Galvin.G</h4><br>
+    </div>
+
+    <div data-role="dialog" id="searchWA" data-close-button="true" data-windows-style="true">
+        <div class="container"><br>
+        <h1>搜索 于 WolframAlpha</h1><br>
+        <form name="searchNews" action="http://m.wolframalpha.com/input/" method="get" target="_blank">
+            <div class="input-control text">
+                <input type="text" name="i" placeholder="在此输入数学表达式">
+            </div>
+        <button class="button"><span class="mif-search"></span></button>
+        </form><br>
+        </div>
     </div>
     
 <!-- End Charm/Dialog -->
@@ -331,11 +344,11 @@ browserRedirect();
         <div class="tile-group double">
             <span class="tile-group-title">常用站点</span>
             <div class="tile-container">
-            <div onclick="document.location.href='https://www.wolframalpha.com/'" class="tile bg-darkViolet fg-white" data-role="tile">
+            <div onclick="showDialog('#searchWA')" class="tile bg-darkViolet fg-white" data-role="tile">
                 <div class="tile-content iconic">
                     <span class="icon mif-calculator"></span>
                 </div>
-                <span class="tile-label">WolframAlpha <span class="mif-link"></span></span>
+                <span class="tile-label">WolframAlpha <span class="mif-search"></span></span>
             </div>
                 
             <div onclick="document.location.href='http://phaidu.com/'" class="tile bg-lightBlue fg-white" data-role="tile">
@@ -354,9 +367,9 @@ browserRedirect();
                 
             <div onclick="showDialog('#searchNews')" class="tile bg-darkCobalt fg-white" data-role="tile">
                 <div class="tile-content iconic">
-                    <span class="icon mif-search"></span>
+                    <span class="icon mif-file-text"></span>
                 </div>
-                <span class="tile-label">学校网站新闻搜索 <span class="mif-link"></span></span>
+                <span class="tile-label">学校网站新闻搜索 <span class="mif-search"></span></span>
             </div>
             </div>
         </div>
