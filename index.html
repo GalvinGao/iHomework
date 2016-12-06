@@ -2,10 +2,17 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+
+    <meta name="title" content="/ iHomework - Kinglee High School /">
+    <meta name="description" content="iHomework 是全世界第一大小游戏网站，顺便帮大家发布作业。xD。">
+    <meta name="keywords" content="ihomework,iHomework,kinglee,勤礼,勤礼外语中学,khs,贝斯特">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="public">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-    <title>iHomework - NewUI</title>
+    <title>[ iHomework ]</title>
 
 <script>
 function browserRedirect() {
@@ -212,6 +219,12 @@ browserRedirect();
         var dialog = $(id).data('dialog');
         dialog.open();
     }
+
+    function jiexi(){
+        str=document.getElementById("jiexicontent").value;
+        res=str.replace(/bilibili.com/, "ibilibili.com");
+        window.location=res;
+    }
     </script>
     
       <script>
@@ -260,7 +273,7 @@ browserRedirect();
             <span id="saohua"></span>
             <blockquote>
                 <p>集天地终极蛇怪铁蛋火车侠威猛先生无敌风火轮，<br>
-                   臭嗨香蕉船皮皮怪稀巴烂一片太平洋之精华。</p>
+                   臭嗨香蕉船皮皮怪喜马拉雅雪乌鸦之绿水煮青蛙の、精华。</p>
                 <small>PDD</small>
             </blockquote>
         </p>
@@ -284,6 +297,29 @@ browserRedirect();
             </div>
         <button class="button"><span class="mif-search"></span></button>
         </form><br>
+        </div>
+    </div>
+
+    <div data-role="dialog" id="bilibiliSearch" data-close-button="true" data-windows-style="true">
+        <div class="container"><br>
+        <h1>搜索 于 bilibili</h1><br>
+        <form name="searchNews" action="http://search.bilibili.com/all" method="get" target="_blank">
+            <div class="input-control text">
+                <input type="text" name="keyword" placeholder="键入搜索内容...">
+            </div>
+        <button class="button"><span class="mif-search"></span></button>
+        </form><br>
+        </div>
+    </div>
+
+    <div data-role="dialog" id="bilibiliJieXi" data-close-button="true" data-windows-style="true">
+        <div class="container"><br>
+        <h1>解析 bilibili 视频</h1><br>
+            <div class="input-control text">
+                <input type="text" id="jiexicontent" placeholder="键入 bilibili 链接...">
+            </div>
+        <button class="button" onclick="jiexi()"><span class="mif-search"></span></button>
+        <br>
         </div>
     </div>
     
@@ -346,16 +382,69 @@ browserRedirect();
             <div class="tile-container">
             <div onclick="showDialog('#searchWA')" class="tile bg-darkViolet fg-white" data-role="tile">
                 <div class="tile-content iconic">
-                    <span class="icon mif-calculator"></span>
+                    <p style="margin: 25px; font-size: 500%;">WolframAlpha</p>
                 </div>
                 <span class="tile-label">WolframAlpha <span class="mif-search"></span></span>
             </div>
                 
             <div onclick="document.location.href='http://phaidu.com/'" class="tile bg-lightBlue fg-white" data-role="tile">
                 <div class="tile-content iconic">
-                    <span class="icon mif-info"></span>
+                    <p style="margin: 25px; font-size: 500%;">Phaidu</p>
                 </div>
                 <span class="tile-label">Phaidu.com <span class="mif-link"></span></span>
+            </div>
+                
+            <div onclick="document.location.href='http://www.best-intl-school.com/shipu/shipu.html'" class="tile bg-darkOrange fg-white" data-role="tile">
+                <div class="tile-content iconic">
+                    <span class="icon mif-spoon-fork"></span>
+                </div>
+                <span class="tile-label">本周食谱 <span class="mif-link"></span></span>
+            </div>
+                
+            <div onclick="showDialog('#searchNews')" class="tile bg-darkCobalt fg-white" data-role="tile">
+                <div class="tile-content iconic">
+                    <span class="icon mif-file-text"></span>
+                </div>
+                <span class="tile-label">学校网站新闻搜索 <span class="mif-search"></span></span>
+            </div>
+            </div>
+        </div>
+
+        <div class="tile-group double">
+            <span class="tile-group-title">233333</span>
+            <div class="tile-container">
+            <div onclick="document.location.href='http://bilibili.com/'" class="tile bg-violet fg-white" data-role="tile">
+                <div class="tile-content iconic">
+                    <p style="margin: 25px; font-size: 500%;">bilibili</p>
+                </div>
+                <span class="tile-label">bilibili - ( ゜- ゜)つロ 乾杯~ <span class="mif-feed"></span></span>
+            </div>
+                
+            <div onclick="showDialog('#bilibiliSearch')" class="tile-small bg-ribbed-violet fg-white" data-role="tile">
+                <div class="tile-content iconic">
+                    <span class="icon mif-search"></span>
+                </div>
+            </div>
+
+            <div onclick="document.location.href='http://www.bilibili.com/hichiku.html'" class="tile-small bg-ribbed-violet fg-white" data-role="tile">
+                <div class="tile-content iconic">
+                    <p style="margin: 10px; font-size: 150%;">GuiChu</p>
+                </div>
+                <span class="tile-label">鬼畜</span>
+            </div>
+
+            <div onclick="document.location.href='http://live.bilibili.com/" class="tile-small bg-ribbed-violet fg-white" data-role="tile">
+                <div class="tile-content iconic">
+                    <p style="margin: 10px; font-size: 150%;">LiveStream</p>
+                </div>
+                <span class="tile-label">直播</span>
+            </div>
+
+            <div onclick="showDialog('#bilibiliJieXi')" class="tile-small bg-ribbed-violet fg-white" data-role="tile">
+                <div class="tile-content iconic">
+                    <p style="margin: 10px; font-size: 150%;">Parse</p>
+                </div>
+                <span class="tile-label">解析</span>
             </div>
                 
             <div onclick="document.location.href='http://www.best-intl-school.com/shipu/shipu.html'" class="tile bg-darkOrange fg-white" data-role="tile">
