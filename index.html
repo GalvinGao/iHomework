@@ -92,6 +92,18 @@ browserRedirect();
         }
 
         a,div{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+
+        .intro-big {
+            margin: 25px;
+            font-size: 500%;
+            color: #eee;
+        }
+
+        .intro-small {
+            margin: 10px;
+            font-size: 150%;
+            color: #efefef;
+        }
     </style>
 
     <script>
@@ -224,6 +236,10 @@ browserRedirect();
         str=document.getElementById("jiexicontent").value;
         res=str.replace(/bilibili.com/, "ibilibili.com");
         window.location=res;
+    }
+
+    function jumpto(url){
+        window.open(url);
     }
     </script>
     
@@ -366,7 +382,7 @@ browserRedirect();
                     </div>
                     <div class="tile-label">每日一骚</div>
                 </div>
-                <div onclick="document.location.href='http://electro.proj.galvingao.xyz/'" class="tile bg-teal fg-white" data-role="tile">
+                <div onclick="jumpto('http://electro.proj.galvingao.xyz/')" class="tile bg-teal fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <span class="icon mif-feed"></span>
                     </div>
@@ -380,19 +396,19 @@ browserRedirect();
             <div class="tile-container">
             <div onclick="showDialog('#searchWA')" class="tile bg-darkViolet fg-white" data-role="tile">
                 <div class="tile-content iconic">
-                    <p style="margin: 25px; font-size: 500%;">WolframAlpha</p>
+                    <p class="intro-big">WolframAlpha</p>
                 </div>
                 <span class="tile-label">WolframAlpha <span class="mif-search"></span></span>
             </div>
                 
-            <div onclick="document.location.href='http://phaidu.com/'" class="tile bg-lightBlue fg-white" data-role="tile">
+            <div onclick="jumpto('http://phaidu.com/')" class="tile bg-lightBlue fg-white" data-role="tile">
                 <div class="tile-content iconic">
-                    <p style="margin: 25px; font-size: 500%;">Phaidu</p>
+                    <p class="intro-big">Phaidu</p>
                 </div>
                 <span class="tile-label">Phaidu.com <span class="mif-link"></span></span>
             </div>
                 
-            <div onclick="document.location.href='http://www.best-intl-school.com/shipu/shipu.html'" class="tile bg-darkOrange fg-white" data-role="tile">
+            <div onclick="jumpto('http://www.best-intl-school.com/shipu/shipu.html'" class="tile bg-darkOrange fg-white" data-role="tile">
                 <div class="tile-content iconic">
                     <span class="icon mif-spoon-fork"></span>
                 </div>
@@ -411,60 +427,60 @@ browserRedirect();
         <div class="tile-group double">
             <span class="tile-group-title">娱乐</span>
             <div class="tile-container">
-            <div onclick="document.location.href='http://bilibili.com/'" class="tile bg-violet fg-white" data-role="tile">
+            <div onclick="jumpto('http://bilibili.com/')" class="tile bg-violet fg-white" data-role="tile">
                 <div class="tile-content iconic">
-                    <p style="margin: 25px; font-size: 500%;">bilibili</p>
+                    <p class="intro-big">bilibili</p>
                 </div>
                 <span class="tile-label">bilibili - ( ゜- ゜)つロ 乾杯~ <span class="mif-feed"></span></span>
             </div>
                 
             <div onclick="showDialog('#bilibiliSearch')" class="tile-small bg-darkViolet fg-white" data-role="tile">
                 <div class="tile-content iconic">
-                    <p style="margin: 10px; font-size: 150%;"><nobr>検索の</nobr></p>
+                    <p class="intro-small"><nobr>検索の</nobr></p>
                 </div>
                 <span class="tile-label">搜索</span>
             </div>
 
-            <div onclick="document.location.href='http://www.bilibili.com/video/kichiku.html'" class="tile-small bg-darkViolet fg-white" data-role="tile">
+            <div onclick="jumpto('http://www.bilibili.com/video/kichiku.html'" class="tile-small bg-darkViolet fg-white" data-role="tile">
                 <div class="tile-content iconic">
-                    <p style="margin: 10px; font-size: 150%;"><nobr>きちく</nobr></p>
+                    <p class="intro-small"><nobr>きちく</nobr></p>
                 </div>
                 <span class="tile-label">鬼畜</span>
             </div>
 
-            <div onclick="document.location.href='http://live.bilibili.com/'" class="tile-small bg-darkViolet fg-white" data-role="tile">
+            <div onclick="jumpto('http://live.bilibili.com/')" class="tile-small bg-darkViolet fg-white" data-role="tile">
                 <div class="tile-content iconic">
-                    <p style="margin: 10px; font-size: 150%;"><nobr>生放送</nobr></p>
+                    <p class="intro-small"><nobr>生放送</nobr></p>
                 </div>
                 <span class="tile-label">直播</span>
             </div>
 
             <div onclick="showDialog('#bilibiliJieXi')" class="tile-small bg-darkViolet fg-white" data-role="tile">
                 <div class="tile-content iconic">
-                    <p style="margin: 10px; font-size: 150%;"><nobr>解析に</nobr></p>
+                    <p class="intro-small"><nobr>解析に</nobr></p>
                 </div>
                 <span class="tile-label">解析 <span class="mif-file-code"></span></span>
             </div>
 
-            <div onclick="document.location.href='https://www.facebook.com/" class="tile-small fg-white" data-role="tile" style="background-color: #3e5c9a">
+            <div onclick="jumpto('https://www.facebook.com/" class="tile-small fg-white" data-role="tile" style="background-color: #3e5c9a">
                 <div class="tile-content iconic">
                     <span class="icon mif-facebook"></span>
                 </div>
             </div>
 
-            <div onclick="document.location.href='https://www.twitter.com/" class="tile-small  fg-white" data-role="tile" style="background-color: #1ab2e8">
+            <div onclick="jumpto('https://www.twitter.com/" class="tile-small  fg-white" data-role="tile" style="background-color: #1ab2e8">
                 <div class="tile-content iconic">
                     <span class="icon mif-twitter"></span>
                 </div>
             </div>
 
-            <div onclick="document.location.href='https://www.steam.com/" class="tile-small fg-white" data-role="tile" style="background-color: #111111">
+            <div onclick="jumpto('https://www.steam.com/" class="tile-small fg-white" data-role="tile" style="background-color: #111111">
                 <div class="tile-content iconic">
                     <span class="icon mif-steam"></span>
                 </div>
             </div>
 
-            <div onclick="document.location.href='http://www.twitch.tv/" class="tile-small fg-white" data-role="tile" style="background-color: #5a52a8">
+            <div onclick="jumpto('http://www.twitch.tv/" class="tile-small fg-white" data-role="tile" style="background-color: #5a52a8">
                 <div class="tile-content iconic">
                     <p style="margin: 15px; font-size: 200%; color: #fff"><nobr>Twitch</nobr></p>
                 </div>
@@ -476,14 +492,14 @@ browserRedirect();
         <div class="tile-group double">
             <span class="tile-group-title">HTML5 小游戏</span>
             <div class="tile-container">
-                <div onclick="document.location.href='http://2048.ihomework.top/'" class="tile bg-amber fg-white" data-role="tile">
+                <div onclick="jumpto('http://2048.ihomework.top/')" class="tile bg-amber fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <span class="icon mif-calculator2"></span>
                     </div>
                     <span class="tile-label">2048</span>
                 </div>
             
-            <div onclick="document.location.href='http://fruit.games.ihomework.top/'" class="tile bg-green fg-white" data-role="tile">
+            <div onclick="jumpto('http://fruit.games.ihomework.top/')" class="tile bg-green fg-white" data-role="tile">
                 <div class="tile-content iconic">
                     <span class="icon mif-gamepad"></span>
                 </div>
