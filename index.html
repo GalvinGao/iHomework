@@ -232,6 +232,16 @@ browserRedirect();
         dialog.open();
     }
 
+    function cdnnew(){
+        showDialog("#getcdnd");
+        getcdn();
+    }
+
+    function backupnew(){
+        showDialog("#getcdnd");
+        getcdn();
+    }
+
     function jiexi(){
         str=document.getElementById("jiexicontent").value;
         res=str.replace(/bilibili.com/, "ibilibili.com");
@@ -269,6 +279,26 @@ browserRedirect();
 <body style="overflow-y: hidden;">
 
 <!-- Charm/Dialog -->
+
+    <div data-role="dialog" id="getcdnd" data-close-button="true" data-windows-style="true">
+        <div class="container"><br>
+        <h1>正在解析链接，请稍等...</h1><br>
+        <h5>链接类型：CDN<br>
+        数据供应商：新浪云存储<br>
+        域名：ihomework.cdn.sinacloud.net</h5>
+        <br>
+        </div>
+    </div>
+
+    <div data-role="dialog" id="getbackupd" data-close-button="true" data-windows-style="true">
+        <div class="container"><br>
+        <h1>正在解析链接，请稍等...</h1><br>
+        <h5>链接类型：备用<br>
+        数据供应商：新浪云存储<br>
+        域名：ihomework.sinacloud.net</h5>
+        <br>
+        </div>
+    </div>
     
     <div data-role="dialog" id="searchNews" data-close-button="true" data-windows-style="true">
         <div class="container"><br>
@@ -350,7 +380,7 @@ browserRedirect();
 
             <div class="tile-container">
 
-                <div class="tile-wide bg-indigo fg-white" data-role="tile" onclick="getcdn()">
+                <div class="tile-wide bg-indigo fg-white" data-role="tile" onclick="cdnnew()">
                     <div class="tile-content iconic">
                         <span class="icon mif-cloud"></span>
                     </div>
@@ -358,7 +388,7 @@ browserRedirect();
                     <span class="tile-badge">预加载：已启用</span>
                 </div>
 
-                <div class="tile bg-darkBlue fg-white" data-role="tile" onclick="getbkup()">
+                <div class="tile bg-darkBlue fg-white" data-role="tile" onclick="backupnew()">
                     <div class="tile-content iconic">
                         <span class="icon mif-more-horiz"></span>
                     </div>
