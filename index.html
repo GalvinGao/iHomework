@@ -265,6 +265,7 @@ browserRedirect();
       </script> 
   <script src="js/saotext.js"></script> 
   <script src="js/saoimg.js"></script> 
+  <script src="js/saovideo.js"></script>
   <script src="js/ihi.js"></script> 
  </head> 
  <body style="overflow-y: hidden;"> 
@@ -316,7 +317,7 @@ browserRedirect();
      <div class="row cells3"> 
       <div class="cell"> 
        <h2>骚话</h2> 
-       <p><br /> <button class="button" onclick="sao();">再来一句</button> <br /> </p> 
+       <p><br /> <button class="button" onclick="sao();">再来一句骚话</button> <br /> </p> 
        <blockquote> 
         <span id="newsao"></span> 
         <br /> 
@@ -325,7 +326,7 @@ browserRedirect();
       </div> 
       <div class="cell"> 
        <h2>骚图</h2>
-       <p><br /> <button class="button" onclick="saoimg();">再来一张</button> <br /> </p>
+       <p><br /> <button class="button" onclick="saoimg();">再来一张骚图</button> <br /> </p>
        <div class="image-container rounded"> 
         <div class="frame">
          <span id="saoimg"></span>
@@ -337,7 +338,15 @@ browserRedirect();
       </div> 
       <div class="cell"> 
        <h2>骚视频</h2>
-       <p>Coming soon...</p> 
+       <h5>骚视频资源库还处于建造状态，不过我们将持续更新～谢谢～</h5>
+       <p><br /> <button class="button" onclick="saovideo();">再来一个骚视频</button> <br /> </p>
+       <div class="image-container rounded"> 
+        <div class="frame">
+         <span id="saovideo"></span>
+         <!-- <img src="http://placehold.it/200x200" /> -->
+        </div> 
+       </div> 
+       <span id="saoauthor3"></span> 
       </div> 
      </div> 
     </div> 
@@ -576,7 +585,7 @@ browserRedirect();
     "hash": "abfc422f3d026db54996c86b14ee3a01"
 });
 tpwidget("show");</script> 
-  <script>sao(); saoimg();</script> 
+  <script>sao(); saoimg(); saovideo();</script> 
   <!-- ********************** Search Engine Collecting & Analytics ********************** --> 
   <script>(function(){var bp=document.createElement('script');var curProtocol=window.location.protocol.split(':')[0];if(curProtocol==='https'){bp.src='https://zz.bdstatic.com/linksubmit/push.js'}else{bp.src='http://push.zhanzhang.baidu.com/push.js'}var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(bp,s)})();</script> 
   <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-69113723-4','auto');ga('send','pageview');</script>  

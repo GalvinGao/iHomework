@@ -10,10 +10,10 @@
   <script>(function($){$(function(){$('.button-collapse').sideNav();$('.parallax').parallax()})})(jQuery);</script> 
 
   <script>
-        function getcdn(){ $.get("https://raw.githubusercontent.com/GalvinGao/iHomework/master/weeknum.txt", function(data){var url = "http://ihomework.cdn.sinacloud.net/iHomework-wkhw_wk" + data + ".pdf";window.open(url);});
+        function getcdn(){ $.get("http://ihomework.top/weeknum.txt", function(data){var url = "http://ihomework.cdn.sinacloud.net/iHomework-wkhw_wk" + data + ".pdf";window.open(url);});
         }
         
-        function getbkup(){ $.get("https://raw.githubusercontent.com/GalvinGao/iHomework/master/weeknum.txt", function(data){var url = "http://ihomework.sinacloud.net/iHomework-wkhw_wk" + data + ".pdf";window.open(url);});
+        function getbkup(){ $.get("http://ihomework.top/weeknum.txt", function(data){var url = "http://ihomework.sinacloud.net/iHomework-wkhw_wk" + data + ".pdf";window.open(url);});
         }
   </script>
 
@@ -34,12 +34,12 @@
    </div>
 
     
-   <button onclick="getcdn()" class="waves-effect waves-light btn-large modal-trigger truncate"><i class="material-icons left">cloud</i>点我到 iHomework</button>
+   <button onclick="getcdn();" class="waves-effect waves-light btn-large modal-trigger truncate"><i class="material-icons left">cloud</i>点我到 iHomework</button>
 
 <br />
-   <a class="waves-effect waves-light btn-flat truncate" href="2048.ihomework.top"><i class="material-icons left">cloud</i>玩个 2048!</a>
+   <a class="waves-effect waves-light btn-flat truncate" href="http://2048.ihomework.top"><i class="material-icons left">cloud</i>玩个 2048!</a>
 <br />
-   <button onclick="getbkup()" class="waves-effect waves-light btn-flat modal-trigger truncate"><i class="material-icons left">update</i>备用链接</button>
+   <button onclick="getbkup();" class="waves-effect waves-light btn-flat modal-trigger truncate"><i class="material-icons left">update</i>备用链接</button>
 <br />
   </section>
   <footer class="page-footer"> 
