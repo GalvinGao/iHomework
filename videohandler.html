@@ -33,7 +33,7 @@
 function parse(){
 var thisurl = document.URL;
 var cuturl = thisurl.substr(43);
-var writeit = "<video src='" + cuturl + "' />";
+var writeit = "<source src='" + cuturl + "' />";
 document.getElementById("videoplay").innerHTML = cuturl;
 }
 
@@ -50,7 +50,11 @@ text-align: center;
 
 <!-- Video Player Code Here -->
 
-<span id="videoplay"></span>
+<div data-role="video">
+    <video>
+        <span id="videoplay"></span>
+    </video>
+</div>
 
 
 
