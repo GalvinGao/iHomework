@@ -5,8 +5,9 @@
 <link href="http://cdn.bootcss.com/metro/3.0.15/css/metro-icons.min.css" rel="stylesheet" /> 
 <link href="http://cdn.bootcss.com/metro/3.0.15/css/metro-colors.min.css" rel="stylesheet" /> 
 <link href="http://ofcdecuts.bkt.clouddn.com/metro.css?v=201612050809" rel="stylesheet" /> 
-<script src="http://cdn.bootcss.com/metro/3.0.15/js/metro.min.js"></script> 
 <script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script> 
+<script src="http://cdn.bootcss.com/metro/3.0.15/js/metro.min.js"></script> 
+<!--<script defer="defer" src="https://raw.githubusercontent.com/AlloyTeam/AlloyLever/gh-pages/alloy_lever.min.js"></script>-->
 
 </head>
 <body>
@@ -36,23 +37,25 @@ function parse(){
 var thisurl = document.URL;
 var cuturl = thisurl.substr(43);
 //var cuturl = "http://ofcdecuts.bkt.clouddn.com/Preview_20161106_2103.mp4";
-var writeit = "<source src='" + cuturl + "' />";
+var writeit = "<source src='" + cuturl + "' type='video/mp4' />";
 document.getElementById("videoplay").innerHTML = writeit;
 }
 
 parse();
 </script>
 
-
-
 <!-- Video Player Code Here -->
-
-<div data-role="video" data-full-screen-mode="window" class="video-player">
-    <video>
+<div class="grid">
+<div class="row">
+<div class="cell">
+<div data-role="video" data-full-screen-mode="window" data-preload="true" class="video-player">
+    <video preload="auto">
         <span id="videoplay"></span>
-        <!--<source src="http://ofcdecuts.bkt.clouddn.com/Preview_20161106_2103.mp4" type="video/mp4" />-->
     </video>
 </div>
-<!--  <script src="https://raw.githubusercontent.com/AlloyTeam/AlloyLever/gh-pages/alloy_lever.min.js"></script>  -->
+</div>
+</div>
+</div>
+
 </body>
 </html>
