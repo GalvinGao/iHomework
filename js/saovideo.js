@@ -3,7 +3,7 @@ function saovideo() {
 
 	var vcover = ["http://placehold.it/200x250"];
     var vlink = ["http://www.bilibili.com/video/av10492"];
-    var author3 = ["I Don't Know."];
+    var author3 = ["233"];
 
 	var index3 = Math.floor((Math.random() * vcover.length));
     var link3 = vcover[index3];
@@ -15,4 +15,3 @@ function saovideo() {
     document.getElementById("saoauthor3").innerHTML = authortext3;
 
 }
-

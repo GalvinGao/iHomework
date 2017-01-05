@@ -210,6 +210,10 @@ browserRedirect();
                 showSettings();
             });
         });
+
+        function quickfetch(){ $.get("http://ihomework.top/weeknum.txt", function(data){var weeknum = data;});
+        }
+        quickfetch();
         
         function getcdn(){ $.get("http://ihomework.top/weeknum.txt", function(data){var url = "http://ihomework.cdn.sinacloud.net/iHomework-wkhw_wk" + data + ".pdf";window.location=url;});
         }
@@ -241,6 +245,12 @@ browserRedirect();
     function jumpto(url){
         window.open(url);
     }
+
+function playv(link) {
+    var playm = "<source src='" + link + "' />";
+    document.getElementById("videoplay").innerHTML = playm;
+    showDialog("#saovideo");
+}
     </script> 
   <script>
         var bodyBgs = [];
@@ -351,6 +361,24 @@ browserRedirect();
      </div> 
     </div> 
     <p></p> 
+   </div> 
+  </div>
+  <div data-role="dialog" id="saovideo" data-close-button="true" data-windows-style="true"> 
+   <div class="container"> 
+    <br /> 
+    <h1 style="line-height: 120%;">骚视频</h1> 
+<div class="grid">
+<div class="row">
+<div class="cell">
+<div data-role="video" data-full-screen-mode="window" data-preload="true" class="video-player">
+    <video preload="auto">
+        <span id="videoplay"></span>
+    </video>
+</div>
+</div>
+</div>
+</div>
+    <br /> 
    </div> 
   </div> 
   <div data-role="charm" data-position="right" id="iHomeworkInfo" style="padding: 25px;"> 
