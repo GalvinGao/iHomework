@@ -1,9 +1,9 @@
 function saovideo() {
     document.getElementById("saovideo").innerHTML = "";
 
-	var vcover = ["http://placehold.it/200x250"];
-    var vlink = ["http://www.bilibili.com/video/av10492"];
-    var author3 = ["233"];
+	var vcover = ["http://ojb479lh2.bkt.clouddn.com/saovideo/IMG_1754.mp4-s","http://ojb479lh2.bkt.clouddn.com/saovideo/IMG_1753.mp4-s"];
+    var vlink = ["http://ihomework.top/videohandler.html?url=http://ojb479lh2.bkt.clouddn.com/saovideo/IMG_1754.mp4","http://ihomework.top/videohandler.html?url=http://ojb479lh2.bkt.clouddn.com/saovideo/IMG_1753.mp4"];
+    var author3 = ["Authur","Felix"];
 
 	var index3 = Math.floor((Math.random() * vcover.length));
     var link3 = vcover[index3];
