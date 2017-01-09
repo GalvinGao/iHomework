@@ -1,9 +1,9 @@
 function saovideo() {
     document.getElementById("saovideo").innerHTML = "";
 
-	var vcover = ["http://ojb479lh2.bkt.clouddn.com/saovideo/IMG_1754.mp4-s","http://ojb479lh2.bkt.clouddn.com/saovideo/IMG_1753.mp4-s","http://ojb479lh2.bkt.clouddn.com/saovideo/IMG_1764.mp4-s"];
+	var vcover = ["http://ojb479lh2.bkt.clouddn.com/saovideo/IMG_1754.mp4-s","http://ojb479lh2.bkt.clouddn.com/saovideo/IMG_1753.mp4-s","http://ojb479lh2.bkt.clouddn.com/saovideo/IMG_1764.mp4?vframe/jpg/offset/20/w/360/h/640"];
     var vlink = ["http://ihomework.top/videohandler.html?url=http://ojb479lh2.bkt.clouddn.com/saovideo/IMG_1754.mp4","http://ihomework.top/videohandler.html?url=http://ojb479lh2.bkt.clouddn.com/saovideo/IMG_1753.mp4","http://ihomework.top/videohandler.html?url=http://ojb479lh2.bkt.clouddn.com/saovideo/IMG_1764.mp4"];
-    var author3 = ["Authur","Felix"];
+    var author3 = ["Authur","Felix","Authur and Teddy"];
 
 	var index3 = Math.floor((Math.random() * vcover.length));
     var link3 = vcover[index3];
