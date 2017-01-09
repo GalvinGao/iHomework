@@ -10,7 +10,7 @@
 <!--<script defer="defer" src="https://raw.githubusercontent.com/AlloyTeam/AlloyLever/gh-pages/alloy_lever.min.js"></script>-->
 
 </head>
-<body>
+<body><!--
   <script>
         var bodyBgs = [];
         bodyBgs[0] = "http://oi5kxcwmp.bkt.clouddn.com/558831/835d4ce148fdfaf7.jpg";
@@ -31,33 +31,22 @@
         var randomBgIndex = Math.round( Math.random() * 14 );
         
         document.write('<style>body{background:url(' + bodyBgs[randomBgIndex] + ')}</style>');
-      </script> 
+      </script> -->
 
 <script>
-function parse(){
+window.onload = function(){
 var thisurl = document.URL;
-var thisurl = "http://ihomework.top/videohandler.html?url=http://ofcdecuts.bkt.clouddn.com/Preview_20161106_2103.mp4"
+//var thisurl = "http://ihomework.top/videohandler.html?url=http://ofcdecuts.bkt.clouddn.com/Preview_20161106_2103.mp4"
 var cuturl = thisurl.substr(43);
 //var cuturl = "http://ofcdecuts.bkt.clouddn.com/Preview_20161106_2103.mp4";
-var writeit = "<source src='" + cuturl + "' type='video/mp4' />";
+var writeit = "<video src='" + cuturl + "' />";
 document.getElementById("videoplay").innerHTML = writeit;
 }
-
-parse();
 </script>
 
 <!-- Video Player Code Here -->
-<div class="grid">
-<div class="row">
-<div class="cell">
-<div data-role="video" data-full-screen-mode="window" data-preload="true" class="video-player">
-    <video preload="auto">
+
         <span id="videoplay"></span>
-    </video>
-</div>
-</div>
-</div>
-</div>
 
 </body>
 </html>
