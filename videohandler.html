@@ -39,7 +39,7 @@ var thisurl = document.URL;
 //var thisurl = "http://ihomework.top/videohandler.html?url=http://ofcdecuts.bkt.clouddn.com/Preview_20161106_2103.mp4"
 var cuturl = thisurl.substr(43);
 var swidth = screen.height;
-var sheight = screen.width - 100;
+var sheight = screen.width - 97 * (screen.width / 768);
 //alert(swidth + "." + sheight);
 var cuturl = "http://ofcdecuts.bkt.clouddn.com/Preview_20161106_2103.mp4";
 var writeit = "<video src='" + cuturl + "' width='" + swidth + "' height='" + sheight + "' controls='controls'>";
