@@ -39,15 +39,25 @@ var thisurl = document.URL;
 //var thisurl = "http://ihomework.top/videohandler.html?url=http://ofcdecuts.bkt.clouddn.com/Preview_20161106_2103.mp4"
 var cuturl = thisurl.substr(43);
 var swidth = screen.width;
-//var cuturl = "http://ofcdecuts.bkt.clouddn.com/Preview_20161106_2103.mp4";
-var writeit = "<video src='" + cuturl + "' width='" + swidth + "' controls='controls'>";
+var sheight = screen.height;
+var cuturl = "http://ofcdecuts.bkt.clouddn.com/Preview_20161106_2103.mp4";
+var writeit = "<video src='" + cuturl + "' width='" + swidth + "' height='" + sheight + "' controls='controls'>";
 document.getElementById("videoplay").innerHTML = writeit;
 }
 </script>
 
-<!-- Video Player Code Here -->
+<style>
+.parent {display: table; text-align: center;}
+.child {
+display: table-cell;
+vertical-align: middle;
+text-align: center;
+}
+</style>
 
-        <span id="videoplay"></span>
+<!-- Video Player Code Here -->
+<span class="parent">
+        <span class="child" id="videoplay"></span></span>
 
 </body>
 </html>
