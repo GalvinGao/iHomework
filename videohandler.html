@@ -38,8 +38,9 @@ window.onload = function(){
 var thisurl = document.URL;
 //var thisurl = "http://ihomework.top/videohandler.html?url=http://ofcdecuts.bkt.clouddn.com/Preview_20161106_2103.mp4"
 var cuturl = thisurl.substr(43);
+var swidth = screen.width;
 //var cuturl = "http://ofcdecuts.bkt.clouddn.com/Preview_20161106_2103.mp4";
-var writeit = "<video src='" + cuturl + "' controls='controls'>";
+var writeit = "<video src='" + cuturl + "' width='" + swidth + "' controls='controls'>";
 document.getElementById("videoplay").innerHTML = writeit;
 }
 </script>
