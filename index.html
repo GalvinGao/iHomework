@@ -318,6 +318,20 @@ function playv(link) {
     <br /> 
    </div> 
   </div> 
+  <div data-role="dialog" id="parseVideo" data-close-button="true" data-windows-style="true"> 
+   <div class="container"> 
+    <br /> 
+    <h1>视频解析</h1> 
+    <br /> 
+    <form name="searchNews" action="http://www.yydy8.com/Common/" method="get" target="_blank"> 
+     <div class="input-control text"> 
+      <input type="text" name="url" placeholder="键入优酷/土豆/爱奇艺视频链接..." /> 
+     </div> 
+     <button class="button"><span class="mif-search"></span></button> 
+    </form> 
+    <br /> 
+   </div> 
+  </div> 
   <div data-role="dialog" id="saoit" data-close-button="true" data-windows-style="true" data-height="550"> 
    <div class="container" style="line-height: 1.5;"> 
     <br /> 
@@ -479,7 +493,7 @@ function playv(link) {
     </div> 
    </div> 
    <div class="tile-group double"> 
-    <span class="tile-group-title">常用站点</span> 
+    <span class="tile-group-title">常用站点 - 1</span> 
     <div class="tile-container"> 
      <div onclick="showDialog('#searchWA')" class="tile bg-darkViolet fg-white" data-role="tile"> 
       <div class="tile-content iconic"> 
@@ -504,6 +518,17 @@ function playv(link) {
        <span class="icon mif-file-text"></span> 
       </div> 
       <span class="tile-label">学校网站新闻搜索 <span class="mif-search"></span></span> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="tile-group double"> 
+    <span class="tile-group-title">常用站点 - 2</span> 
+    <div class="tile-container"> 
+     <div onclick="showDialog('#parseVideo')" class="tile-wide bg-grayDark fg-white" data-role="tile"> 
+      <div class="tile-content iconic"> 
+       <span class="icon mif-file-text"></span> 
+      </div> 
+      <span class="tile-label">视频解析 优酷/土豆/爱奇艺均可解析 <span class="mif-search"></span></span> 
      </div> 
     </div> 
    </div> 
