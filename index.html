@@ -73,7 +73,7 @@
     <script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
     <meta http-equiv="x-dns-prefetch-control" content="on" />
     <link rel="dns-prefetch" href="http://ihomeworkkhs.applinzi.com/" />
-    <link rel="dns-prefetch" href="http://ihomework.cdn.sinacloud.net/" />
+    <link rel="dns-prefetch" href="http://oji8ixlnf.bkt.clouddn.com/" />
     <link rel="dns-prefetch" href="http://cdn.bootcss.com/" />
     <link rel="dns-prefetch" href="http://widget.thinkpage.cn/" />
     <link rel="dns-prefetch" href="http://2048.ihomework.top/" />
@@ -272,14 +272,14 @@
         function getcdn() {
             $.get("http://ihomework.top/weeknum.txt", function(data) {
                 var url = "http://oji8ixlnf.bkt.clouddn.com/iHomework-wkhw_wk" + data + ".pdf";
-                window.location = url;
+                jumpto(url);
             });
         }
 
         function getbkup() {
             $.get("http://ihomework.top/weeknum.txt", function(data) {
                 var url = "http://oji8ixlnf.bkt.clouddn.com/iHomework-wkhw_wk" + data + ".pdf";
-                window.location = url;
+                jumpto(url);
             });
         }
 
@@ -301,7 +301,7 @@
         function jiexi() {
             str = document.getElementById("jiexicontent").value;
             res = str.replace(/bilibili.com/, "ibilibili.com");
-            window.location = res;
+            jumpto(res);
         }
 
         function jumpto(url) {
@@ -353,7 +353,7 @@
             <br />
             <h1 style="line-height: 120%;">正在解析链接，请稍等...</h1>
             <br />
-            <h5 style="line-height: 140%;">链接类型：CDN<br /> 数据供应商：新浪云存储<br /> 域名：ihomework.cdn.sinacloud.net</h5>
+            <h5 style="line-height: 140%;">链接类型：CDN<br /> 数据供应商：七牛云对象存储<br /> 域名：oji8ixlnf.bkt.clouddn.com</h5>
             <br />
         </div>
     </div>
@@ -365,7 +365,7 @@
             <br />
             <h1 style="line-height: 120%;">正在解析链接，请稍等...</h1>
             <br />
-            <h5 style="line-height: 140%;">链接类型：备用<br /> 数据供应商：新浪云存储<br /> 域名：ihomework.sinacloud.net</h5>
+            <h5 style="line-height: 140%;">链接类型：备用<br /> 数据供应商：七牛云对象存储<br /> 域名：oji8ixlnf.bkt.clouddn.com</h5>
             <br />
         </div>
     </div>
@@ -537,10 +537,6 @@
         <div class="tile-group double">
             <span class="tile-group-title">扩展</span>
             <div class="tile-container">
-                <a href="#" class="tile-wide bg-darkGreen fg-white" data-role="tile">
-                    <div class="tile-content iconic">
-                        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="310" height="140" src="http://music.163.com/outchain/player?type=0&amp;id=521452765&amp;auto=0&amp;height=90"></iframe>
-                    </div> <span class="tile-label">网易云音乐</span> </a>
                 <div onclick="showDialog('#saoit')" class="tile bg-cyan fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <p class="intro-big">

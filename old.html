@@ -1,124 +1,47 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
 
 <head>
     <meta charset="UTF-8" />
     <title>iHomework - PhoneUI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link async="async" href="http://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen" />
+    <!--<script refer="refer" defer="defer" src="./js/alloylever.min.js"></script>-->
+    <script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
     <script>
-        (function($) {
-            $(function() {
-                $('.button-collapse').sideNav();
-                $('.parallax').parallax()
-            })
-        })(jQuery);
-
-    </script>
-
-    <script>
-        function getcdn() {
+        function quickfetch() {
             $.get("http://ihomework.top/weeknum.txt", function(data) {
-                var url = "http://ihomework.cdn.sinacloud.net/iHomework-wkhw_wk" + data + ".pdf";
-                window.open(url);
+                var weeknum = data;
+            });
+        }
+        quickfetch();
+
+        function getcdn() {
+            $.get("http://ihomework.top/weeknum.txt", function(data) {var data=666;
+                var url = "http://oji8ixlnf.bkt.clouddn.com/iHomework-wkhw_wk" + data + ".pdf";alert(url);
+                jumpto(url);
             });
         }
 
         function getbkup() {
             $.get("http://ihomework.top/weeknum.txt", function(data) {
-                var url = "http://ihomework.sinacloud.net/iHomework-wkhw_wk" + data + ".pdf";
-                window.open(url);
+                var url = "http://oji8ixlnf.bkt.clouddn.com/iHomework-wkhw_wk" + data + ".pdf";
+                jumpto(url);
             });
         }
-
     </script>
 
 </head>
 
-<body>
-    <section class="page-header">
-        <h1 class="project-name">iHomework</h1><br><br>
+<body style="text-align:center;">
+<br><br><br><br><br><br>
+        <span style="line-height: 1.5;color:#f44336;">提示<br><br>
+            此版本为 iHomework 手机特殊界面版本<br><br>并为加载速度考虑已移除界面效果。<br><br>
+            若需体验新界面，请使用 iPad 或电脑访问 <code>ihomework.top</code><br>
+        </span>
+        <button onclick="getcdn()">点我到 iHomework</button>
+            <br>
+        <a href="http://2048.ihomework.top/">2048</a>
 
-        <div class="container">
-            <div class="card-panel red lighten-1 z-depth-4">
-                <span class="white-text" style="line-height: 1.5;">提示<br><br>
-            此版本为 iHomework 手机特殊界面版本，且此版本已停止进行界面优化（但功能不被影响）。<br><br>
-            若需体验新界面版本，请使用 iPad 或电脑访问 <code>ihomework.top</code><br>
-          </span>
-            </div>
-        </div>
-        </div>
-
-
-        <button onclick="getcdn();" class="waves-effect waves-light btn-large modal-trigger truncate"><i class="material-icons left">cloud</i>点我到 iHomework</button>
-
-        <br />
-        <a class="waves-effect waves-light btn-flat truncate" href="http://2048.ihomework.top"><i class="material-icons left">cloud</i>玩个 2048!</a>
-        <br />
-        <button onclick="getbkup();" class="waves-effect waves-light btn-flat modal-trigger truncate"><i class="material-icons left">update</i>备用链接</button>
-        <br />
-    </section>
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">iHomework</h5>
-                    <p class="grey-text text-lighten-4"> iHomework is the new way to know your homework. We are keeping it best. Thanks for using! </p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                &copy; 2015 - 2017 Galvin Gao. All rights reserved!
-            </div>
-        </div>
-    </footer>
-    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/materialize/0.97.7/css/materialize.min.css" media="screen,projection" />
-    <script type="text/javascript" src="http://cdn.bootcss.com/materialize/0.97.7/js/materialize.min.js"></script>
-    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-    <script>
-        (function(T, h, i, n, k, P, a, g, e) {
-            g = function() {
-                P = h.createElement(i);
-                a = h.getElementsByTagName(i)[0];
-                P.src = k;
-                P.charset = "utf-8";
-                P.async = 1;
-                a.parentNode.insertBefore(P, a)
-            };
-            T["ThinkPageWeatherWidgetObject"] = n;
-            T[n] || (T[n] = function() {
-                (T[n].q = T[n].q || []).push(arguments)
-            });
-            T[n].l = +new Date();
-            if (T.attachEvent) {
-                T.attachEvent("onload", g)
-            } else {
-                T.addEventListener("load", g, false)
-            }
-        }(window, document, "script", "tpwidget", "//widget.thinkpage.cn/widget/chameleon.js"))
-
-    </script>
-    <script>
-        tpwidget("init", {
-            "flavor": "bubble",
-            "location": "WW0V9QP93VS8",
-            "geolocation": "enabled",
-            "position": "bottom-right",
-            "margin": "10px 10px",
-            "language": "auto",
-            "unit": "c",
-            "theme": "chameleon",
-            "uid": "UBD6EA9953",
-            "hash": "abfc422f3d026db54996c86b14ee3a01"
-        });
-        tpwidget("show");
-
-    </script>
 </body>
 
 </html>
