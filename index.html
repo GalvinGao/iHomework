@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>iHomework - MingDe Kinglee</title>
     <script refer="refer" src="http://cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <!--<script refer="refer" defer="defer" src="./js/alloylever.min.js"></script>-->
     <style>
         .pace {
             font-family: "Roboto", serif;
@@ -673,49 +674,49 @@
         <div class="tile-group double">
             <span class="tile-group-title">HTML5 小游戏</span>
             <div class="tile-container">
-                <div onclick="jumpto('http://2048.ihomework.top/')" class="tile-small bg-amber fg-white" data-role="tile">
+                <div onclick="jumpto('http://2048.ihomework.top/');ga('send', 'event', 'h5games', '2048');" class="tile-small bg-amber fg-white" data-role="tile">
                     <div class="tile-content iconic">
            
                     </div>
                     <span class="tile-label"><nobr>2048</nobr></span>
                 </div>
-                <div onclick="jumpto('http://fruit.games.ihomework.top/')" class="tile-small bg-green fg-white" data-role="tile">
+                <div onclick="jumpto('http://fruit.games.ihomework.top/');ga('send', 'event', 'h5games', 'fruitninja');" class="tile-small bg-green fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         
                     </div>
                     <span class="tile-label"><nobr>水果忍者</nobr></span>
                 </div>
-                <div onclick="jumpto('http://sda.4399.com/4399swf/upload_swf/ftp17/ssj/20151202/3/index.html')" class="tile-small bg-darkCobalt fg-white" data-role="tile">
+                <div onclick="jumpto('http://sda.4399.com/4399swf/upload_swf/ftp17/ssj/20151202/3/index.html');ga('send', 'event', 'h5games', 'hundouluo');" class="tile-small bg-darkCobalt fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         
                     </div>
                     <span class="tile-label"><nobr>魂斗罗</nobr></span>
                 </div>
-                <div onclick="jumpto('http://szhong.4399.com/4399swf/upload_swf/ftp21/ssj/20170220/b2/index.html')" class="tile-small bg-amber fg-white" data-role="tile">
+                <div onclick="jumpto('http://szhong.4399.com/4399swf/upload_swf/ftp21/ssj/20170220/b2/index.html');ga('send', 'event', 'h5games', 'mrminer');" class="tile-small bg-amber fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         
                     </div>
                     <span class="tile-label"><nobr>挖矿先生</nobr></span>
                 </div>
-                <div onclick="jumpto('http://szhong.4399.com/4399swf/upload_swf/ftp21/ssj/20170214/b4/index.htm')" class="tile-small bg-lightGreen fg-white" data-role="tile">
+                <div onclick="jumpto('http://szhong.4399.com/4399swf/upload_swf/ftp21/ssj/20170214/b4/index.htm');ga('send', 'event', 'h5games', 'locker');" class="tile-small bg-lightGreen fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         
                     </div>
                     <span class="tile-label"><nobr>Locker</nobr></span>
                 </div>
-                <div onclick="jumpto('http://sda.4399.com/4399swf/upload_swf/ftp21/ssj/20170211/t1/index.htm')" class="tile-small bg-lightBlue fg-white" data-role="tile">
+                <div onclick="jumpto('http://sda.4399.com/4399swf/upload_swf/ftp21/ssj/20170211/t1/index.htm');ga('send', 'event', 'h5games', 'energycircuit');" class="tile-small bg-lightBlue fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         
                     </div>
                     <span class="tile-label"><nobr>能量电路</nobr></span>
                 </div>
-                <div onclick="jumpto('http://sxiao.4399.com/4399swf/upload_swf/ftp20/ssj/20170206/j7/index.html')" class="tile-small bg-blue fg-white" data-role="tile">
+                <div onclick="jumpto('http://sxiao.4399.com/4399swf/upload_swf/ftp20/ssj/20170206/j7/index.html');ga('send', 'event', 'h5games', 'savebubbles');" class="tile-small bg-blue fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         
                     </div>
                     <span class="tile-label"><nobr>拯救泡泡</nobr></span>
                 </div>
-                <div onclick="jumpto('http://szhong.4399.com/4399swf/upload_swf/ftp20/ssj/20170124/3/index.html')" class="tile-small bg-red fg-white" data-role="tile">
+                <div onclick="jumpto('http://szhong.4399.com/4399swf/upload_swf/ftp20/ssj/20170124/3/index.html');ga('send', 'event', 'h5games', 'spiderpoker');" class="tile-small bg-red fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         
                     </div>
@@ -800,6 +801,7 @@
             a.src = g;
             m.parentNode.insertBefore(a, m)
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+//window.ga_debug = {trace: true};
         ga('create', 'UA-69113723-4', 'auto');
         ga('send', 'pageview');
 
