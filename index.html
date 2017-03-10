@@ -277,13 +277,6 @@
             });
         }
 
-        function getbkup() {
-            $.get("http://ihomework.top/weeknum.txt", function(data) {
-                var url = "http://oji8ixlnf.bkt.clouddn.com/iHomework-wkhw_wk" + data + ".pdf";
-                window.location = url;
-            });
-        }
-
         function showDialog(id) {
             var dialog = $(id).data('dialog');
             dialog.open();
@@ -294,9 +287,8 @@
             getcdn();
         }
 
-        function backupnew() {
-            showDialog("#getbackupd");
-            getbkup();
+        function resources() {
+            showDialog("#resources");
         }
 
         function jiexi() {
@@ -358,15 +350,14 @@
             <br />
         </div>
     </div>
-    <div data-role="dialog" id="getbackupd" data-close-button="true" data-windows-style="true">
-        <div class="container">
-            <br />
-            <span class="mif-spinner3 mif-ani-spin mif-lg"></span> Getting /weeknum.txt on GitHub Raw...
-            <br />
-            <br />
-            <h1 style="line-height: 120%;">正在解析链接，请稍等...</h1>
-            <br />
-            <h5 style="line-height: 140%;">链接类型：备用<br /> 数据供应商：七牛云对象存储<br /> 域名：oji8ixlnf.bkt.clouddn.com</h5>
+    <div data-role="dialog" id="resources" data-close-button="true" data-windows-style="true">
+        <div class="container"><br><br>
+            <h1 style="line-height: 120%;">中考资料</h1>
+            <br>
+            <h4 style="line-height: 160%;">
+<span class="mif-file-pdf"></span>&nbsp;<a href="http://oji8ixlnf.bkt.clouddn.com/ref-wk03/ChiBiology-Ref_01.pdf">2017 生物实验操作练习题</a>&nbsp;<span style="color:#757575;font-family:'Courier New','Courier',serif;">466.1 KB</span><br>
+<span class="mif-file-pdf"></span>&nbsp;<a href="http://oji8ixlnf.bkt.clouddn.com/ref-wk03/ChiBiology-Ref_01.pdf">2017 理化生实验套题</a>&nbsp;<span style="color:#757575;font-family:'Courier New','Courier',serif;">15.1 MB</span><br>
+</h4>
             <br />
         </div>
     </div>
@@ -443,24 +434,6 @@
             <p></p>
         </div>
     </div>
-    <div data-role="dialog" id="saovideo" data-close-button="true" data-windows-style="true">
-        <div class="container">
-            <br />
-            <h1 style="line-height: 120%;">骚视频</h1>
-            <div class="grid">
-                <div class="row">
-                    <div class="cell">
-                        <div data-role="video" data-full-screen-mode="window" data-preload="true" class="video-player">
-                            <video preload="auto">
-        <span id="videoplay"></span>
-    </video>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br />
-        </div>
-    </div>
     <div data-role="charm" data-position="right" id="iHomeworkInfo" style="padding: 25px;">
         <h2>iHomework 信息</h2>
         <br />
@@ -527,11 +500,11 @@
                     <span class="tile-label">点我到 iHomework</span>
                     <span class="tile-badge">预加载：已启用</span>
                 </div>
-                <div class="tile bg-darkBlue fg-white" data-role="tile" onclick="backupnew()">
+                <div class="tile-wide bg-lightRed fg-white" data-role="tile" onclick="resources()">
                     <div class="tile-content iconic">
                         <span class="icon mif-more-horiz"></span>
                     </div>
-                    <span class="tile-label">备用镜像链接</span>
+                    <span class="tile-label">* 中考资料 *</span>
                 </div>
             </div>
         </div>
