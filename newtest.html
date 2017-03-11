@@ -357,7 +357,7 @@ default:
 }
 
 }
-step=0
+
  function flash_title()
  {
   step++
@@ -370,6 +370,7 @@ step=0
 function passed(){
 document.getElementById("hidezone").style.setProperty("display","block");
 currenttitle=document.title;
+step=0;
 flash_title()
 }
 
