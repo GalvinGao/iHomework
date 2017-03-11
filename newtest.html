@@ -324,6 +324,7 @@ var $_GET = (function(){
 })();
 
 function verify(){
+
 var cut1=$_GET['pass'];
 switch (cut1)
 {
@@ -333,6 +334,17 @@ case "kinglee":
 default:
     break;
 }
+
+var cut2=$_GET['longtermpass'];
+switch (cut2)
+{
+case "zhSSjPcETBzwzfPzGXgxGTZrfTYZGwFq":
+    passed();
+    break;
+default:
+    break;
+}
+
 }
 
 function passed(){
