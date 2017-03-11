@@ -358,12 +358,6 @@ default:
 
 }
 
-function passed(){
-document.getElementById("hidezone").style.setProperty("display","block");
-currenttitle=document.title;
-flash_title()
-}
-
  function flash_title()
  {
   step++
@@ -372,6 +366,12 @@ flash_title()
   if (step==2) {document.title='【　　　】 '+currenttitle}
   setTimeout("flash_title()",500);
  }
+
+function passed(){
+document.getElementById("hidezone").style.setProperty("display","block");
+currenttitle=document.title;
+flash_title()
+}
 
 document.addEventListener('visibilitychange', function()
 {
