@@ -360,17 +360,23 @@ default:
 
  function flash_title()
  {
+  if (countt<7){
   step++
+  countt++
   if (step==3) {step=1}         
   if (step==1) {document.title='【已解锁】 '+currenttitle}
   if (step==2) {document.title='【　　　】 '+currenttitle}
   setTimeout("flash_title()",500);
+  } else {
+}
+  
  }
 
 function passed(){
 document.getElementById("hidezone").style.setProperty("display","block");
 currenttitle=document.title;
 step=0;
+countt=0;
 flash_title()
 }
 
