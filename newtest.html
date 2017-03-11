@@ -361,25 +361,24 @@ default:
 function passed(){
 document.getElementById("hidezone").style.setProperty("display","block");
 currenttitle=document.title;
-document.title="[已解锁]"+currenttitle;
-sleep(750);
-document.title="       "+currenttitle;
-sleep(750)
-document.title="[已解锁]"+currenttitle;
-sleep(750);
-document.title="       "+currenttitle;
-sleep(750);
-document.title="[已解锁]"+currenttitle;
-sleep(1500);
-document.title=currenttitle;
+flash_title()
 }
+
+ function flash_title()
+ {
+  step++
+  if (step==3) {step=1}         
+  if (step==1) {document.title='【已解锁】 '+currenttitle}
+  if (step==2) {document.title='【　　　】 '+currenttitle}
+  setTimeout("flash_title()",500);
+ }
 
 document.addEventListener('visibilitychange', function()
 {
 	if (document.hidden)
 	{
 		OriginTitle = document.title
-		document.title = '别走嘛 (≧ω≦)/ | iHomework';
+		document.title = '别走嘛，来玩啊 (≧ω≦)/ | iHomework';
 		clearTimeout(titleTime)
 	}
 	else
