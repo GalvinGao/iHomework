@@ -323,10 +323,21 @@ var $_GET = (function(){
     }
 })();
 
-function verify(){
+var passinput=0;
+
+function verify(passinput){
 
 var cut1=$_GET['pass'];
 switch (cut1)
+{
+case "kinglee":
+    passed();
+    break;
+default:
+    break;
+}
+
+switch (passinput)
 {
 case "kinglee":
     passed();
@@ -349,6 +360,18 @@ default:
 
 function passed(){
 document.getElementById("hidezone").style.setProperty("display","block");
+currenttitle=document.title;
+document.title="[已解锁]"+currenttitle;
+sleep(750);
+document.title="       "+currenttitle;
+sleep(750)
+document.title="[已解锁]"+currenttitle;
+sleep(750);
+document.title="       "+currenttitle;
+sleep(750);
+document.title="[已解锁]"+currenttitle;
+sleep(1500);
+document.title=currenttitle;
 }
 
 document.addEventListener('visibilitychange', function()
