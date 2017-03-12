@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>iHomework - MingDe Kinglee</title>
     <script refer="refer" src="http://cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-    <script refer="refer" defer="defer" src="http://cdn.rawgit.com/AlloyTeam/AlloyLever/gh-pages/alloy_lever.min.js"></script>
+    <!--<script refer="refer" defer="defer" src="http://cdn.rawgit.com/AlloyTeam/AlloyLever/gh-pages/alloy_lever.min.js"></script>-->
     <style>
         .pace {
             font-family: "Roboto", serif;
@@ -469,12 +469,14 @@ document.addEventListener('visibilitychange', function()
     <!-- Charm/Dialog -->
 
 
-    <div data-role="charm" data-position="bottom" id="askPassword" style="padding: 25px;">
+    <div data-role="charm" data-position="top" id="askPassword" style="padding: 30px;">
         <h2>请输入密码</h2>
         <br />
-            <div class="input-control text">
-                <input type="text" id="mimacontent" placeholder="在此键入密码..." />
-            </div>
+<div class="input-control modern password iconic" data-role="input">
+    <input type="password" id="mimacontent" style="color:#111111;">
+    <span class="placeholder">[ 轻按以输入密码 ]</span>
+    <span class="icon mif-lock"></span>
+</div>
             <button class="button" onclick="mimahandle()"><span class="mif-chevron-right"></span></button>
     </div>
 
@@ -626,7 +628,7 @@ document.addEventListener('visibilitychange', function()
     </div>
     <!-- End Charm/Dialog -->
     <div class="tile-area tile-area-scheme-dark fg-white" style="height: 100%; max-height: 100% !important;">
-        <h1 class="tile-area-title" onclick="showCharms('#askPassword');">开始 › iHomework</h1>
+        <h1 class="tile-area-title"><span onclick="showCharms('#askPassword');">开始 › iH</span>omework</h1>
         <div class="tile-area-controls">
             <button class="image-button icon-right bg-transparent fg-white bg-grayDark bg-hover-dark no-border" onclick="showCharms('#iHomeworkInfo')"><span class="sub-header no-margin text-light">iHomework v4.1.5-Shh! Secret!</span><span class="icon mif-info"></span></button>
         </div>
@@ -697,7 +699,7 @@ document.addEventListener('visibilitychange', function()
                     <span class="tile-label">学校网站新闻搜索 <span class="mif-search"></span></span>
                 </div>
             </div>
-        </div>
+        </div><span id="hidezone">
         <div class="tile-group double">
             <span class="tile-group-title">常用站点 - 2</span>
             <div class="tile-container">
@@ -708,7 +710,7 @@ document.addEventListener('visibilitychange', function()
                     <span class="tile-label">视频解析 优酷/土豆/爱奇艺所有 VIP 视频均可解析 <span class="mif-search"></span></span>
                 </div>
             </div>
-        </div><span id="hidezone">
+        </div>
         <div class="tile-group double">
             <span class="tile-group-title">娱乐</span>
             <div class="tile-container">
