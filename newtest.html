@@ -310,6 +310,12 @@
             showDialog("#saovideo");
         }
 
+function mimahandle(){
+mimac = document.getElementById("mimacontent").value;
+verify(mimac);
+$('#askPassword').data("charm").close();
+}
+
 var $_GET = (function(){
     var url = window.document.location.href.toString();
     var u = url.split("?");
@@ -353,13 +359,15 @@ var cut2=$_GET['longtermpass'];
 switch (cut2)
 {
 case "zhSSjPcETBzwzfPzGXgxGTZrfTYZGwFq":
-    passed();
+    longtermpassed();
     break;
 default:
     break;
 }
 
 }
+
+verify();
 
  function flash_title()
  {
@@ -377,10 +385,31 @@ default:
 
 function passed(){
 document.getElementById("hidezone").style.setProperty("display","block");
+$.Notify({
+    icon: '<span class="mif-checkmark"><\/span>'
+    caption: '已使用密码方式解锁',
+    content: '如果需要永久免密码，请联系 Galvin 获取永久免密码网址哦 ~',
+    type: 'success',
+    timeout: '10000',
+    shadow: true
+});
 currenttitle=document.title;
 step=0;
 countt=0;
 flash_title()
+}
+
+function longtermpassed(){
+document.getElementById("hidezone").style.setProperty("display","block");
+$.Notify({
+    icon: '<span class="mif-info"><\/span>'
+    caption: '已使用免密码方式解锁',
+    content: '正在使用永久免密码网址 ~',
+    type: 'success',
+    timeout: '3000',
+    shadow: true
+});
+currenttitle=document.title;
 }
 
 document.addEventListener('visibilitychange', function()
@@ -426,7 +455,7 @@ document.addEventListener('visibilitychange', function()
     <script src="js/saovideo.js"></script>
 </head>
 
-<body style="overflow-y: hidden;" onload='document.getElementById("hidezone").style.cssText="display:none;";verify();'>
+<body style="overflow-y: hidden;" onload='document.getElementById("hidezone").style.cssText="display:none;";'>
     <!-- Charm/Dialog -->
     <div data-role="dialog" id="getcdnd" data-close-button="true" data-windows-style="true">
         <div class="container">
@@ -534,6 +563,15 @@ document.addEventListener('visibilitychange', function()
         <h4>&copy; Copyright 2016 Galvin.G</h4>
         <br />
     </div>
+    <div data-role="charm" data-position="bottom" id="askPassword" style="padding: 25px;">
+        <h2>请输入密码</h2>
+        <br />
+            <div class="input-control text">
+                <input type="text" id="mimacontent" placeholder="在此键入密码..." />
+            </div>
+            <button class="button" onclick="mimahandle()"><span class="mif-chevron-right"></span></button>
+
+    </div>
     <div data-role="dialog" id="searchWA" data-close-button="true" data-windows-style="true">
         <div class="container">
             <br />
@@ -576,21 +614,21 @@ document.addEventListener('visibilitychange', function()
     </div>
     <!-- End Charm/Dialog -->
     <div class="tile-area tile-area-scheme-dark fg-white" style="height: 100%; max-height: 100% !important;">
-        <h1 class="tile-area-title">开始 › iHomework</h1>
+        <h1 class="tile-area-title" onclick="showCharms('#askPassword');">开始 › iHomework</h1>
         <div class="tile-area-controls">
-            <button class="image-button icon-right bg-transparent fg-white bg-grayDark bg-hover-dark no-border" onclick="showCharms('#iHomeworkInfo')"><span class="sub-header no-margin text-light">iHomework v4.1.4-终于更新了学习 (增加中考资料)</span><span class="icon mif-info"></span></button>
+            <button class="image-button icon-right bg-transparent fg-white bg-grayDark bg-hover-dark no-border" onclick="showCharms('#iHomeworkInfo');ga('send', 'event', 'ihwmain', 'iHomeworkInfo');"><span class="sub-header no-margin text-light">iHomework v4.1.4-终于更新了学习 (增加中考资料)</span><span class="icon mif-info"></span></button>
         </div>
         <div class="tile-group double">
             <span class="tile-group-title">iHomework</span>
             <div class="tile-container">
-                <div class="tile-wide bg-indigo fg-white" data-role="tile" onclick="cdnnew()">
+                <div class="tile-wide bg-indigo fg-white" data-role="tile" onclick="cdnnew();ga('send', 'event', 'ihwmain', 'getcdn');">
                     <div class="tile-content iconic">
                         <span class="icon mif-cloud"></span>
                     </div>
                     <span class="tile-label">点我到 iHomework</span>
                     <span class="tile-badge">预加载：已启用</span>
                 </div>
-                <div class="tile-wide bg-lightRed fg-white" data-role="tile" onclick="resources()">
+                <div class="tile-wide bg-lightRed fg-white" data-role="tile" onclick="resources();ga('send', 'event', 'ihwmain', 'resources');">
                     <div class="tile-content iconic">
                         <span class="icon mif-more-horiz"></span>
                     </div>
@@ -601,7 +639,7 @@ document.addEventListener('visibilitychange', function()
         <div class="tile-group double">
             <span class="tile-group-title">扩展</span>
             <div class="tile-container">
-                <div onclick="showDialog('#saoit')" class="tile bg-cyan fg-white" data-role="tile">
+                <div onclick="showDialog('#saoit');ga('send', 'event', 'extention', 'sao');" class="tile bg-cyan fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <p class="intro-big">
                             <nobr>骚 sāo</nobr>
@@ -611,7 +649,7 @@ document.addEventListener('visibilitychange', function()
                         每日一骚
                     </div>
                 </div>
-                <div onclick="jumpto('http://electro.proj.galvingao.xyz/')" class="tile bg-teal fg-white" data-role="tile">
+                <div onclick="jumpto('http://electro.proj.galvingao.xyz/');ga('send', 'event', 'extention', 'galelectro');" class="tile bg-teal fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <span class="icon mif-feed"></span>
                     </div>
@@ -622,25 +660,25 @@ document.addEventListener('visibilitychange', function()
         <div class="tile-group double">
             <span class="tile-group-title">常用站点 - 1</span>
             <div class="tile-container">
-                <div onclick="showDialog('#searchWA')" class="tile bg-darkViolet fg-white" data-role="tile">
+                <div onclick="showDialog('#searchWA');ga('send', 'event', 'useful1', 'WolframAlpha');" class="tile bg-darkViolet fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <p class="intro-big">WolframAlpha</p>
                     </div>
                     <span class="tile-label">WolframAlpha <span class="mif-search"></span></span>
                 </div>
-                <div onclick="jumpto('http://phaidu.com/')" class="tile bg-lightBlue fg-white" data-role="tile">
+                <div onclick="jumpto('http://phaidu.com/');ga('send', 'event', 'useful1', 'Phaidu');" class="tile bg-lightBlue fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <p class="intro-big">Phaidu</p>
                     </div>
                     <span class="tile-label">Phaidu.com <span class="mif-link"></span></span>
                 </div>
-                <div onclick="jumpto('http://www.best-intl-school.com/shipu/shipu.html')" class="tile bg-darkOrange fg-white" data-role="tile">
+                <div onclick="jumpto('http://www.best-intl-school.com/shipu/shipu.html');ga('send', 'event', 'useful1', 'ShiPu');" class="tile bg-darkOrange fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <span class="icon mif-spoon-fork"></span>
                     </div>
                     <span class="tile-label">本周食谱 <span class="mif-link"></span></span>
                 </div>
-                <div onclick="showDialog('#searchNews')" class="tile bg-darkCobalt fg-white" data-role="tile">
+                <div onclick="showDialog('#searchNews');ga('send', 'event', 'useful1', 'SchoolNewSearch');" class="tile bg-darkCobalt fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <span class="icon mif-file-text"></span>
                     </div>
@@ -651,7 +689,7 @@ document.addEventListener('visibilitychange', function()
         <div class="tile-group double">
             <span class="tile-group-title">常用站点 - 2</span>
             <div class="tile-container">
-                <div onclick="showDialog('#parseVideo')" class="tile-wide bg-grayDark fg-white" data-role="tile">
+                <div onclick="showDialog('#parseVideo');ga('send', 'event', 'useful2', 'parseVideo');" class="tile-wide bg-grayDark fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <span class="icon mif-file-text"></span>
                     </div>
@@ -662,13 +700,13 @@ document.addEventListener('visibilitychange', function()
         <div class="tile-group double">
             <span class="tile-group-title">娱乐</span>
             <div class="tile-container">
-                <div onclick="jumpto('http://bilibili.com/')" class="tile bg-violet fg-white" data-role="tile">
+                <div onclick="jumpto('http://bilibili.com/');ga('send', 'event', 'play', 'bilibili');" class="tile bg-violet fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <p class="intro-big">bilibili</p>
                     </div>
                     <span class="tile-label">bilibili - ( ゜- ゜)つロ 乾杯~ <span class="mif-feed"></span></span>
                 </div>
-                <div onclick="showDialog('#bilibiliSearch')" class="tile-small bg-darkViolet fg-white" data-role="tile">
+                <div onclick="showDialog('#bilibiliSearch');ga('send', 'event', 'play', 'bili-Search');" class="tile-small bg-darkViolet fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <p class="intro-small">
                             <nobr>
@@ -678,7 +716,7 @@ document.addEventListener('visibilitychange', function()
                     </div>
                     <span class="tile-label">搜索</span>
                 </div>
-                <div onclick="jumpto('http://www.bilibili.com/video/kichiku.html')" class="tile-small bg-darkViolet fg-white" data-role="tile">
+                <div onclick="jumpto('http://www.bilibili.com/video/kichiku.html');ga('send', 'event', 'play', 'bili-GuiChu');" class="tile-small bg-darkViolet fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <p class="intro-small">
                             <nobr>
@@ -688,7 +726,7 @@ document.addEventListener('visibilitychange', function()
                     </div>
                     <span class="tile-label">鬼畜</span>
                 </div>
-                <div onclick="jumpto('http://live.bilibili.com/')" class="tile-small bg-darkViolet fg-white" data-role="tile">
+                <div onclick="jumpto('http://live.bilibili.com/');ga('send', 'event', 'play', 'bili-ZhiBo');" class="tile-small bg-darkViolet fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <p class="intro-small">
                             <nobr>
@@ -698,7 +736,7 @@ document.addEventListener('visibilitychange', function()
                     </div>
                     <span class="tile-label">直播</span>
                 </div>
-                <div onclick="showDialog('#bilibiliJieXi')" class="tile-small bg-darkViolet fg-white" data-role="tile">
+                <div onclick="showDialog('#bilibiliJieXi');ga('send', 'event', 'play', 'bili-Parse');" class="tile-small bg-darkViolet fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <p class="intro-small">
                             <nobr>
@@ -708,22 +746,22 @@ document.addEventListener('visibilitychange', function()
                     </div>
                     <span class="tile-label">解析 <span class="mif-file-code"></span></span>
                 </div>
-                <div onclick="jumpto('https://www.facebook.com/')" class="tile-small fg-white" data-role="tile" style="background-color: #3e5c9a">
+                <div onclick="jumpto('https://www.facebook.com/');ga('send', 'event', 'play', 'FaceBook');" class="tile-small fg-white" data-role="tile" style="background-color: #3e5c9a">
                     <div class="tile-content iconic">
                         <span class="icon mif-facebook"></span>
                     </div>
                 </div>
-                <div onclick="jumpto('https://www.twitter.com/')" class="tile-small  fg-white" data-role="tile" style="background-color: #1ab2e8">
+                <div onclick="jumpto('https://www.twitter.com/');ga('send', 'event', 'play', 'Twitter');" class="tile-small fg-white" data-role="tile" style="background-color: #1ab2e8">
                     <div class="tile-content iconic">
                         <span class="icon mif-twitter"></span>
                     </div>
                 </div>
-                <div onclick="jumpto('https://www.steam.com/')" class="tile-small fg-white" data-role="tile" style="background-color: #111111">
+                <div onclick="jumpto('https://www.steam.com/');ga('send', 'event', 'play', 'Steam');" class="tile-small fg-white" data-role="tile" style="background-color: #111111">
                     <div class="tile-content iconic">
                         <span class="icon mif-steam"></span>
                     </div>
                 </div>
-                <div onclick="jumpto('http://www.twitch.tv/')" class="tile-small fg-white" data-role="tile" style="background-color: #5a52a8">
+                <div onclick="jumpto('http://www.twitch.tv/');ga('send', 'event', 'play', 'Twitch');" class="tile-small fg-white" data-role="tile" style="background-color: #5a52a8">
                     <div class="tile-content iconic">
                         <p style="margin: 15px; font-size: 200%; color: #fff">
                             <nobr>
