@@ -134,6 +134,10 @@
         div {
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         }
+
+        .taphl {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+        }
         
         .intro-big {
             margin: 25px;
@@ -395,7 +399,7 @@ document.getElementById("mimacontent").className="success";
 $.Notify({
     icon: '<span class="mif-checkmark"></span>',
     caption: '已使用密码方式解锁<br>',
-    content: '如果需要永久免密码，请联系 Galvin 获取永久免密码网址哦 ~',
+    content: '若需免密码网址，请联系 Galvin 哦 ~',
     type: 'success',
     timeout: '10000',
     shadow: true
@@ -411,7 +415,7 @@ document.getElementById("hidezone").style.setProperty("display","block");
 $.Notify({
     icon: '<span class="mif-info"></span>',
     caption: '已使用免密码方式解锁<br>',
-    content: '正在使用永久免密码链接 ~',
+    content: '正在使用免密码链接 ~',
     type: 'info',
     timeout: '3000',
     shadow: true
@@ -472,10 +476,10 @@ document.addEventListener('visibilitychange', function()
     <div data-role="charm" data-position="top" id="askPassword" style="padding: 30px;">
         <h2>请输入密码</h2>
         <br />
-<div class="input-control modern password iconic" data-role="input">
-    <input type="password" id="mimacontent" style="color:#111111;">
-    <span class="placeholder">[ 轻按以输入密码 ]</span>
-    <span class="icon mif-lock"></span>
+<div class="input-control modern password iconic" data-role="input" style="color:#eeeeee;">
+    <input type="password" id="mimacontent" style="color:#eeeeee;">
+    <span class="placeholder" style="color:#eeeeee;">[ 轻按以输入密码 ]</span>
+    <span class="icon mif-lock" style="color:#eeeeee;"></span>
 </div>
             <button class="button" onclick="mimahandle()"><span class="mif-chevron-right"></span></button>
     </div>
@@ -496,7 +500,7 @@ document.addEventListener('visibilitychange', function()
         <div class="container"><br>
             <h1 style="line-height: 120%;">中考资料</h1>
             <br>
-            <h4 style="line-height: 160%;">
+            <h4 style="line-height: 160%;" class="taphl">
 <span class="mif-file-pdf"></span>&nbsp;<span style="color:#1976d2" onclick="jumpto('http://oji8ixlnf.bkt.clouddn.com/ref-wk03/ChiBiology-Ref_01.pdf');">2017 生物实验操作练习题</span>&nbsp;<span style="color:#757575;font-size:85%;">466.1 KB</span><br>
 <span class="mif-file-pdf"></span>&nbsp;<span style="color:#1976d2" onclick="jumpto('http://oji8ixlnf.bkt.clouddn.com/ref-wk04/ChiPhysics-Ref_01.pdf');">2017 理化生实验套题</span>&nbsp;<span style="color:#757575;font-size:85%;">15.1 MB</span>&nbsp;<span style="color:#e32f2f;font-size:75%;">加载缓慢，请耐心等待</span><br>
 </h4>
