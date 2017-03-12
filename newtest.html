@@ -323,6 +323,13 @@ var $_GET = (function(){
     }
 })();
 
+function mimahandle(){
+mimac = document.getElementById("mimacontent").value;
+verify(mimac);
+$('#askPassword').data("charm").close();
+}
+
+
 var passinput=0;
 
 function verify(passinput){
@@ -331,6 +338,9 @@ var cut1=$_GET['pass'];
 switch (cut1)
 {
 case "kinglee":
+    passed();
+    break;
+case "Kinglee":
     passed();
     break;
 default:
@@ -342,7 +352,11 @@ switch (passinput)
 case "kinglee":
     passed();
     break;
+case "Kinglee":
+    passed();
+    break;
 default:
+    document.getElementById("mimacontent").className="error";
     break;
 }
 
@@ -350,7 +364,7 @@ var cut2=$_GET['longtermpass'];
 switch (cut2)
 {
 case "zhSSjPcETBzwzfPzGXgxGTZrfTYZGwFq":
-    passed();
+    longtermpassed();
     break;
 default:
     break;
@@ -374,10 +388,32 @@ default:
 
 function passed(){
 document.getElementById("hidezone").style.setProperty("display","block");
+document.getElementById("mimacontent").className="success";
+$.Notify({
+    icon: '<span class="mif-checkmark"></span>',
+    caption: '已使用密码方式解锁<br>',
+    content: '如果需要永久免密码，请联系 Galvin 获取永久免密码网址哦 ~',
+    type: 'success',
+    timeout: '10000',
+    shadow: true
+});
 currenttitle=document.title;
 step=0;
 countt=0;
 flash_title()
+}
+
+function longtermpassed(){
+document.getElementById("hidezone").style.setProperty("display","block");
+$.Notify({
+    icon: '<span class="mif-info"></span>',
+    caption: '已使用免密码方式解锁<br>',
+    content: '正在使用永久免密码链接 ~',
+    type: 'info',
+    timeout: '3000',
+    shadow: true
+});
+currenttitle=document.title;
 }
 
 document.addEventListener('visibilitychange', function()
@@ -425,7 +461,20 @@ document.addEventListener('visibilitychange', function()
 </head>
 
 <body style="overflow-y: hidden;" onload='document.getElementById("hidezone").style.cssText="display:none;";verify();'>
+
+
     <!-- Charm/Dialog -->
+
+
+    <div data-role="charm" data-position="bottom" id="askPassword" style="padding: 25px;">
+        <h2>请输入密码</h2>
+        <br />
+            <div class="input-control text">
+                <input type="text" id="mimacontent" placeholder="在此键入密码..." />
+            </div>
+            <button class="button" onclick="mimahandle()"><span class="mif-chevron-right"></span></button>
+    </div>
+
     <div data-role="dialog" id="getcdnd" data-close-button="true" data-windows-style="true">
         <div class="container">
             <br />
@@ -574,7 +623,7 @@ document.addEventListener('visibilitychange', function()
     </div>
     <!-- End Charm/Dialog -->
     <div class="tile-area tile-area-scheme-dark fg-white" style="height: 100%; max-height: 100% !important;">
-        <h1 class="tile-area-title">开始 › iHomework</h1>
+        <h1 class="tile-area-title" onclick="showCharms('#askPassword');">开始 › iHomework</h1>
         <div class="tile-area-controls">
             <button class="image-button icon-right bg-transparent fg-white bg-grayDark bg-hover-dark no-border" onclick="showCharms('#iHomeworkInfo')"><span class="sub-header no-margin text-light">iHomework v4.1.4-终于更新了学习 (增加中考资料)</span><span class="icon mif-info"></span></button>
         </div>
