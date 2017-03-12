@@ -12,8 +12,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>iHomework - MingDe Kinglee</title>
     <script refer="refer" src="http://cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-    <!--<script refer="refer" defer="defer" src="http://cdn.rawgit.com/AlloyTeam/AlloyLever/gh-pages/alloy_lever.min.js"></script>-->
-
+    <script refer="refer" defer="defer" src="http://cdn.rawgit.com/AlloyTeam/AlloyLever/gh-pages/alloy_lever.min.js"></script>
+    <link href="http://ofcdecuts.bkt.clouddn.com/metro.css?v=201612050809" rel="stylesheet" />
+    <link href="http://cdn.bootcss.com/metro/3.0.15/css/metro-icons.min.css" rel="stylesheet" />
+    <link href="http://cdn.bootcss.com/metro/3.0.15/css/metro-colors.min.css" rel="stylesheet" />
     <style>
         .pace {
             font-family: "Roboto", serif;
@@ -367,26 +369,26 @@ default:
 
 verify();
 
- function flash_title()
- {
+ function flash_title()
+ {
   if (countt<7){
-  step++
+  step++
   countt++
-  if (step==3) {step=1}         
-  if (step==1) {document.title='【已解锁】 '+currenttitle}
-  if (step==2) {document.title='【　　　】 '+currenttitle}
-  setTimeout("flash_title()",500);
+  if (step==3) {step=1}         
+  if (step==1) {document.title='【已解锁】 '+currenttitle}
+  if (step==2) {document.title='【　　　】 '+currenttitle}
+  setTimeout("flash_title()",500);
   } else {
 }
   
- }
+ }
 
 function passed(){
 document.getElementById("hidezone").style.setProperty("display","block");
 $.Notify({
     icon: '<span class="mif-checkmark"><\/span>'
     caption: '已使用密码方式解锁',
-    content: '如果需要永久免密码，请联系 Galvin 获取永久免密码网址哦',
+    content: '如果需要永久免密码，请联系 Galvin 获取永久免密码网址哦 ~',
     type: 'success',
     timeout: '10000',
     shadow: true
@@ -402,7 +404,7 @@ document.getElementById("hidezone").style.setProperty("display","block");
 $.Notify({
     icon: '<span class="mif-info"><\/span>'
     caption: '已使用免密码方式解锁',
-    content: '正在使用永久免密码网址',
+    content: '正在使用永久免密码网址 ~',
     type: 'success',
     timeout: '3000',
     shadow: true
