@@ -287,6 +287,7 @@
 
         function cdnnew() {
             showDialog("#getcdnd");
+            ga('send', 'event', 'ihwmain', 'getcdn');
             getcdn();
         }
 
@@ -388,7 +389,7 @@ document.getElementById("hidezone").style.setProperty("display","block");
 $.Notify({
     icon: '<span class="mif-checkmark"><\/span>'
     caption: '已使用密码方式解锁',
-    content: '如果需要永久免密码，请联系 Galvin 获取永久免密码网址哦 ~',
+    content: '如果需要永久免密码，请联系 Galvin 获取永久免密码网址哦',
     type: 'success',
     timeout: '10000',
     shadow: true
@@ -404,7 +405,7 @@ document.getElementById("hidezone").style.setProperty("display","block");
 $.Notify({
     icon: '<span class="mif-info"><\/span>'
     caption: '已使用免密码方式解锁',
-    content: '正在使用永久免密码网址 ~',
+    content: '正在使用永久免密码网址',
     type: 'success',
     timeout: '3000',
     shadow: true
@@ -621,7 +622,7 @@ document.addEventListener('visibilitychange', function()
         <div class="tile-group double">
             <span class="tile-group-title">iHomework</span>
             <div class="tile-container">
-                <div class="tile-wide bg-indigo fg-white" data-role="tile" onclick="cdnnew();ga('send', 'event', 'ihwmain', 'getcdn');">
+                <div class="tile-wide bg-indigo fg-white" data-role="tile" onclick="cdnnew()">
                     <div class="tile-content iconic">
                         <span class="icon mif-cloud"></span>
                     </div>
