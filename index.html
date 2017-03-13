@@ -12,7 +12,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>iHomework - MingDe Kinglee</title>
     <script refer="refer" src="http://cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-    <!--<script refer="refer" defer="defer" src="./js/alloylever.min.js"></script>-->
+    <link href="http://cdn.bootcss.com/metro/3.0.15/css/metro-icons.min.css" rel="stylesheet" />
+    <link href="http://cdn.bootcss.com/metro/3.0.15/css/metro-colors.min.css" rel="stylesheet" />
+    <link href="http://ofcdecuts.bkt.clouddn.com/metro.css?v=201612050809" rel="stylesheet" />
+    <!--<script refer="refer" defer="defer" src="http://cdn.rawgit.com/AlloyTeam/AlloyLever/gh-pages/alloy_lever.min.js"></script>-->
     <style>
         .pace {
             font-family: "Roboto", serif;
@@ -133,6 +136,10 @@
         a,
         div {
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        .taphl {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
         }
         
         .intro-big {
@@ -307,6 +314,133 @@
             showDialog("#saovideo");
         }
 
+var $_GET = (function(){
+    var url = window.document.location.href.toString();
+    var u = url.split("?");
+    if(typeof(u[1]) == "string"){
+        u = u[1].split("&");
+        var get = {};
+        for(var i in u){
+            var j = u[i].split("=");
+            get[j[0]] = j[1];
+        }
+        return get;
+    } else {
+        return {};
+    }
+})();
+
+function mimahandle(){
+mimac = document.getElementById("mimacontent").value;
+verify(mimac);
+$('#askPassword').data("charm").close();
+}
+
+
+var passinput=0;
+
+function verify(passinput){
+
+
+/*
+var get1 = $_GET['pass'];
+length1 = get1.length;
+if (length1 > 0) {
+$.Notify({
+    icon: '<span class="mif-warning"></span>',
+    caption: 'pass 方式已弃用<br>',
+    content: '请联系 Galvin。',
+    type: 'success',
+    keepopen: true,
+    shadow: true
+});
+};
+*/
+
+switch (passinput)
+{
+case "kinglee":
+    passed();
+    break;
+case "Kinglee":
+    passed();
+    break;
+default:
+    document.getElementById("mimacontent").className="error";
+    break;
+}
+
+var cut2=$_GET['longtermpass'];
+switch (cut2)
+{
+case "zhSSjPcETBzwzfPzGXgxGTZrfTYZGwFq":
+    longtermpassed();
+    break;
+default:
+    break;
+}
+
+}
+
+ function flash_title()
+ {
+  if (countt<7){
+  step++
+  countt++
+  if (step==3) {step=1}         
+  if (step==1) {document.title='【已解锁】 '+currenttitle}
+  if (step==2) {document.title='【　　　】 '+currenttitle}
+  setTimeout("flash_title()",500);
+  } else {
+}
+  
+ }
+
+function passed(){
+document.getElementById("hidezone").style.setProperty("display","block");
+document.getElementById("mimacontent").className="success";
+$.Notify({
+    icon: '<span class="mif-checkmark"></span>',
+    caption: '已使用密码方式解锁<br>',
+    content: '若需免密码网址，请联系 Galvin 哦 ~',
+    type: 'success',
+    timeout: '10000',
+    shadow: true
+});
+currenttitle=document.title;
+step=0;
+countt=0;
+flash_title()
+}
+
+function longtermpassed(){
+document.getElementById("hidezone").style.setProperty("display","block");
+$.Notify({
+    icon: '<span class="mif-info"></span>',
+    caption: '已使用免密码方式解锁<br>',
+    content: '正在使用免密码链接 ~',
+    type: 'info',
+    timeout: '3000',
+    shadow: true
+});
+currenttitle=document.title;
+}
+
+document.addEventListener('visibilitychange', function()
+{
+	if (document.hidden)
+	{
+		OriginTitle = document.title
+		document.title = '别走嘛，来玩啊 (≧ω≦)/ | iHomework';
+		clearTimeout(titleTime)
+	}
+	else
+	{
+		document.title = OriginTitle
+	}
+});
+
+
     </script>
     <script>
         var bodyBgs = [];
@@ -336,8 +470,23 @@
     <script src="js/ihi.js"></script>
 </head>
 
-<body style="overflow-y: hidden;">
+<body style="overflow-y: hidden;" onload='document.getElementById("hidezone").style.cssText="display:none;";verify();'>
+
+
     <!-- Charm/Dialog -->
+
+
+    <div data-role="charm" data-position="top" id="askPassword" style="padding: 30px;">
+        <h2>请输入密码</h2>
+        <br />
+<div class="input-control modern password iconic" data-role="input" style="color:#eeeeee;">
+    <input type="password" id="mimacontent" style="color:#eeeeee;">
+    <span class="placeholder" style="color:#eeeeee;">[ 轻按以输入密码 ]</span>
+    <span class="icon mif-lock" style="color:#eeeeee;"></span>
+</div>
+            <button class="button" onclick="mimahandle()"><span class="mif-chevron-right"></span></button>
+    </div>
+
     <div data-role="dialog" id="getcdnd" data-close-button="true" data-windows-style="true">
         <div class="container">
             <br />
@@ -351,12 +500,13 @@
         </div>
     </div>
     <div data-role="dialog" id="resources" data-close-button="true" data-windows-style="true">
-        <div class="container"><br><br>
+        <div class="container"><br>
             <h1 style="line-height: 120%;">中考资料</h1>
             <br>
-            <h4 style="line-height: 160%;">
+            <h4 style="line-height: 160%;" class="taphl">
 <span class="mif-file-pdf"></span>&nbsp;<span style="color:#1976d2" onclick="jumpto('http://oji8ixlnf.bkt.clouddn.com/ref-wk03/ChiBiology-Ref_01.pdf');">2017 生物实验操作练习题</span>&nbsp;<span style="color:#757575;font-size:85%;">466.1 KB</span><br>
-<span class="mif-file-pdf"></span>&nbsp;<span style="color:#1976d2" onclick="jumpto('http://oji8ixlnf.bkt.clouddn.com/ref-wk04/ChiPhysics-Ref_01.pdf');">2017 理化生实验套题</span>&nbsp;<span style="color:#757575;font-size:85%;">15.1 MB</span>&nbsp;<span style="color:#e32f2f;font-size:75%;">加载缓慢，请耐心等待</span><br>
+<span class="mif-file-pdf"></span>&nbsp;<span style="color:#559952" onclick="jumpto('http://oji8ixlnf.bkt.clouddn.com/ref-wk04/ChiPhysics-Ref_01-Compressed.pdf');">2017 理化生实验套题【速度优化版，推荐】</span>&nbsp;<span style="color:#757575;font-size:85%;">5.4 MB</span>&nbsp;<span style="color:#e32f2f;font-size:75%;">加载更快，质量非常好，推荐</span><br>
+<span class="mif-file-pdf" style="font-size:90%;"></span>&nbsp;<span style="color:#992652;font-size:90%;" onclick="jumpto('http://oji8ixlnf.bkt.clouddn.com/ref-wk04/ChiPhysics-Ref_01.pdf');">2017 理化生实验套题【备用版】</span>&nbsp;<span style="color:#757575;font-size:85%;">15.1 MB</span>&nbsp;<span style="color:#e32f2f;font-size:75%;">请在速度优化版看不清字时再使用此版本。加载缓慢，请耐心等待</span><br>
 </h4>
             <br />
         </div>
@@ -486,9 +636,9 @@
     </div>
     <!-- End Charm/Dialog -->
     <div class="tile-area tile-area-scheme-dark fg-white" style="height: 100%; max-height: 100% !important;">
-        <h1 class="tile-area-title">开始 › iHomework</h1>
+        <h1 class="tile-area-title"><span onclick="showCharms('#askPassword');">开始 › iH</span>omework</h1>
         <div class="tile-area-controls">
-            <button class="image-button icon-right bg-transparent fg-white bg-grayDark bg-hover-dark no-border" onclick="showCharms('#iHomeworkInfo')"><span class="sub-header no-margin text-light">iHomework v4.1.4-终于更新了学习 (增加中考资料)</span><span class="icon mif-info"></span></button>
+            <button class="image-button icon-right bg-transparent fg-white bg-grayDark bg-hover-dark no-border" onclick="showCharms('#iHomeworkInfo')"><span class="sub-header no-margin text-light">iHomework v4.1.5-Shh! Secret!</span><span class="icon mif-info"></span></button>
         </div>
         <div class="tile-group double">
             <span class="tile-group-title">iHomework</span>
@@ -557,7 +707,7 @@
                     <span class="tile-label">学校网站新闻搜索 <span class="mif-search"></span></span>
                 </div>
             </div>
-        </div>
+        </div><span id="hidezone">
         <div class="tile-group double">
             <span class="tile-group-title">常用站点 - 2</span>
             <div class="tile-container">
@@ -697,12 +847,9 @@
                 </div>
                 
             </div>
-        </div>
+        </div></span>
     </div>
-    <link href="http://cdn.bootcss.com/metro/3.0.15/css/metro-icons.min.css" rel="stylesheet" />
-    <link href="http://cdn.bootcss.com/metro/3.0.15/css/metro-colors.min.css" rel="stylesheet" />
     <script src="http://cdn.bootcss.com/metro/3.0.15/js/metro.min.js"></script>
-    <link href="http://ofcdecuts.bkt.clouddn.com/metro.css?v=201612050809" rel="stylesheet" />
     <script>
         (function(T, h, i, n, k, P, a, g, e) {
             g = function() {
