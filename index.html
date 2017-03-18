@@ -493,12 +493,20 @@ document.addEventListener('visibilitychange', function()
     <script src="js/ihi.js"></script>
 </head>
 
-<body style="overflow-y: hidden;" onload='document.getElementById("hidezone").style.cssText="display:none;";verify();'>
+<body style="overflow-y: hidden;" onload='document.getElementById("hidezone").style.cssText="display:none;";verify();showDialog("#notice");'>
 
 
     <!-- Charm/Dialog -->
 
-
+    <div data-role="dialog" id="notice" data-close-button="true" data-windows-style="true" class="bg-lightRed">
+        <div class="container fg-white">
+            <br />
+            <h1>注意</h1>
+            <br />
+<h4>下周<strong font-size:120%;>只上五天</strong>，家长星期五 5:50 接！！！</h5>
+            <br />
+        </div>
+    </div>
     <div data-role="charm" data-position="top" id="askPassword" style="padding: 30px;">
         <h2>请输入密码</h2>
         <br />
