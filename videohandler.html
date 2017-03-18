@@ -5,7 +5,7 @@
     <title>VideoHandler - iHomework</title>
     <link href="http://cdn.bootcss.com/metro/3.0.15/css/metro-icons.min.css" rel="stylesheet" />
     <link href="http://cdn.bootcss.com/metro/3.0.15/css/metro-colors.min.css" rel="stylesheet" />
-    <link href="http://ofcdecuts.bkt.clouddn.com/metro.css?v=201612050809" rel="stylesheet" />
+    <link href="http://main.qn.iblueg.cn/metro.css?v=201612050809" rel="stylesheet" />
     <script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/metro/3.0.15/js/metro.min.js"></script>
     <!--<script defer="defer" src="https://raw.githubusercontent.com/AlloyTeam/AlloyLever/gh-pages/alloy_lever.min.js"></script>-->
@@ -15,21 +15,21 @@
 <body>
     <script>
         var bodyBgs = [];
-        bodyBgs[0] = "http://oi5kxcwmp.bkt.clouddn.com/558831/835d4ce148fdfaf7.jpg";
-        bodyBgs[1] = "http://oi5kxcwmp.bkt.clouddn.com/558831/c76006911f353711.jpg";
-        bodyBgs[2] = "http://oi5kxcwmp.bkt.clouddn.com/558831/79814d7c9e8f5841.jpg";
-        bodyBgs[3] = "http://oi5kxcwmp.bkt.clouddn.com/558831/a6d06133fc058e7a.jpg";
-        bodyBgs[4] = "http://oi5kxcwmp.bkt.clouddn.com/558831/b37ef125793b7cf6.jpg";
-        bodyBgs[5] = "http://oi5kxcwmp.bkt.clouddn.com/558831/4fc3668c5eebe5d3.jpg";
-        bodyBgs[6] = "http://oi5kxcwmp.bkt.clouddn.com/558831/9ad99a82e3269b84.jpg";
-        bodyBgs[7] = "http://oi5kxcwmp.bkt.clouddn.com/558831/19e72d2829f4f877.jpg";
-        bodyBgs[8] = "http://oi5kxcwmp.bkt.clouddn.com/558831/6dcfdca90516c0ff.jpg";
-        bodyBgs[9] = "http://oi5kxcwmp.bkt.clouddn.com/558831/b37ef125793b7cf6.jpg";
-        bodyBgs[10] = "http://oi5kxcwmp.bkt.clouddn.com/558831/004bbed3afee6f26.jpg";
-        bodyBgs[11] = "http://oi5kxcwmp.bkt.clouddn.com/558831/850a10070db56310.jpg";
-        bodyBgs[12] = "http://oi5kxcwmp.bkt.clouddn.com/558831/aa18a9ecfa2596bf.jpg";
-        bodyBgs[13] = "http://oi5kxcwmp.bkt.clouddn.com/558831/01019265e4b84e85.jpg";
-        bodyBgs[14] = "http://oi5kxcwmp.bkt.clouddn.com/558831/bbc8321cebdc0df2.jpg";
+        bodyBgs[0] = "http://image.qn.iblueg.cn/558831/835d4ce148fdfaf7.jpg";
+        bodyBgs[1] = "http://image.qn.iblueg.cn/558831/c76006911f353711.jpg";
+        bodyBgs[2] = "http://image.qn.iblueg.cn/558831/79814d7c9e8f5841.jpg";
+        bodyBgs[3] = "http://image.qn.iblueg.cn/558831/a6d06133fc058e7a.jpg";
+        bodyBgs[4] = "http://image.qn.iblueg.cn/558831/b37ef125793b7cf6.jpg";
+        bodyBgs[5] = "http://image.qn.iblueg.cn/558831/4fc3668c5eebe5d3.jpg";
+        bodyBgs[6] = "http://image.qn.iblueg.cn/558831/9ad99a82e3269b84.jpg";
+        bodyBgs[7] = "http://image.qn.iblueg.cn/558831/19e72d2829f4f877.jpg";
+        bodyBgs[8] = "http://image.qn.iblueg.cn/558831/6dcfdca90516c0ff.jpg";
+        bodyBgs[9] = "http://image.qn.iblueg.cn/558831/b37ef125793b7cf6.jpg";
+        bodyBgs[10] = "http://image.qn.iblueg.cn/558831/004bbed3afee6f26.jpg";
+        bodyBgs[11] = "http://image.qn.iblueg.cn/558831/850a10070db56310.jpg";
+        bodyBgs[12] = "http://image.qn.iblueg.cn/558831/aa18a9ecfa2596bf.jpg";
+        bodyBgs[13] = "http://image.qn.iblueg.cn/558831/01019265e4b84e85.jpg";
+        bodyBgs[14] = "http://image.qn.iblueg.cn/558831/bbc8321cebdc0df2.jpg";
         var randomBgIndex = Math.round(Math.random() * 14);
 
         document.write('<style>body{background:url(' + bodyBgs[randomBgIndex] + ')}</style>');
@@ -39,12 +39,12 @@
     <script>
         window.onload = function() {
             var thisurl = document.URL;
-            //var thisurl = "http://ihomework.top/videohandler.html?url=http://ofcdecuts.bkt.clouddn.com/Preview_20161106_2103.mp4"
+            //var thisurl = "http://ihomework.top/videohandler.html?url=http://main.qn.iblueg.cn/Preview_20161106_2103.mp4"
             var cuturl = thisurl.substr(43);
             var swidth = screen.height;
             var sheight = screen.width - 97 * (screen.width / 768);
             //alert(swidth + "." + sheight);
-            //var cuturl = "http://ofcdecuts.bkt.clouddn.com/Preview_20161106_2103.mp4";
+            //var cuturl = "http://main.qn.iblueg.cn/Preview_20161106_2103.mp4";
             var writeit = "<video src='" + cuturl + "' width='" + swidth + "' height='" + sheight + "' controls='controls'>";
             document.getElementById("videoplay").innerHTML = writeit;
         }
