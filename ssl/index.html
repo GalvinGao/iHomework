@@ -14,7 +14,7 @@
     <script refer="refer" src="https://cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
     <link href="https://cdn.bootcss.com/metro/3.0.15/css/metro-icons.min.css" rel="stylesheet" />
     <link href="https://cdn.bootcss.com/metro/3.0.15/css/metro-colors.min.css" rel="stylesheet" />
-    <link href="https://ihw-doc.qn.iblueg.cn/metro.css?v=201612050809" rel="stylesheet" />
+    <link href="https://ihw-doc.qn.iblueg.cn/metro.css?v=201703201831" rel="stylesheet" />
     <!--<script refer="refer" defer="defer" src="https://cdn.rawgit.com/AlloyTeam/AlloyLever/gh-pages/alloy_lever.min.js"></script>-->
 <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png?v=00r659EweM">
 <link rel="icon" type="image/png" href="/icons/favicon-32x32.png?v=00r659EweM" sizes="32x32">
@@ -295,8 +295,8 @@ background: linear-gradient(to bottom, #30E8BF , #FF8235); /* W3C, IE 10+/ Edge,
         quickfetch();
 
         function getcdn() {
-            $.get("http://ihomework.top/weeknum.txt", function(data) {
-                var url = "http://ihw-doc.qn.iblueg.cn/iHomework-wkhw_wk" + data + ".pdf";
+            $.get("https://ihomework.top/weeknum.txt", function(data) {
+                var url = "https://ihw-doc.qn.iblueg.cn/iHomework-wkhw_wk" + data + ".pdf";
                 window.location = url;
             });
         }
