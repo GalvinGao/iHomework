@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8" />
+    <meta name="title" content="/ iHomework - by Galvin /" />
+    <meta name="description" content="iHomework 是全世界第一大(教你如何不好好)学习的网站，~顺便~ 发布作业。xD。" />
+    <meta name="keywords" content="ihomework,iHomework,kinglee,勤礼,勤礼外语中学,khs,贝斯特,best,zhengzhou,Kinglee,School,study,mingde,明德" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Cache-Control" content="public" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>iHomework - MingDe Kinglee</title>
+    <script refer="refer" src="https://cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="https://cdn.bootcss.com/metro/3.0.15/css/metro-icons.min.css" rel="stylesheet" />
+    <link href="https://cdn.bootcss.com/metro/3.0.15/css/metro-colors.min.css" rel="stylesheet" />
+    <link href="https://ihw-doc.qn.iblueg.cn/metro.css?v=201612050809" rel="stylesheet" />
+    <!--<script refer="refer" defer="defer" src="https://cdn.rawgit.com/AlloyTeam/AlloyLever/gh-pages/alloy_lever.min.js"></script>-->
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png?v=00r659EweM">
+<link rel="icon" type="image/png" href="/icons/favicon-32x32.png?v=00r659EweM" sizes="32x32">
+<link rel="icon" type="image/png" href="/icons/favicon-16x16.png?v=00r659EweM" sizes="16x16">
+<link rel="manifest" href="/icons/manifest.json?v=00r659EweM">
+<link rel="mask-icon" href="/icons/safari-pinned-tab.svg?v=00r659EweM" color="#5bbad5">
+<link rel="shortcut icon" href="/icons/favicon.ico?v=00r659EweM">
+<meta name="apple-mobile-web-app-title" content="iHomework">
+<meta name="application-name" content="iHomework">
+<meta name="msapplication-TileColor" content="#ff8235">
+<meta name="msapplication-TileImage" content="/icons/mstile-144x144.png?v=00r659EweM">
+<meta name="msapplication-config" content="/icons/browserconfig.xml?v=00r659EweM">
+<meta name="theme-color" content="#ffffff">
+    <style>
+        .pace {
+            font-family: "Roboto", serif;
+            -webkit-pointer-events: none;
+            pointer-events: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        
+        .pace .pace-activity {
+            font-family: "Roboto", serif;
+            display: block;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: #29d;
+            -webkit-transition: -webkit-transform 0.3s;
+            transition: transform 0.3s;
+            -webkit-transform: translateX(100%) translateY(-100%) rotate(45deg);
+            transform: translateX(100%) translateY(-100%) rotate(45deg);
+            pointer-events: none;
+        }
+        
+        .pace.pace-inactive .pace-progress {
+            display: none;
+        }
+        
+        .pace .pace-progress {
+            font-family: "Roboto", serif;
+            background-color: rgba(34, 153, 221, 0.5);
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            right: 100%;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .pace .pace-progress:after {
+            font-family: "Roboto", serif;
+            display: block;
+            position: absolute;
+            top: .5rem;
+            right: 1rem;
+            content: attr(data-progress-text);
+            font-weight: 100;
+            font-size: 7.5rem;
+            line-height: 1;
+            text-align: right;
+            color: rgba(68, 187, 255, 1);
+        }
+
+    </style>
+
+    <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <link rel="dns-prefetch" href="http://ihomeworkkhs.applinzi.com/" />
+    <link rel="dns-prefetch" href="https://ihw-doc.qn.iblueg.cn/" />
+    <link rel="dns-prefetch" href="https://cdn.bootcss.com/" />
+    <link rel="dns-prefetch" href="https://widget.thinkpage.cn/" />
+    <link rel="dns-prefetch" href="https://2048.ihomework.top/" />
+    <link rel="dns-prefetch" href="https://electro.proj.galvingao.xyz/" />
+    <link rel="dns-prefetch" href="http://main.qn.iblueg.cn/" />
+    <link rel="dns-prefetch" href="http://fruit.games.ihomework.top/" />
+    <style>
+        .tile-area-controls {
+            position: fixed;
+            right: 40px;
+            top: 40px;
+        }
+        
+        .tile-group {
+            left: 100px;
+        }
+        
+        .tile,
+        .tile-small,
+        .tile-sqaure,
+        .tile-wide,
+        .tile-large,
+        .tile-big,
+        .tile-super {
+            opacity: 0;
+            -webkit-transform: scale(.8);
+            transform: scale(.8);
+        }
+        
+        #charmSettings .button {
+            margin: 5px;
+        }
+        
+        .schemeButtons {
+            /*width: 300px;*/
+        }
+        
+        @media screen and (max-width: 640px) {
+            .tile-area {
+                overflow-y: scroll;
+            }
+            .tile-area-controls {
+                display: none;
+            }
+        }
+        
+        @media screen and (max-width: 320px) {
+            .tile-area {
+                overflow-y: scroll;
+            }
+            .tile-area-controls {
+                display: none;
+            }
+        }
+        
+        a,
+        div {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        .taphl {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        .intro-big {
+            margin: 25px;
+            font-size: 500%;
+            color: #eee;
+        }
+        
+        .intro-small {
+            margin: 10px;
+            font-size: 150%;
+            color: #efefef;
+        }
+/*body{
+background: #30E8BF; /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #30E8BF , #FF8235); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #30E8BF , #FF8235); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}*/
+
+    </style>
+    <script>
+        (function($) {
+            $.StartScreen = function() {
+                var plugin = this;
+                var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
+                plugin.init = function() {
+                    setTilesAreaSize();
+                    if (width > 640) addMouseWheel();
+                };
+
+                var setTilesAreaSize = function() {
+                    var groups = $(".tile-group");
+                    var tileAreaWidth = 80;
+                    $.each(groups, function(i, t) {
+                        if (width <= 640) {
+                            tileAreaWidth = width;
+                        } else {
+                            tileAreaWidth += $(t).outerWidth() + 80;
+                        }
+                    });
+                    $(".tile-area").css({
+                        width: tileAreaWidth
+                    });
+                };
+
+                var addMouseWheel = function() {
+                    $("body").mousewheel(function(event, delta, deltaX, deltaY) {
+                        var page = $(document);
+                        var scroll_value = delta * 50;
+                        page.scrollLeft(page.scrollLeft() - scroll_value);
+                        return false;
+                    });
+                };
+
+                plugin.init();
+            }
+        })(jQuery);
+
+        $(function() {
+            $.StartScreen();
+
+            var tiles = $(".tile, .tile-small, .tile-sqaure, .tile-wide, .tile-large, .tile-big, .tile-super");
+
+            $.each(tiles, function() {
+                var tile = $(this);
+                setTimeout(function() {
+                    tile.css({
+                        opacity: 1,
+                        "-webkit-transform": "scale(1)",
+                        "transform": "scale(1)",
+                        "-webkit-transition": ".3s",
+                        "transition": ".3s"
+                    });
+                }, Math.floor(Math.random() * 500));
+            });
+
+            $(".tile-group").animate({
+                left: 0
+            });
+        });
+
+        function showCharms(id) {
+            var charm = $(id).data("charm");
+            if (charm.element.data("opened") === true) {
+                charm.close();
+            } else {
+                charm.open();
+            }
+        }
+
+        function setSearchPlace(el) {
+            var a = $(el);
+            var text = a.text();
+            var toggle = a.parents('label').children('.dropdown-toggle');
+
+            toggle.text(text);
+        }
+
+        $(function() {
+            var current_tile_area_scheme = localStorage.getItem('tile-area-scheme') || "tile-area-scheme-dark";
+            $(".tile-area").removeClass(function(index, css) {
+                return (css.match(/(^|\s)tile-area-scheme-\S+/g) || []).join(' ');
+            }).addClass(current_tile_area_scheme);
+
+            $(".schemeButtons .button").hover(
+                function() {
+                    var b = $(this);
+                    var scheme = "tile-area-scheme-" + b.data('scheme');
+                    $(".tile-area").removeClass(function(index, css) {
+                        return (css.match(/(^|\s)tile-area-scheme-\S+/g) || []).join(' ');
+                    }).addClass(scheme);
+                },
+                function() {
+                    $(".tile-area").removeClass(function(index, css) {
+                        return (css.match(/(^|\s)tile-area-scheme-\S+/g) || []).join(' ');
+                    }).addClass(current_tile_area_scheme);
+                }
+            );
+
+            $(".schemeButtons .button").on("click", function() {
+                var b = $(this);
+                var scheme = "tile-area-scheme-" + b.data('scheme');
+
+                $(".tile-area").removeClass(function(index, css) {
+                    return (css.match(/(^|\s)tile-area-scheme-\S+/g) || []).join(' ');
+                }).addClass(scheme);
+
+                current_tile_area_scheme = scheme;
+                localStorage.setItem('tile-area-scheme', scheme);
+
+                showSettings();
+            });
+        });
+
+        function quickfetch() {
+            $.get("http://ihomework.top/weeknum.txt", function(data) {
+                var weeknum = data;
+            });
+        }
+        quickfetch();
+
+        function getcdn() {
+            $.get("http://ihomework.top/weeknum.txt", function(data) {
+                var url = "http://ihw-doc.qn.iblueg.cn/iHomework-wkhw_wk" + data + ".pdf";
+                window.location = url;
+            });
+        }
+
+        function showDialog(id) {
+            var dialog = $(id).data('dialog');
+            dialog.open();
+        }
+
+        function cdnnew() {
+            showDialog("#getcdnd");
+            getcdn();
+        }
+
+        function resources() {
+            showDialog("#resources");
+        }
+
+        function jiexi() {
+            str = document.getElementById("jiexicontent").value;
+            res = str.replace(/bilibili.com/, "ibilibili.com");
+            jumpto(res);
+        }
+
+        function jumpto(url) {
+            window.open(url);
+        }
+
+        function playv(link) {
+            var playm = "<source src='" + link + "' />";
+            document.getElementById("videoplay").innerHTML = playm;
+            showDialog("#saovideo");
+        }
+
+var $_GET = (function(){
+    var url = window.document.location.href.toString();
+    var u = url.split("?");
+    if(typeof(u[1]) == "string"){
+        u = u[1].split("&");
+        var get = {};
+        for(var i in u){
+            var j = u[i].split("=");
+            get[j[0]] = j[1];
+        }
+        return get;
+    } else {
+        return {};
+    }
+})();
+
+function mimahandle(){
+mimac = document.getElementById("mimacontent").value;
+passverify(mimac);
+$('#askPassword').data("charm").close();
+}
+
+
+var passinput=0;
+
+function passverify(passinput){
+
+switch (passinput)
+{
+case "kinglee":
+    passed();
+    break;
+case "Kinglee":
+    passed();
+    break;
+default:
+    document.getElementById("mimacontent").className="error";
+    ga('send', 'event', 'Auth', 'Pwd-Failed');
+    break;
+}
+
+}
+
+function verify(){
+
+/*
+var get1 = $_GET['pass'];
+length1 = get1.length;
+if (length1 > 0) {
+$.Notify({
+    icon: '<span class="mif-warning"></span>',
+    caption: 'pass 方式已弃用<br>',
+    content: '请联系 Galvin。',
+    type: 'success',
+    keepopen: true,
+    shadow: true
+});
+};
+*/
+
+var cut2=$_GET['longtermpass'];
+switch (cut2)
+{
+case "zhSSjPcETBzwzfPzGXgxGTZrfTYZGwFq":
+    longtermpassed();
+    break;
+default:
+    ga('send', 'event', 'Auth', 'LongTerm-Failed');
+    break;
+}
+
+}
+
+ function flash_title()
+ {
+  if (countt<7){
+  step++
+  countt++
+  if (step==3) {step=1}         
+  if (step==1) {document.title='【已解锁】 '+currenttitle}
+  if (step==2) {document.title='【　　　】 '+currenttitle}
+  setTimeout("flash_title()",500);
+  } else {
+}
+  
+ }
+
+function passed(){
+document.getElementById("hidezone").style.setProperty("display","block");
+document.getElementById("mimacontent").className="success";
+$.Notify({
+    icon: '<span class="mif-checkmark"></span>',
+    caption: '已使用密码方式解锁<br>',
+    content: '若需免密码网址，请联系 Galvin 哦 ~',
+    type: 'success',
+    timeout: '10000',
+    shadow: true
+});
+currenttitle=document.title;
+step=0;
+countt=0;
+flash_title();
+ga('send', 'event', 'Auth', 'Pwd-Success');
+}
+
+function longtermpassed(){
+document.getElementById("hidezone").style.setProperty("display","block");
+$.Notify({
+    icon: '<span class="mif-info"></span>',
+    caption: '已使用免密码方式解锁<br>',
+    content: '正在使用免密码链接 ~',
+    type: 'info',
+    timeout: '3000',
+    shadow: true
+});
+currenttitle=document.title;
+ga('send', 'event', 'Auth', 'LongTerm-Success');
+}
+
+document.addEventListener('visibilitychange', function()
+{
+	if (document.hidden)
+	{
+		OriginTitle = document.title
+		document.title = '别走嘛，来玩啊 (≧ω≦)/ | iHomework';
+		clearTimeout(titleTime)
+	}
+	else
+	{
+		document.title = OriginTitle
+	}
+});
+    </script>
+    <script>
+        var bodyBgs = [];
+        bodyBgs[0] = "https://image.qn.iblueg.cn/558831/835d4ce148fdfaf7.jpg";
+        bodyBgs[1] = "https://image.qn.iblueg.cn/558831/c76006911f353711.jpg";
+        bodyBgs[2] = "https://image.qn.iblueg.cn/558831/79814d7c9e8f5841.jpg";
+        bodyBgs[3] = "https://image.qn.iblueg.cn/558831/a6d06133fc058e7a.jpg";
+        bodyBgs[4] = "https://image.qn.iblueg.cn/558831/b37ef125793b7cf6.jpg";
+        bodyBgs[5] = "https://image.qn.iblueg.cn/558831/4fc3668c5eebe5d3.jpg";
+        bodyBgs[6] = "https://image.qn.iblueg.cn/558831/9ad99a82e3269b84.jpg";
+        bodyBgs[7] = "https://image.qn.iblueg.cn/558831/19e72d2829f4f877.jpg";
+        bodyBgs[8] = "https://image.qn.iblueg.cn/558831/6dcfdca90516c0ff.jpg";
+        bodyBgs[9] = "https://image.qn.iblueg.cn/558831/b37ef125793b7cf6.jpg";
+        bodyBgs[10] = "https://image.qn.iblueg.cn/558831/004bbed3afee6f26.jpg";
+        bodyBgs[11] = "https://image.qn.iblueg.cn/558831/850a10070db56310.jpg";
+        bodyBgs[12] = "https://image.qn.iblueg.cn/558831/aa18a9ecfa2596bf.jpg";
+        bodyBgs[13] = "https://image.qn.iblueg.cn/558831/01019265e4b84e85.jpg";
+        bodyBgs[14] = "https://image.qn.iblueg.cn/558831/bbc8321cebdc0df2.jpg";
+        var randomBgIndex = Math.round(Math.random() * 14);
+
+        document.write('<style>body{background:url(' + bodyBgs[randomBgIndex] + ')}</style>');
+
+    </script>
+<!--<style>body{background:url('http://main.qn.iblueg.cn/niconiconi.gif');background-size:10% 10%;background-repeat:repeat;}</style>-->
+    <script src="js/saotext.js"></script>
+    <script src="js/saoimg.js"></script>
+    <script src="js/saovideo.js"></script>
+    <script src="js/ihi.js"></script>
+</head>
+
+<body style="overflow-y: hidden;" onload='document.getElementById("hidezone").style.cssText="display:none;";verify();showDialog("#notice");'>
+
+
+    <!-- Charm/Dialog -->
+
+    <div data-role="dialog" id="notice" data-close-button="true" data-windows-style="true" class="ribbed-lightRed">
+        <div class="container fg-white">
+            <br />
+            <h1>注意</h1>
+            <br />
+<h4>下周<strong font-size:120%;>只上五天</strong>，家长星期五 5:50 接！！！</h5>
+            <br />
+        </div>
+    </div>
+    <div data-role="charm" data-position="top" id="askPassword" style="padding: 30px;">
+        <h2>请输入密码</h2>
+        <br />
+<div class="input-control modern password iconic" data-role="input" style="color:#eeeeee;">
+    <input type="password" id="mimacontent" style="color:#eeeeee;font-family:'Courier New','Courier',mono-space;">
+    <span class="placeholder" style="color:#eeeeee;">[ 轻按以输入密码 ]</span>
+    <span class="icon mif-lock" style="color:#eeeeee;"></span>
+</div>
+            <button class="button" onclick="mimahandle();ga('send', 'event', 'Auth', 'PwdTry');"><span class="mif-chevron-right"></span></button>
+    </div>
+
+    <div data-role="dialog" id="getcdnd" data-close-button="true" data-windows-style="true">
+        <div class="container">
+            <br />
+            <span class="mif-spinner3 mif-ani-spin mif-lg"></span> Getting /weeknum.txt on GitHub Raw...
+            <br />
+            <br />
+            <h1 style="line-height: 120%;">正在解析链接，请稍等...</h1>
+            <br />
+            <h5 style="line-height: 140%;">链接类型：CDN<br /> 数据供应商：七牛云对象存储<br /> 域名：ihw-doc.qn.iblueg.cn</h5>
+            <br />
+        </div>
+    </div>
+    <div data-role="dialog" id="resources" data-close-button="true" data-windows-style="true">
+        <div class="container"><br>
+            <h1 style="line-height: 120%;">中考资料</h1>
+            <br>
+            <h4 style="line-height: 160%;" class="taphl">
+<span class="mif-file-pdf"></span>&nbsp;<span style="color:#1976d2" onclick="jumpto('http://ihw-doc.qn.iblueg.cn/ref-wk03/ChiBiology-Ref_01.pdf');">2017 生物实验操作练习题</span>&nbsp;<span style="color:#757575;font-size:85%;">466.1 KB</span><br>
+<span class="mif-file-pdf"></span>&nbsp;<span style="color:#559952" onclick="jumpto('http://ihw-doc.qn.iblueg.cn/ref-wk04/ChiPhysics-Ref_01-Compressed.pdf');">2017 理化生实验套题【速度优化版，推荐】</span>&nbsp;<span style="color:#757575;font-size:85%;">5.4 MB</span>&nbsp;<span style="color:#e32f2f;font-size:75%;">加载更快，质量非常好，推荐</span><br>
+<span class="mif-file-pdf" style="font-size:90%;"></span>&nbsp;<span style="color:#992652;font-size:90%;" onclick="jumpto('http://ihw-doc.qn.iblueg.cn/ref-wk04/ChiPhysics-Ref_01.pdf');">2017 理化生实验套题【备用版】</span>&nbsp;<span style="color:#757575;font-size:85%;">15.1 MB</span>&nbsp;<span style="color:#e32f2f;font-size:75%;">请在速度优化版看不清字时再使用此版本。加载缓慢，请耐心等待</span><br>
+</h4>
+            <br />
+        </div>
+    </div>
+    <div data-role="dialog" id="searchNews" data-close-button="true" data-windows-style="true">
+        <div class="container">
+            <br />
+            <h1>搜索校网新闻</h1>
+            <br />
+            <form name="searchNews" action="http://www.best-intl-school.com/zongwu/newslist.php" method="get" target="_blank">
+                <div class="input-control text">
+                    <input type="text" name="bt" placeholder="键入搜索关键字..." />
+                </div>
+                <button class="button"><span class="mif-search"></span></button>
+            </form>
+            <br />
+        </div>
+    </div>
+    <div data-role="dialog" id="parseVideo" data-close-button="true" data-windows-style="true">
+        <div class="container">
+            <br />
+            <h1>优酷/土豆/爱奇艺 普通或 VIP 视频解析器</h1>
+            <br />
+            <form name="searchNews" action="http://www.yydy8.com/Common/" method="get" target="_blank">
+                <div class="input-control text">
+                    <input type="text" name="url" placeholder="键入视频链接..." />
+                </div>
+                <button class="button"><span class="mif-search"></span></button>
+            </form>
+            <br />
+        </div>
+    </div>
+    <div data-role="dialog" id="saoit" data-close-button="true" data-windows-style="true" data-height="550">
+        <div class="container" style="line-height: 1.5;">
+            <br />
+            <h1>每日一sāo&aacute;oǎo&agrave;oo</h1>
+            <br />
+            <div class="grid">
+                <div class="row cells3">
+                    <div class="cell">
+                        <h2>骚话</h2>
+                        <p><br /> <button class="button" onclick="sao();">再来一句骚话</button> <br /> </p>
+                        <blockquote>
+                            <span id="newsao"></span>
+                            <br />
+                            <span id="saoauthor1"></span>
+                        </blockquote>
+                    </div>
+                    <div class="cell">
+                        <h2>骚图</h2>
+                        <p><br /> <button class="button" onclick="saoimg();">再来一张骚图</button> <br /> </p>
+                        <div class="image-container rounded">
+                            <div class="frame">
+                                <span id="saoimg"></span>
+                                <!-- <img src="http://placehold.it/200x200" /> -->
+                            </div>
+                        </div>
+                        <span id="saoauthor2"></span>
+                        <p></p>
+                    </div>
+                    <div class="cell">
+                        <h2>骚视频</h2>
+                        <h5>骚视频资源库还处于建造状态，不过我们将持续更新～谢谢～</h5>
+                        <p><br /> <button class="button" onclick="saovideo();">再来一个骚视频</button> <br /> </p>
+                        <div class="image-container rounded">
+                            <div class="frame">
+                                <span id="saovideo"></span>
+                                <!-- <img src="http://placehold.it/200x200" /> -->
+                            </div>
+                        </div>
+                        <span id="saoauthor3"></span>
+                    </div>
+                </div>
+            </div>
+            <p></p>
+        </div>
+    </div>
+    <div data-role="charm" data-position="right" id="iHomeworkInfo" style="padding: 25px;">
+        <h2>iHomework 公告栏</h2>
+        <br />
+        <p class="text-accent" style="line-height:150%;">用小钱钱买了备案域名之后，<br>逼格一下子就上来了。现在<br> iHomework 文档的加载速度将会提升 2~3 倍<br>（特别是中考资料效果明显）。<br>希望大家用的爽一些～<br>我会考虑把所有的游戏都托管到七牛上，<br>让加载速度快一些的哦～<br>就这样，我们下个更新见！</p>
+        <br />
+        <h4>&copy; Copyright 2017 Galvin.G</h4>
+        <br />
+    </div>
+    <div data-role="dialog" id="searchWA" data-close-button="true" data-windows-style="true">
+        <div class="container">
+            <br />
+            <h1>WolframAlpha 数学云计算</h1>
+            <br />
+            <form name="searchNews" action="http://m.wolframalpha.com/input/" method="get" target="_blank">
+                <div class="input-control text">
+                    <input type="text" name="i" placeholder="键入数学表达式..." />
+                </div>
+                <button class="button"><span class="mif-search"></span></button>
+            </form>
+            <br />
+        </div>
+    </div>
+    <div data-role="dialog" id="bilibiliSearch" data-close-button="true" data-windows-style="true">
+        <div class="container">
+            <br />
+            <h1>搜索 于 bilibili</h1>
+            <br />
+            <form name="searchNews" action="http://search.bilibili.com/all" method="get" target="_blank">
+                <div class="input-control text">
+                    <input type="text" name="keyword" placeholder="键入搜索内容..." />
+                </div>
+                <button class="button"><span class="mif-search"></span></button>
+            </form>
+            <br />
+        </div>
+    </div>
+    <div data-role="dialog" id="bilibiliJieXi" data-close-button="true" data-windows-style="true">
+        <div class="container">
+            <br />
+            <h1>解析 bilibili 视频</h1>
+            <br />
+            <div class="input-control text">
+                <input type="text" id="jiexicontent" placeholder="键入 bilibili 链接..." />
+            </div>
+            <button class="button" onclick="jiexi()"><span class="mif-search"></span></button>
+            <br />
+        </div>
+    </div>
+    <!-- End Charm/Dialog -->
+    <div class="tile-area tile-area-scheme-dark fg-white" style="height: 100%; max-height: 100% !important;">
+        <h1 class="tile-area-title"><span onclick="showCharms('#askPassword');ga('send', 'event', 'Auth', 'start');">开始 › iH</span>omework</h1>
+        <div class="tile-area-controls">
+            <button class="image-button icon-right bg-transparent fg-white bg-grayDark bg-hover-dark no-border" onclick="showCharms('#iHomeworkInfo')"><span class="sub-header no-margin text-light">iHomework v4.1.6-用钱钱提升逼格 (点我了解更多)</span><span class="icon mif-info"></span></button>
+        </div>
+        <div class="tile-group double">
+            <span class="tile-group-title">iHomework</span>
+            <div class="tile-container">
+                <div class="tile-wide bg-indigo fg-white" data-role="tile" onclick="cdnnew();ga('send', 'event', 'ihwmain', 'getcdn');">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-cloud"></span>
+                    </div>
+                    <span class="tile-label">点我到 iHomework</span>
+                    <span class="tile-badge">预加载：已启用</span>
+                </div>
+                <div class="tile-wide bg-lightRed fg-white" data-role="tile" onclick="resources();ga('send', 'event', 'ihwmain', 'resources');">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-more-horiz"></span>
+                    </div>
+                    <span class="tile-label">* 中考资料 *</span>
+                </div>
+            </div>
+        </div>
+        <div class="tile-group double">
+            <span class="tile-group-title">扩展</span>
+            <div class="tile-container">
+                <div onclick="showDialog('#saoit');ga('send', 'event', 'Extention', 'Sao');" class="tile bg-cyan fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <p class="intro-big">
+                            <nobr>骚 sāo</nobr>
+                        </p>
+                    </div>
+                    <div class="tile-label">
+                        每日一骚
+                    </div>
+                </div>
+                <div onclick="jumpto('http://electro.proj.galvingao.xyz/');ga('send', 'event', 'Extention', 'Electro');" class="tile bg-teal fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-feed"></span>
+                    </div>
+                    <span class="tile-label">Galvin's 原创拔丝电音</span>
+                </div>
+            </div>
+        </div>
+        <div class="tile-group double">
+            <span class="tile-group-title">常用站点 - 1</span>
+            <div class="tile-container">
+                <div onclick="showDialog('#searchWA');ga('send', 'event', 'usefulLink1', 'WolframAlpha Search');" class="tile bg-darkViolet fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <p class="intro-big">WolframAlpha</p>
+                    </div>
+                    <span class="tile-label">WolframAlpha <span class="mif-search"></span></span>
+                </div>
+                <div onclick="jumpto('http://phaidu.com/');ga('send', 'event', 'usefulLink1', 'Go to Phaidu');" class="tile bg-lightBlue fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <p class="intro-big">Phaidu</p>
+                    </div>
+                    <span class="tile-label">Phaidu.com <span class="mif-link"></span></span>
+                </div>
+                <div onclick="jumpto('http://www.best-intl-school.com/shipu/shipu.html');ga('send', 'event', 'usefulLink1', 'Go to ShiPu');" class="tile bg-darkOrange fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-spoon-fork"></span>
+                    </div>
+                    <span class="tile-label">本周食谱 <span class="mif-link"></span></span>
+                </div>
+                <div onclick="showDialog('#searchNews');ga('send', 'event', 'usefulLink1', 'Search News on School Site');" class="tile bg-darkCobalt fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-file-text"></span>
+                    </div>
+                    <span class="tile-label">学校网站新闻搜索 <span class="mif-search"></span></span>
+                </div>
+            </div>
+        </div><span id="hidezone">
+        <div class="tile-group double">
+            <span class="tile-group-title">常用站点 - 2</span>
+            <div class="tile-container">
+                <div onclick="showDialog('#parseVideo');ga('send', 'event', 'usefulLink2', 'Parse Video');" class="tile-wide bg-grayDark fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-file-text"></span>
+                    </div>
+                    <span class="tile-label">视频解析 优酷/土豆/爱奇艺所有 VIP 视频均可解析 <span class="mif-search"></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="tile-group double">
+            <span class="tile-group-title">娱乐</span>
+            <div class="tile-container">
+                <div onclick="jumpto('http://bilibili.com/');ga('send', 'event', 'Play', 'Jump to bilibili');" class="tile bg-violet fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <p class="intro-big">bilibili</p>
+                    </div>
+                    <span class="tile-label">bilibili - ( ゜- ゜)つロ 乾杯~ <span class="mif-feed"></span></span>
+                </div>
+                <div onclick="showDialog('#bilibiliSearch');ga('send', 'event', 'Play', 'Search on bilibili');" class="tile-small bg-darkViolet fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <p class="intro-small">
+                            <nobr>
+                                検索の
+                            </nobr>
+                        </p>
+                    </div>
+                    <span class="tile-label">搜索</span>
+                </div>
+                <div onclick="jumpto('http://www.bilibili.com/video/kichiku.html');ga('send', 'event', 'Play', 'Jump to bilibili-guichu');" class="tile-small bg-darkViolet fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <p class="intro-small">
+                            <nobr>
+                                きちく
+                            </nobr>
+                        </p>
+                    </div>
+                    <span class="tile-label">鬼畜</span>
+                </div>
+                <div onclick="jumpto('http://live.bilibili.com/');ga('send', 'event', 'Play', 'Jump to bilibili-live');" class="tile-small bg-darkViolet fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <p class="intro-small">
+                            <nobr>
+                                生放送
+                            </nobr>
+                        </p>
+                    </div>
+                    <span class="tile-label">直播</span>
+                </div>
+                <div onclick="showDialog('#bilibiliJieXi');ga('send', 'event', 'Play', 'Parse bilibili Video');" class="tile-small bg-darkViolet fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <p class="intro-small">
+                            <nobr>
+                                解析に
+                            </nobr>
+                        </p>
+                    </div>
+                    <span class="tile-label">解析 <span class="mif-file-code"></span></span>
+                </div>
+                <div onclick="jumpto('https://www.facebook.com/');ga('send', 'event', 'Play', 'Jump to FaceBook');" class="tile-small fg-white" data-role="tile" style="background-color: #3e5c9a">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-facebook"></span>
+                    </div>
+                </div>
+                <div onclick="jumpto('https://www.twitter.com/');ga('send', 'event', 'Play', 'Jump to Twitter');" class="tile-small  fg-white" data-role="tile" style="background-color: #1ab2e8">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-twitter"></span>
+                    </div>
+                </div>
+                <div onclick="jumpto('https://www.steam.com/');ga('send', 'event', 'Play', 'Jump to Steam');" class="tile-small fg-white" data-role="tile" style="background-color: #111111">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-steam"></span>
+                    </div>
+                </div>
+                <div onclick="jumpto('http://www.twitch.tv/');ga('send', 'event', 'Play', 'Jump to Twitch');" class="tile-small fg-white" data-role="tile" style="background-color: #5a52a8">
+                    <div class="tile-content iconic">
+                        <p style="margin: 15px; font-size: 200%; color: #fff">
+                            <nobr>
+                                Twitch
+                            </nobr>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tile-group double">
+            <span class="tile-group-title">HTML5 小游戏</span>
+            <div class="tile-container">
+                <div onclick="jumpto('http://2048.ihomework.top/');ga('send', 'event', 'h5games', '2048');" class="tile-small bg-amber fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+           
+                    </div>
+                    <span class="tile-label"><nobr>2048</nobr></span>
+                </div>
+                <div onclick="jumpto('http://fruit.games.ihomework.top/');ga('send', 'event', 'h5games', 'fruitninja');" class="tile-small bg-green fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        
+                    </div>
+                    <span class="tile-label"><nobr>水果忍者</nobr></span>
+                </div>
+                <div onclick="jumpto('http://sda.4399.com/4399swf/upload_swf/ftp17/ssj/20151202/3/index.html');ga('send', 'event', 'h5games', 'hundouluo');" class="tile-small bg-darkCobalt fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        
+                    </div>
+                    <span class="tile-label"><nobr>魂斗罗</nobr></span>
+                </div>
+                <div onclick="jumpto('http://szhong.4399.com/4399swf/upload_swf/ftp21/ssj/20170220/b2/index.html');ga('send', 'event', 'h5games', 'mrminer');" class="tile-small bg-amber fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        
+                    </div>
+                    <span class="tile-label"><nobr>挖矿先生</nobr></span>
+                </div>
+                <div onclick="jumpto('http://szhong.4399.com/4399swf/upload_swf/ftp21/ssj/20170214/b4/index.htm');ga('send', 'event', 'h5games', 'locker');" class="tile-small bg-lightGreen fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        
+                    </div>
+                    <span class="tile-label"><nobr>Locker</nobr></span>
+                </div>
+                <div onclick="jumpto('http://sda.4399.com/4399swf/upload_swf/ftp21/ssj/20170211/t1/index.htm');ga('send', 'event', 'h5games', 'energycircuit');" class="tile-small bg-lightBlue fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        
+                    </div>
+                    <span class="tile-label"><nobr>能量电路</nobr></span>
+                </div>
+                <div onclick="jumpto('http://sxiao.4399.com/4399swf/upload_swf/ftp20/ssj/20170206/j7/index.html');ga('send', 'event', 'h5games', 'savebubbles');" class="tile-small bg-blue fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        
+                    </div>
+                    <span class="tile-label"><nobr>拯救泡泡</nobr></span>
+                </div>
+                <div onclick="jumpto('http://szhong.4399.com/4399swf/upload_swf/ftp20/ssj/20170124/3/index.html');ga('send', 'event', 'h5games', 'spiderpoker');" class="tile-small bg-red fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        
+                    </div>
+                    <span class="tile-label"><nobr>蜘蛛纸牌</nobr></span>
+                </div>
+                
+            </div>
+        </div></span>
+    </div>
+    <script src="https://cdn.bootcss.com/metro/3.0.15/js/metro.min.js"></script>
+    <script>
+        (function(T, h, i, n, k, P, a, g, e) {
+            g = function() {
+                P = h.createElement(i);
+                a = h.getElementsByTagName(i)[0];
+                P.src = k;
+                P.charset = "utf-8";
+                P.async = 1;
+                a.parentNode.insertBefore(P, a)
+            };
+            T["ThinkPageWeatherWidgetObject"] = n;
+            T[n] || (T[n] = function() {
+                (T[n].q = T[n].q || []).push(arguments)
+            });
+            T[n].l = +new Date();
+            if (T.attachEvent) {
+                T.attachEvent("onload", g)
+            } else {
+                T.addEventListener("load", g, false)
+            }
+        }(window, document, "script", "tpwidget", "//widget.thinkpage.cn/widget/chameleon.js"))
+
+    </script>
+    <script>
+        tpwidget("init", {
+            "flavor": "bubble",
+            "location": "WW0V9QP93VS8",
+            "geolocation": "enabled",
+            "position": "bottom-right",
+            "margin": "10px 10px",
+            "language": "auto",
+            "unit": "c",
+            "theme": "chameleon",
+            "uid": "UBD6EA9953",
+            "hash": "abfc422f3d026db54996c86b14ee3a01"
+        });
+        tpwidget("show");
+
+    </script>
+    <!--<script>
+        sao();
+        saoimg();
+        saovideo();
+
+    </script>-->
+    <!-- ********************** Search Engine Collecting & Analytics ********************** -->
+    <script>
+        (function() {
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
+            } else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js'
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s)
+        })();
+
+    </script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+//window.ga_debug = {trace: true};
+        ga('create', 'UA-69113723-4', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+<script type="text/javascript" color="255,255,255" zindex="-1" opacity="0.5" count="150" src="https://cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+</body>
+
+</html>
