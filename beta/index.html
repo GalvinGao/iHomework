@@ -8,10 +8,13 @@
   <!-- CSS  -->
   <link href="http://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.min.css" rel="stylesheet">
   <link href="http://cdn.bootcss.com/materialize/0.98.1/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="http://static.qn.iblueg.cn/sf2017/fonts/FZQingKeBenYueSongS-R-GB.css" rel="stylesheet">
 </head>
 <body>
 <style>
-.subject{font-size:150%;margin:10px;}
+.subject{font-size:150%;margin:1px 15px 1px 10px;}
+.collapsible{font-family:"FZQingKeBenYueSongS-R-GB";}
+.hcontent{-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
 </style>
   <nav class="indigo lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">iHomework</a>
@@ -33,28 +36,48 @@
       <h2 class="header center orange-text">iHomework 文档页</h2><br>
       <div class="row center">
         <h5 class="header col s12 light">新版的 iHomework 文档，更懂你！</h5>
-      </div>
+</div><br><br>
 <div class="row">
-<div class="col s12 m2 l2"></div>
-<div class="col s12 m8 l8"></div>
+<div class="col s12 m1 l2"></div>
+<div class="col s12 m10 l8 hcontent">
+
+<input type="checkbox" id="sub1" />
+<label for="sub1">语文</label>
 
   <ul class="collapsible" data-collapsible="expandable">
     <li>
-      <div class="collapsible-header"><span class="subject">语</span>语文</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+      <div class="collapsible-header"><span class="subject"> 语 </span> 语文 </div>
+      <div class="collapsible-body"><span id="s1-content">正在获取，请稍等...</span></div>
     </li>
     <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+      <div class="collapsible-header"><span class="subject"> 数 </span> 数学 </div>
+      <div class="collapsible-body"><span id="s1-content">正在获取，请稍等...</span></div>
     </li>
     <li>
-      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+      <div class="collapsible-header"><span class="subject"> 英 </span> 数学 </div>
+      <div class="collapsible-body"><span id="s1-content">正在获取，请稍等...</span></div>
     </li>
+    <li>
+      <div class="collapsible-header"><span class="subject"> 政 </span> 思想品德 </div>
+      <div class="collapsible-body"><span id="s1-content">正在获取，请稍等...</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><span class="subject"> 史 </span> 历史 </div>
+      <div class="collapsible-body"><span id="s1-content">正在获取，请稍等...</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><span class="subject"> 物 </span> 物理 </div>
+      <div class="collapsible-body"><span id="s1-content">正在获取，请稍等...</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><span class="subject"> 化 </span> 化学 </div>
+      <div class="collapsible-body"><span id="s1-content">正在获取，请稍等...</span></div>
+    </li>
+
   </ul>
 
 
-<div class="col s12 m2 l2"></div>
+<div class="col s12 m1 l2"></div>
 </div>
       <br><br>
       
