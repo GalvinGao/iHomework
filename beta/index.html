@@ -12,9 +12,11 @@
 </head>
 <body>
 <style>
-.subject{font-size:150%;margin:1px 15px 1px 10px;}
-.collapsible{font-family:"FZQingKeBenYueSongS-R-GB";}
-.hcontent{-webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);}
+.subject{font-size:150%;margin-right:10px;}
+.hcontent{font-family:"FZQingKeBenYueSongS-R-GB";-webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);}
+label{color:#555;}
+.hwsection{line-height:1.2;margin-top:15px;margin-bottom:30px;}
+.hwcontent{font-size:110%;margin-top:15px;margin-bottom:20px;margin-left:3em;}
 </style>
   <nav class="indigo lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">iHomework</a>
@@ -41,9 +43,19 @@
 <div class="col s12 m1 l2"></div>
 <div class="col s12 m10 l8 hcontent">
 
-<input type="checkbox" id="sub1" />
-<label for="sub1">语文</label>
 
+
+<div class="hwsection">
+<input type="checkbox" id="sub1" /> <label for="sub1"><span class="subject">语</span>- 语文</label> 
+<div class="hwcontent">
+<span id="sub1-content"></span>
+</div>
+</div>
+
+
+
+
+<!--
   <ul class="collapsible" data-collapsible="expandable">
     <li>
       <div class="collapsible-header"><span class="subject"> 语 </span> 语文 </div>
@@ -75,7 +87,7 @@
     </li>
 
   </ul>
-
+-->
 
 <div class="col s12 m1 l2"></div>
 </div>
@@ -108,7 +120,7 @@
   <!--  Scripts-->
   <script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
   <script src="http://cdn.bootcss.com/materialize/0.98.1/js/materialize.min.js"></script>
-  <script>(function($){$(function(){$('.button-collapse').sideNav()})})(jQuery);</script>
+  <script>(function($){$(function(){$('.button-collapse').sideNav()})})(jQuery);$(document).ready(function(){$('.scrollspy').scrollSpy()});</script>
 
   </body>
 </html>
