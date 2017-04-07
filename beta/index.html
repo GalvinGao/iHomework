@@ -10,7 +10,7 @@
   <link href="http://cdn.bootcss.com/materialize/0.98.1/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="http://static.qn.iblueg.cn/sf2017/fonts/FZQingKeBenYueSongS-R-GB.css" rel="stylesheet">
 </head>
-<body>
+<body onload="loginSetup();">
 <style>
 .subject{font-size:150%;margin-right:10px;}
 .hcontent{font-family:"FZQingKeBenYueSongS-R-GB";-webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);}
@@ -43,11 +43,22 @@ label{color:#555;}
 <div class="col s12 m1 l2"></div>
 <div class="col s12 m10 l8 hcontent">
 
+<!--sse-->
+<div style="border:2px solid grey; background:#eee;">
+<h5>Debug Toolbar</h5><br>
+
+Clients shouldnt see this!<br>
+
 <button onclick="Cookies.clear();">clearall</button>
 <button onclick="alert(localStorage.subject)">alertsubject</button>
 <button onclick="alert(localStorage.me)">alertme</button>
 <button onclick="alert(localStorage.sub1)">alertsub1</button>
 <button onclick="var allcookies = document.cookie;alert(allcookies);">cookietest1</button>
+<button onclick="changebox('sub1');">changebox</button>
+
+</div>
+
+<!--/sse-->
 
 <div class="hwsection">
 	<div class="hwcheckbox">
@@ -99,6 +110,25 @@ console.log(changedSubject+" changed to 1");
 Cookies.set(changedSubject, 1);
 console.log(changedSubject+" dont have data. Initialize it.");
 }
+}
+
+function changebox(toChangeSubject){
+var toChangeSubjectCookie = Cookies.get(toChangeSubject);
+if (toChangeSubjectCookie=="1"){
+$("#sub1").attr('checked','true');
+} else {
+console.log(toChangeSubject+" havnt checked");
+}
+}
+
+function loginSetup(){
+changebox('sub1');
+changebox('sub2');
+changebox('sub3');
+changebox('sub4');
+changebox('sub5');
+changebox('sub6');
+changebox('sub7');
 }
 </script>
 
