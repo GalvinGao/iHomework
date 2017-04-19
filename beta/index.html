@@ -112,7 +112,8 @@ console.log(changedSubject+" dont have data. Initialize it.");
 function changebox(toChangeSubject){
 var toChangeSubjectCookie = Cookies.get(toChangeSubject);
 if (toChangeSubjectCookie=="1"){
-$("#sub1").attr('checked','true');
+var toEvalCode="$('#"+toChangeSubject+"').attr('checked','true');"
+eval(toEvalCode);
 } else {
 console.log(toChangeSubject+" havnt checked");
 }
