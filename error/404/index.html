@@ -6,15 +6,14 @@
 <link href="https://cdn.bootcss.com/materialize/0.97.8/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
 <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
 </head>
-<body onload="bingWallpaper();">
+<body>
 <style>
 .content{margin:75px;position:absolute;width:500px;height:400px;left:50%;top:30%;margin-left:-250px;margin-top:-100px;line-height:2.5;font-family:'Lobster','Galada','Avenir Next','Futura',sans-serif;text-align:center;text-weight:lighter;}h1,h5{text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 40px, 0 0 70px;}.collection{text-shadow: 0 0 20px;}
 </style>
+<script async="async" src="https://json2jsonp.com/?url=https%3a%2f%2fwww.bing.com%2fHPImageArchive.aspx%3fformat%3djs%26idx%3d0%26n%3d1%26call%3d23&callback=bingImage"></script>
 <script>
-function bingWallpaper(){
-    $.getJSON("https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1", function(bingResponse){
-  $('#imgid').html("<style>body{background:url(https://www.bing.com"+bingResponse.images[0].url+") no-repeat center;}</style>");
-    });
+function bingImage(bingResponse){
+  $('#imgid').html("<style>body{background:url(https://www.bing.com"+bingResponse.images[0].url+") no-repeat center; max-width: 100%; height: 100%;filter: blur(0.1px);}</style>");
 }
 </script>
 <span id="imgid"></span>
