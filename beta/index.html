@@ -43,6 +43,7 @@ label{color:#555;}
 <div class="col s12 m1 l2"></div>
 <div class="col s12 m10 l8 hcontent">
 
+
 <div style="border:2px solid grey; background:#eee;">
 <h5>Debug Toolbar</h5><br>
 
@@ -56,6 +57,7 @@ Clients shouldnt see this!<br>
 <button onclick="changebox('sub1');">changebox</button>
 
 </div>
+
 
 <div class="hwsection">
 	<div class="hwcheckbox">
@@ -88,6 +90,26 @@ function off(subject) {
 }
 </script>
 <script>
+var thisWeekNumCookie=Cookies.get("weeknum");
+var typeThisWeekNum=typeof Cookies.get("weeknum");
+
+if (typeThisWeekNum == "null") {
+    // Initialize.
+	Cookies.set('weeknum', thisWeekNum);
+} else {
+	if (thisWeekNum == thisWeekNumCookie) {
+		// Do Nothing.
+	} else {
+        // Updated. Clear all checked and initialize weeknum cookie.
+		var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
+		if (keys) {
+			for (var i = keys.length; i--;)
+			    document.cookie = keys[i] + '=0;expires=' + new Date(0).toUTCString()
+		}
+		Cookies.set('weeknum', thisWeekNum);
+	}
+}
+
 function subchange(changedSubject){
 var dataLength=typeof Cookies.get(changedSubject);
 var cookieData=Cookies.get(changedSubject);
@@ -202,6 +224,7 @@ changebox('sub7');
   <script>(function($){$(function(){$('.button-collapse').sideNav()})})(jQuery);$(document).ready(function(){$('.scrollspy').scrollSpy()});</script>
 <script src="http://cdn.bootcss.com/js-cookie/latest/js.cookie.min.js"></script>
   <script src="http://cdn.rawgit.com/AlloyTeam/AlloyLever/gh-pages/alloy_lever.min.js"></script>
+  <script src="http://cdn.rawgit.com/GalvinGao/iHomework/master/beta/hw.js"></script>
 
   </body>
 </html>
