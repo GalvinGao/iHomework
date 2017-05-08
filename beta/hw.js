@@ -1,2 +1,1 @@
-var thisWeekNum="233"; //[EveryUpload] The WeekNum for this week.
-
+var thisWeekNum="13"; //[EveryUpload] The WeekNum for this week.

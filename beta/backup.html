@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>[ 文档 | iHomework ]</title>
+
+<!-- CSS  -->
+<link href="http://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.min.css" rel="stylesheet">
+<link href="http://cdn.bootcss.com/materialize/0.98.1/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="http://static.qn.iblueg.cn/sf2017/fonts/FZQingKeBenYueSongS-R-GB.css" rel="stylesheet">
+</head>
+<body onload="loginSetup();weeknumCheck();">
+<style>
+.subject{font-size:150%;margin-right:10px;}
+.hcontent{font-family:"FZQingKeBenYueSongS-R-GB";-webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);}
+label{color:#555;}
+.hwsection{line-height:1.2;margin-top:15px;margin-bottom:30px;}
+.hwcontent{font-size:110%;margin-top:15px;margin-bottom:20px;margin-left:3em;}
+</style>
+<nav class="indigo lighten-1" role="navigation">
+<div class="nav-wrapper container">
+  <a id="logo-container" href="#" class="brand-logo">iHomework</a>
+  <ul class="right hide-on-med-and-down">
+    <li><a href="/">首页</a></li>
+    <li class="active"><a href="#">文档</a></li>
+  </ul>
+  <ul id="nav-mobile" class="side-nav">
+    <li><a href="/">首页</a></li>
+    <li class="active"><a href="#">文档</a></li>
+  </ul>
+  <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+</div>
+</nav>
+<div class="section no-pad-bot" id="index-banner">
+  <div class="container">
+    <br>
+    <br>
+    <h2 class="header center orange-text">iHomework 文档页</h2>
+    <br>
+    <div class="row center">
+      <h5 class="header col s12 light">新版的 iHomework 文档，更懂你！</h5>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col s12 m1 l2">
+      </div>
+      <div class="col s12 m10 l8 hcontent">
+        <div style="border:2px solid grey; background:#eee;">
+          <h5>Debug Toolbar</h5>
+          <br>
+Clients shouldnt see this!
+          <br>
+          <button onclick="alert(typeThisWeekNum);">alertThisWeekNum</button>
+          <button onclick="alert(localStorage.subject)">alertsubject</button>
+          <button onclick="alert(Cookies.get('weeknum'));">weeknum</button>
+          <button onclick="alert(localStorage.sub1)">alertsub1</button>
+          <button onclick="var allcookies = document.cookie;alert(allcookies);">cookietest1</button>
+          <button onclick="changebox('sub1');">changebox</button>
+        </div>
+        <div class="hwsection">
+          <div class="hwcheckbox">
+            <input type="checkbox" id="sub1" onchange="subchange('sub1')"/><label for="sub1"><span class="subject"> 语 </span>- 语文 </label>
+          </div>
+          <div class="hwcontent">
+            <span id="sub1-content">test</span>
+          </div>
+        </div>
+        <div class="hwsection">
+          <div class="hwcheckbox">
+            <input type="checkbox" id="sub2" onchange="subchange('sub2')"/><label for="sub2"><span class="subject"> 数 </span>- 数学 </label>
+          </div>
+          <div class="hwcontent">
+            <span id="sub2-content">test</span>
+          </div>
+        </div>
+        <div class="hwsection">
+          <div class="hwcheckbox">
+            <input type="checkbox" id="sub3" onchange="subchange('sub3')"/><label for="sub3"><span class="subject"> 英 </span>- 英语 </label>
+          </div>
+          <div class="hwcontent">
+            <span id="sub3-content">test</span>
+          </div>
+        </div>
+        <div class="hwsection">
+          <div class="hwcheckbox">
+            <input type="checkbox" id="sub4" onchange="subchange('sub4')"/><label for="sub4"><span class="subject"> 政 </span>- 思想品德 </label>
+          </div>
+          <div class="hwcontent">
+            <span id="sub4-content">test</span>
+          </div>
+        </div>
+        <div class="hwsection">
+          <div class="hwcheckbox">
+            <input type="checkbox" id="sub5" onchange="subchange('sub5')"/><label for="sub5"><span class="subject"> 史 </span>- 历史 </label>
+          </div>
+          <div class="hwcontent">
+            <span id="sub5-content">test</span>
+          </div>
+        </div>
+        <div class="hwsection">
+          <div class="hwcheckbox">
+            <input type="checkbox" id="sub6" onchange="subchange('sub6')"/><label for="sub6"><span class="subject"> 物 </span>- 物理 </label>
+          </div>
+          <div class="hwcontent">
+            <span id="sub6-content">test</span>
+          </div>
+        </div>
+        <div class="hwsection">
+          <div class="hwcheckbox">
+            <input type="checkbox" id="sub7" onchange="subchange('sub7')"/><label for="sub7"><span class="subject"> 化 </span>- 化学 </label>
+          </div>
+          <div class="hwcontent">
+            <span id="sub7-content">test</span>
+          </div>
+        </div>
+        <!--<script>
+var changeh=function(me){
+  var pdata = localStorage[me]
+  if (pdata == "on") {
+    off(me)
+  }
+  elseif(pdata == "off") {
+    on(me)
+  } else {
+    alert("Error. " + pdata)
+  }
+}
+function on(subject) {
+  localStorage.setItem(subject, "on");
+  console.log(localStorage[subject])
+}
+function off(subject) {
+  localStorage.setItem(subject, "off");
+  console.log(localStorage[subject])
+}
+        </script>
+        -->
+        <script>
+function weeknumCheck() {
+    var thisWeekNumCookie = Cookies.get("weeknum");
+    var typeThisWeekNum = typeof Cookies.get("weeknum");
+    if (typeThisWeekNum == "undefined") {
+        // Initialize.
+        Cookies.set('weeknum', thisWeekNum);
+        console.log("Weeknum: 1");
+    } else {
+        if (thisWeekNum == thisWeekNumCookie) {
+            // Do Nothing.
+            console.log("Weeknum: 2");
+        } else {
+            // Updated. Clear all checked and initialize weeknum cookie.
+            clearCookie();
+            Cookies.set('weeknum', thisWeekNum);
+            console.log("Weeknum: 3");
+        }
+    }
+}
+weeknumCheck();
+
+</script><script>
+
+function subchange(changedSubject) {
+    var dataLength = typeof Cookies.get(changedSubject);
+    var cookieData = Cookies.get(changedSubject);
+    if (dataLength == "string") {
+        //normal
+        if (cookieData == 1) {
+            Cookies.set(changedSubject, 0);
+            console.log(changedSubject + " changed to 0");
+        } else {
+            Cookies.set(changedSubject, 1);
+            console.log(changedSubject + " changed to 1");
+        }
+    } else {
+        //nodata,initialize
+        Cookies.set(changedSubject, 1);
+        console.log(changedSubject + " dont have data. Initialize it.");
+    }
+}
+
+function changebox(toChangeSubject) {
+    var toChangeSubjectCookie = Cookies.get(toChangeSubject);
+    if (toChangeSubjectCookie == "1") {
+        var toEvalCode = "$('#" + toChangeSubject + "').attr('checked','true');"
+        eval(toEvalCode);
+    } else {
+        console.log(toChangeSubject + " havnt checked");
+    }
+}
+
+function loginSetup() {
+    changebox('sub1');
+    changebox('sub2');
+    changebox('sub3');
+    changebox('sub4');
+    changebox('sub5');
+    changebox('sub6');
+    changebox('sub7');
+}
+
+function clearCookie() {
+    var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
+    if (keys) {
+        for (var i = keys.length; i--;)
+            document.cookie = keys[i] + '=0;expires=' + new Date(0).toUTCString()
+    }
+}
+        </script>
+        <!--
+  <ul class="collapsible" data-collapsible="expandable">
+        <li>
+        <div class="collapsible-header">
+          <span class="subject"> 语 </span> 语文
+        </div>
+        <div class="collapsible-body">
+          <span id="s1-content">正在获取，请稍等...</span>
+        </div>
+        </li>
+        <li>
+        <div class="collapsible-header">
+          <span class="subject"> 数 </span> 数学
+        </div>
+        <div class="collapsible-body">
+          <span id="s1-content">正在获取，请稍等...</span>
+        </div>
+        </li>
+        <li>
+        <div class="collapsible-header">
+          <span class="subject"> 英 </span> 英语
+        </div>
+        <div class="collapsible-body">
+          <span id="s1-content">正在获取，请稍等...</span>
+        </div>
+        </li>
+        <li>
+        <div class="collapsible-header">
+          <span class="subject"> 政 </span> 思想品德
+        </div>
+        <div class="collapsible-body">
+          <span id="s1-content">正在获取，请稍等...</span>
+        </div>
+        </li>
+        <li>
+        <div class="collapsible-header">
+          <span class="subject"> 史 </span> 历史
+        </div>
+        <div class="collapsible-body">
+          <span id="s1-content">正在获取，请稍等...</span>
+        </div>
+        </li>
+        <li>
+        <div class="collapsible-header">
+          <span class="subject"> 物 </span> 物理
+        </div>
+        <div class="collapsible-body">
+          <span id="s1-content">正在获取，请稍等...</span>
+        </div>
+        </li>
+        <li>
+        <div class="collapsible-header">
+          <span class="subject"> 化 </span> 化学
+        </div>
+        <div class="collapsible-body">
+          <span id="s1-content">正在获取，请稍等...</span>
+        </div>
+        </li>
+      </ul>
+-->
+      <div class="col s12 m1 l2">
+      </div>
+    </div>
+    <br>
+    <br>
+  </div>
+</div>
+<br>
+<br>
+<footer class="page-footer indigo">
+<div class="container">
+  <div class="row">
+    <div class="col l8 s12">
+      <h5 class="white-text">iHomework Beta</h5>
+      <p class="grey-text text-lighten-3">
+        This is iHomework's new version beta. Please note that bugs and unexpected page behavior will occurs anytime. Use with your own risk.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="footer-copyright">
+  <div class="container">
+      Made by 
+    <a class="grey-text text-lighten-4" href="https://github.com/GalvinGao">Galvin.G</a> based on <a class="grey-text text-lighten-4" href="http://materializecss.com">Materialize</a>. Sponsored by 
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 272 92" height="12">
+    <path fill="#EA4335" d="M115.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18C71.25 34.32 81.24 25 93.5 25s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44S80.99 39.2 80.99 47.18c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z"/><path fill="#FBBC05" d="M163.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18c0-12.85 9.99-22.18 22.25-22.18s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44s-12.51 5.46-12.51 13.44c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z"/><path fill="#4285F4" d="M209.75 26.34v39.82c0 16.38-9.66 23.07-21.08 23.07-10.75 0-17.22-7.19-19.66-13.07l8.48-3.53c1.51 3.61 5.21 7.87 11.17 7.87 7.31 0 11.84-4.51 11.84-13v-3.19h-.34c-2.18 2.69-6.38 5.04-11.68 5.04-11.09 0-21.25-9.66-21.25-22.09 0-12.52 10.16-22.26 21.25-22.26 5.29 0 9.49 2.35 11.68 4.96h.34v-3.61h9.25zm-8.56 20.92c0-7.81-5.21-13.52-11.84-13.52-6.72 0-12.35 5.71-12.35 13.52 0 7.73 5.63 13.36 12.35 13.36 6.63 0 11.84-5.63 11.84-13.36z"/><path fill="#34A853" d="M225 3v65h-9.5V3h9.5z"/><path fill="#EA4335" d="M262.02 54.48l7.56 5.04c-2.44 3.61-8.32 9.83-18.48 9.83-12.6 0-22.01-9.74-22.01-22.18 0-13.19 9.49-22.18 20.92-22.18 11.51 0 17.14 9.16 18.98 14.11l1.01 2.52-29.65 12.28c2.27 4.45 5.8 6.72 10.75 6.72 4.96 0 8.4-2.44 10.92-6.14zm-23.27-7.98l19.82-8.23c-1.09-2.77-4.37-4.7-8.23-4.7-4.95 0-11.84 4.37-11.59 12.93z"/><path fill="#4285F4" d="M35.29 41.41V32H67c.31 1.64.47 3.58.47 5.68 0 7.06-1.93 15.79-8.15 22.01-6.05 6.3-13.78 9.66-24.02 9.66C16.32 69.35.36 53.89.36 34.91.36 15.93 16.32.47 35.3.47c10.5 0 17.98 4.12 23.6 9.49l-6.64 6.64c-4.03-3.78-9.49-6.72-16.97-6.72-13.86 0-24.7 11.17-24.7 25.03 0 13.86 10.84 25.03 24.7 25.03 8.99 0 14.11-3.61 17.39-6.89 2.66-2.66 4.41-6.46 5.1-11.65l-22.49.01z"/></svg>
+  </div>
+</div>
+</footer>
+<!-- Scripts -->
+<script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/materialize/0.98.1/js/materialize.min.js"></script>
+<script>(function($){$(function(){$('.button-collapse').sideNav()})})(jQuery);$(document).ready(function(){$('.scrollspy').scrollSpy()});</script>
+<script src="http://cdn.bootcss.com/js-cookie/latest/js.cookie.min.js"></script>
+<script>var randomInt=new Date().getTime(); var hwJavascript="http://ihomework.top/beta/hw.js?nocache"+randomInt; $.getScript(hwJavascript);</script>
+<!--<script src="http://cdn.rawgit.com/GalvinGao/iHomework/master/beta/hw.js"></script>
+-->
+</body>
+</html>
