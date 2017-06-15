@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head lang="en">
     <meta charset="UTF-8" />
     <meta name="title" content="/ iHomework - by Galvin /" />
@@ -473,6 +472,7 @@ $.Notify({
 currenttitle=document.title;
 step=0;
 countt=0;
+showDialog("#respass");
 flash_title();
 ga('send', 'event', 'Auth', 'Pwd-Success');
 }
@@ -529,7 +529,7 @@ var bgurl = "http://image.qn.iblueg.cn/kuanpin"+bgnum+".jpg";
     <script src="js/ihi.js"></script>-->
 </head>
 
-<body style="overflow-y: hidden;" onload='document.getElementById("hidezone").style.cssText="display:none;";verify();showDialog("#notice");'>
+<body style="overflow-y: hidden;" onload='document.getElementById("hidezone").style.cssText="display:none;";verify();showDialog("#respass");'>
 
 
     <!-- Charm/Dialog -->
@@ -543,6 +543,18 @@ var bgurl = "http://image.qn.iblueg.cn/kuanpin"+bgnum+".jpg";
             <br />
         </div>
     </div>
+
+    <div data-role="dialog" id="respass" data-close-button="true" data-windows-style="true" class="ribbed-green">
+        <div class="container fg-white">
+            <br />
+            <h1>通知：访问限制密码更新</h1>
+            <br />
+<h4 style="line-height:1.75;"><button class="button" onclick="jumpto('/pass-2djh7rfxl36kqcza');">点我前往</button></h4>
+            <br />
+        </div>
+    </div>
+
+
     <div data-role="charm" data-position="top" id="askPassword" style="padding: 30px;">
         <h2>请输入密码</h2>
         <br />
