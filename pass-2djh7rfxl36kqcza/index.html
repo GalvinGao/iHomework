@@ -40,9 +40,9 @@
 
 <script>
 function verify(){
-var token = $_GET['token']; console.log(typeof token);
-var timenow = new Date().getTime(); console.log(typeof timenow);
-var calculation = token - timenow; console.log(calculation);
+var token = $_GET['token']; console.log(typeof token); console.log(token);
+var timenow = new Date().getTime(); console.log(typeof timenow); console.log(timenow);
+var calculation = token - timenow; console.log(calculation); console.log(calculation);
 //var calculation=0;
 
 if(typeof token=="number"){
@@ -78,7 +78,7 @@ var $_GET = (function(){
 })();
 </script>
 </head>
-<body style="display:none;" id="wholepage" onload="verify();">
+<body id="wholepage" onload="verify();">
 
 <div id="wrapper" class="typo typo-selection">
 
