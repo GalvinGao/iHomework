@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, minimal-ui">
   <link rel="stylesheet" href="http://static.qn.iblueg.cn/typo.css"/>
   <title>访问限制密码 - iHomework</title>
+  <script refer="refer" defer="defer" src="https://raw.githubusercontent.com/AlloyTeam/AlloyLever/gh-pages/alloy_lever.min.js"></script>
+
   <style>
     code{ color:#1abc9c; }
     html{ background:#eee; }
@@ -13,7 +15,7 @@
     pre{white-space:pre-wrap;}
 
     i.serif{ text-transform:lowercase; color:#1abc9c; }
-    :-moz-any(h1, h2, h3, h4, h5, h5) i.serif{ text-transform: capitalize; }
+    :-moz-any(h1, h2, h3, h4, h5, h6) i.serif{ text-transform: capitalize; }
     i.serif:hover{ color:inherit; }
 
     #wrapper{ padding:5% 10%; position:relative;}
@@ -38,18 +40,25 @@
 
 <script>
 function verify(){
-var token = $_GET['token'];
-var timenow = new Date().getTime();
-var calculation = token - timenow;
+var token = $_GET['token']; console.log(typeof token);
+var timenow = new Date().getTime(); console.log(typeof timenow);
+var calculation = token - timenow; console.log(calculation);
 //var calculation=0;
 
-if (-5<calculation<5){
+if(typeof token=="number"){
+
+
+if (-5<calculation && calclulation<5){
 document.getElementById("wholepage").style.setProperty("display","block");
 //}else if(calculation<5){
 //document.getElementById("wholepage").style.setProperty("display","block");
 }else{
-document.write("<h1>Invalid token.</h1>")
-};
+document.write("<h1>Invalid token.</h1>"); //document.getElementById("wholepage").style.setProperty("display","none");
+}
+
+
+}
+
 }
 
 var $_GET = (function(){
