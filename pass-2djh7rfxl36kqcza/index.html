@@ -35,8 +35,41 @@
     #status-green{ color: #9a0a0a; }
     #status-red{ color: #0a9a0a; }
   </style>
+
+<script>
+function verify(){
+var token = $_GET['token'];
+var timenow = new Date().getTime();
+var calculation = token - timenow;
+//var calculation=0;
+
+if (-5<calculation<5){
+document.getElementById("wholepage").style.setProperty("display","block");
+//}else if(calculation<5){
+//document.getElementById("wholepage").style.setProperty("display","block");
+}else{
+document.write("<h1>Invalid token.</h1>")
+};
+}
+
+var $_GET = (function(){
+    var url = window.document.location.href.toString();
+    var u = url.split("?");
+    if(typeof(u[1]) == "string"){
+        u = u[1].split("&");
+        var get = {};
+        for(var i in u){
+            var j = u[i].split("=");
+            get[j[0]] = j[1];
+        }
+        return get;
+    } else {
+        return {};
+    }
+})();
+</script>
 </head>
-<body>
+<body style="display:none;" id="wholepage" onload="verify();">
 
 <div id="wrapper" class="typo typo-selection">
 
