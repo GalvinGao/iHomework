@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, minimal-ui">
   <link rel="stylesheet" href="http://static.qn.iblueg.cn/typo.css"/>
   <title>访问限制密码 - iHomework</title>
-  <script refer="refer" defer="defer" src="https://raw.githubusercontent.com/AlloyTeam/AlloyLever/gh-pages/alloy_lever.min.js"></script>
+  <!--<script refer="refer" defer="defer" src="https://raw.githubusercontent.com/AlloyTeam/AlloyLever/gh-pages/alloy_lever.min.js"></script>-->
 
   <style>
     code{ color:#1abc9c; }
@@ -36,6 +36,7 @@
     #passcontent{ color: #1abc9c; font-family: monospace; font-size: 300%; }
     #status-green{ color: #9a0a0a; }
     #status-red{ color: #0a9a0a; }
+    #notice{ color:#f00!important; text-size:500%!important; text-align:center; }
   </style>
 
 <script>
@@ -45,15 +46,15 @@ var timenow = new Date().getTime(); console.log(typeof timenow); console.log(tim
 var calculation = token - timenow; console.log(calculation); console.log(calculation);
 //var calculation=0;
 
-if(typeof token=="string"){
+if(typeof token=="string" || typeof token=="number"){
 
 
-if (-3000<calculation && calculation<3000){
+if (-10000<calculation && calculation<10000){
 document.getElementById("wholepage").style.setProperty("display","block");alert("1");
 //}else if(calculation<5){
 //document.getElementById("wholepage").style.setProperty("display","block");
 }else{
-document.write("<h1>Invalid token.</h1>"); //document.getElementById("wholepage").style.setProperty("display","none");
+document.getElementById("notice").innerHTML="无效的访问凭证。 / Invalid token."; //document.getElementById("wholepage").style.setProperty("display","none");
 }
 
 
@@ -78,9 +79,13 @@ var $_GET = (function(){
 })();
 </script>
 </head>
-<body id="wholepage" onload="verify();">
+<body onload="verify();">
 
 <div id="wrapper" class="typo typo-selection">
+
+<div id="notice"></div>
+
+<span id="wholepage">
 
 <h1>访问限制密码</h1><br/>
 
@@ -114,6 +119,8 @@ var $_GET = (function(){
 <h5 id="pass2">十年级（2017.8-2018.6）</h5>
 <p id="status-red">状态：等待密码设定。</p>
 <p id="passcontent"><abbr title="Password">N/A</abbr></p>
+
+</span>
 
 </div>
 
