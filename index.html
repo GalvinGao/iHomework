@@ -363,6 +363,14 @@ background: linear-gradient(to bottom, #30E8BF , #FF8235); /* W3C, IE 10+/ Edge,
 
         function jumpto(url) {
             window.open(url);
+          
+  ga('send', 'event', {
+    eventCategory: 'Outbound Link',
+    eventAction: 'click',
+    eventLabel: url,
+    transport: 'beacon'
+  });
+
         }
 
         function playv(link) {
@@ -755,11 +763,11 @@ var bgurl = "http://image.qn.iblueg.cn/kuanpin"+bgnum+".jpg";
                         每日一骚
                     </div>
                 </div>
-                <div onclick="jumpto('http://electro.proj.galvingao.xyz/');ga('send', 'event', 'Extention', 'Electro');" class="tile bg-teal fg-white" data-role="tile">
+                <div onclick="respass();ga('send', 'event', 'Extention', 'ResPass');" class="tile ribbed-lightRed fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <span class="icon mif-feed"></span>
                     </div>
-                    <span class="tile-label">Galvin's 原创拔丝电音</span>
+                    <span class="tile-label">访问限制密码</span>
                 </div>
             </div>
         </div>
