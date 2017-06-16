@@ -36,7 +36,7 @@
     #passcontent{ color: #1abc9c; font-family: monospace; font-size: 300%; }
     #status-green{ color: #9a0a0a; }
     #status-red{ color: #0a9a0a; }
-    #notice{ color:#f00!important; text-size:500%!important; text-align:center; }
+    #notice{ color:#f00!important; font-size:150%!important; text-align:center; }
   </style>
 
 <script>
@@ -50,7 +50,7 @@ if(typeof token=="string" || typeof token=="number"){
 
 
 if (-10000<calculation && calculation<10000){
-document.getElementById("wholepage").style.setProperty("display","block");alert("1");
+document.getElementById("wholepage").style.setProperty("display","block");
 //}else if(calculation<5){
 //document.getElementById("wholepage").style.setProperty("display","block");
 }else{
@@ -58,7 +58,7 @@ document.getElementById("notice").innerHTML="无效的访问凭证。 / Invalid 
 }
 
 
-}
+}else{document.getElementById("notice").innerHTML="访问凭证缺失。 / Token is needed.";}
 
 }
 
@@ -81,11 +81,11 @@ var $_GET = (function(){
 </head>
 <body onload="verify();">
 
-<div id="wrapper" class="typo typo-selection">
+<div id="wrapper">
 
 <div id="notice"></div>
 
-<span style="display:none;" id="wholepage">
+<span style="display:none;" id="wholepage" class="typo typo-selection">
 
 <h1>访问限制密码</h1><br/>
 
