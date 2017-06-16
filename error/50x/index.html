@@ -13,7 +13,7 @@
 <script async="async" src="https://json2jsonp.com/?url=https%3a%2f%2fwww.bing.com%2fHPImageArchive.aspx%3fformat%3djs%26idx%3d0%26n%3d1%26call%3d23&callback=bingImage"></script>
 <script>
 function bingImage(bingResponse){
-  $('#imgid').html("<style>body{background:url(https://www.bing.com"+bingResponse.images[0].url+") no-repeat center; max-width: 100%; height: 100%;filter: blur(0.1px);}</style>");
+  $('#imgid').html("<style>body{background:url(https://www.bing.com"+bingResponse.images[0].url+") no-repeat center; max-width: 100%; height: 100%;}</style>");
 }
 </script>
 <span id="imgid"></span>
