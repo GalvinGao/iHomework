@@ -39,7 +39,7 @@ function browserRedirect() {
     var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
     var bIsWechat = sUserAgent.match(/wechat/i) == "wechat";
     if (bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM || bIsWechat){
-        window.location.href="http://get.ihomework.top/";
+        window.location.href="http://get.ihw.today/";
     }
 }
 browserRedirect();
@@ -125,10 +125,10 @@ browserRedirect();
     <link rel="dns-prefetch" href="http://ihw-doc.qn.iblueg.cn/" />
     <link rel="dns-prefetch" href="http://cdn.bootcss.com/" />
     <link rel="dns-prefetch" href="http://widget.thinkpage.cn/" />
-    <link rel="dns-prefetch" href="http://2048.ihomework.top/" />
+    <link rel="dns-prefetch" href="http://2048.ihw.today/" />
     <link rel="dns-prefetch" href="http://electro.proj.galvingao.xyz/" />
     <link rel="dns-prefetch" href="http://main.qn.iblueg.cn/" />
-    <link rel="dns-prefetch" href="http://fruit.games.ihomework.top/" />
+    <link rel="dns-prefetch" href="http://fruit.games.ihw.today/" />
     <style>
         .tile-area-controls {
             position: fixed;
@@ -328,14 +328,14 @@ background: linear-gradient(to bottom, #30E8BF , #FF8235); /* W3C, IE 10+/ Edge,
         });
 
         function quickfetch() {
-            $.get("http://ihomework.top/weeknum.txt", function(data) {
+            $.get("http://ihw.today/weeknum.txt", function(data) {
                 var weeknum = data;
             });
         }
         quickfetch();
 
         function getcdn() {
-            $.get("http://ihomework.top/weeknum.txt", function(data) {
+            $.get("http://ihw.today/weeknum.txt", function(data) {
                 var url = "http://ihw-doc.qn.iblueg.cn/iHomework-wkhw_wk" + data + ".pdf";
                 window.location = url;
             });
@@ -515,7 +515,7 @@ document.addEventListener('visibilitychange', function()
 
 function respass(){
 var timenow=new Date().getTime();
-jumpto("http://ihomework.top/pass-2djh7rfxl36kqcza/?token="+timenow);
+jumpto("http://ihw.today/pass-2djh7rfxl36kqcza/?token="+timenow);
 }
     </script>
     <script>
@@ -563,6 +563,10 @@ var bgurl = "http://image.qn.iblueg.cn/kuanpin"+bgnum+".jpg";
             <h1>通知：访问限制密码更新</h1>
             <br />
 <h4 style="line-height:1.75;"><button class="button" onclick="respass();">点我前往</button></h4>
+            <br /><hr style="background:rgba(255,255,255,0.3);"><br />
+            <h1>通知：iHomework 网站已更新</h1>
+            <br />
+<h4 style="line-height:1.75;">iHomework 网站已从 ihomework.top 转为 ihw.today.<br />以后请使用 ihw.today 进入 iHomework。谢谢。</h4>
             <br />
         </div>
     </div>
@@ -889,13 +893,13 @@ var bgurl = "http://image.qn.iblueg.cn/kuanpin"+bgnum+".jpg";
         <div class="tile-group double">
             <span class="tile-group-title">HTML5 小游戏</span>
             <div class="tile-container">
-                <div onclick="jumpto('http://2048.ihomework.top/');ga('send', 'event', 'h5games', '2048');" class="tile-small bg-amber fg-white" data-role="tile">
+                <div onclick="jumpto('http://2048.ihw.today/');ga('send', 'event', 'h5games', '2048');" class="tile-small bg-amber fg-white" data-role="tile">
                     <div class="tile-content iconic">
            
                     </div>
                     <span class="tile-label"><nobr>2048</nobr></span>
                 </div>
-                <div onclick="jumpto('http://fruit.games.ihomework.top/');ga('send', 'event', 'h5games', 'fruitninja');" class="tile-small bg-green fg-white" data-role="tile">
+                <div onclick="jumpto('http://fruit.games.ihw.today/');ga('send', 'event', 'h5games', 'fruitninja');" class="tile-small bg-green fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         
                     </div>

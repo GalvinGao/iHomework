@@ -9,21 +9,21 @@
     <script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
     <script>
         function quickfetch() {
-            $.get("http://ihomework.top/weeknum.txt", function(data) {
+            $.get("http://ihw.today/weeknum.txt", function(data) {
                 var weeknum = data;
             });
         }
         quickfetch();
 
         function getcdn() {
-            $.get("http://ihomework.top/weeknum.txt", function(data) {var data=666;
+            $.get("http://ihw.today/weeknum.txt", function(data) {var data=666;
                 var url = "http://ihw-doc.qn.iblueg.cn/iHomework-wkhw_wk" + data + ".pdf";alert(url);
                 jumpto(url);
             });
         }
 
         function getbkup() {
-            $.get("http://ihomework.top/weeknum.txt", function(data) {
+            $.get("http://ihw.today/weeknum.txt", function(data) {
                 var url = "http://ihw-doc.qn.iblueg.cn/iHomework-wkhw_wk" + data + ".pdf";
                 jumpto(url);
             });
@@ -36,11 +36,11 @@
 <br><br><br><br><br><br>
         <span style="line-height: 1.5;color:#f44336;">提示<br><br>
             此版本为 iHomework 手机特殊界面版本<br><br>并为加载速度考虑已移除界面效果。<br><br>
-            若需体验新界面，请使用 iPad 或电脑访问 <code>ihomework.top</code><br>
+            若需体验新界面，请使用 iPad 或电脑访问 <code>ihw.today</code><br>
         </span>
         <button onclick="getcdn()">点我到 iHomework</button>
             <br>
-        <a href="http://2048.ihomework.top/">2048</a>
+        <a href="http://2048.ihw.today/">2048</a>
 
 </body>
 

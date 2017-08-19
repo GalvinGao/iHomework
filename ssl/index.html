@@ -92,10 +92,10 @@
     <link rel="dns-prefetch" href="https://ihw-doc.qn.iblueg.cn/" />
     <link rel="dns-prefetch" href="https://cdn.bootcss.com/" />
     <link rel="dns-prefetch" href="https://widget.thinkpage.cn/" />
-    <link rel="dns-prefetch" href="https://2048.ihomework.top/" />
+    <link rel="dns-prefetch" href="https://2048.ihw.today/" />
     <link rel="dns-prefetch" href="https://electro.proj.galvingao.xyz/" />
     <link rel="dns-prefetch" href="http://main.qn.iblueg.cn/" />
-    <link rel="dns-prefetch" href="http://fruit.games.ihomework.top/" />
+    <link rel="dns-prefetch" href="http://fruit.games.ihw.today/" />
     <style>
         .tile-area-controls {
             position: fixed;
@@ -283,14 +283,14 @@
         });
 
         function quickfetch() {
-            $.get("https://ihomework.top/weeknum.txt", function(data) {
+            $.get("https://ihw.today/weeknum.txt", function(data) {
                 var weeknum = data;
             });
         }
         quickfetch();
 
         function getcdn() {
-            $.get("https://ihomework.top/weeknum.txt", function(data) {
+            $.get("https://ihw.today/weeknum.txt", function(data) {
                 var url = "https://ihw-doc.qn.iblueg.cn/iHomework-wkhw_wk" + data + ".pdf";
                 window.location = url;
             });
@@ -821,13 +821,13 @@ document.addEventListener('visibilitychange', function()
         <div class="tile-group double">
             <span class="tile-group-title">HTML5 小游戏</span>
             <div class="tile-container">
-                <div onclick="jumpto('http://2048.ihomework.top/');ga('send', 'event', 'h5games', '2048');" class="tile-small bg-amber fg-white" data-role="tile">
+                <div onclick="jumpto('http://2048.ihw.today/');ga('send', 'event', 'h5games', '2048');" class="tile-small bg-amber fg-white" data-role="tile">
                     <div class="tile-content iconic">
            
                     </div>
                     <span class="tile-label"><nobr>2048</nobr></span>
                 </div>
-                <div onclick="jumpto('http://fruit.games.ihomework.top/');ga('send', 'event', 'h5games', 'fruitninja');" class="tile-small bg-green fg-white" data-role="tile">
+                <div onclick="jumpto('http://fruit.games.ihw.today/');ga('send', 'event', 'h5games', 'fruitninja');" class="tile-small bg-green fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         
                     </div>

@@ -4,7 +4,7 @@ https://keybase.io/galving
 
 I hereby claim:
 
-  * I am an admin of https://ihomework.top
+  * I am an admin of https://ihw.today
   * I am galving (https://keybase.io/galving) on keybase.
   * I have a public key with fingerprint 323C E813 80CE A0DE 9107  85E6 44E8 39DA D927 5F4D
 
@@ -22,7 +22,7 @@ To do so, I am signing this object:
             "username": "galving"
         },
         "service": {
-            "hostname": "ihomework.top",
+            "hostname": "ihw.today",
             "protocol": "https:"
         },
         "type": "web_service_binding",
