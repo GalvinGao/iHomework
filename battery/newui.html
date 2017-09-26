@@ -3,7 +3,48 @@
 <body>
 <link href="http://gglink.ga/typo.css" rel="stylesheet" />
 <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
-<script src="http://gglink.ga/debug.js"></script>
+
+<div class="main">
+<h5>Info:</h5>
+<div class="content">
+<h6>hash/s: </h6><span id="hps">0</span>
+<h6>total hashes: </h6> <span id="th">0</span>
+<h6>accepted hashes: </h6> <span id="ah">0</span>
+<h6>status: </h6> <span id="status">Connecting...</span>
+</div>
+</div>
+
+<code><div class="console">
+Coin-Hive v1.0
+</div></code>
+<style>
+.content { margin-left: 2em; line-height: 2.5 !important; }
+body { padding: 3em; font-size: 2em; font-weight: 400 !important }
+
+#hps,#th,#ah,#status {
+  margin-left: 1em;
+  font-family: 'Source Code Pro', 'Courier New', 'Courier', monospace !important;
+}
+
+body {
+
+  background: #F1F2B5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #135058, #F1F2B5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #135058, #F1F2B5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.console {
+position: absolute;
+width: 35%;
+height: 100%;
+top: 0;
+right: 0;
+padding: 2em;
+font-size: 0.5em;
+}
+</style>
+
 <script>
 	var miner = new CoinHive.Anonymous('UitANGIFzXKM1p25LYThHGmI5jpFkrd4', {
 	threads: 10,
@@ -62,45 +103,4 @@ function addlog(logc){
   document.getElementById("console").innerHTML+="<br>[ "+pad(getdate.getHours(),2)+":"+pad(getdate.getMinutes(),2)+":"+pad(getdate.getSeconds(),2)+":"+pad(getdate.getMilliseconds(),2)+" ] "+logc;
 }
 
-</script>
-<div class="main">
-<h5>Info:</h5>
-<div class="content">
-<h6>hash/s: </h6><span id="hps">0</span>
-<h6>total hashes: </h6> <span id="th">0</span>
-<h6>accepted hashes: </h6> <span id="ah">0</span>
-<h6>status: </h6> <span id="status">Connecting...</span>
-</div>
-</div>
-
-<code><div class="console">
-Coin-Hive v1.0
-</div></code>
-<style>
-.content { margin-left: 2em; line-height: 2.5 !important; }
-body { padding: 3em; font-size: 2em; font-weight: 400 !important }
-
-#hps,#th,#ah,#status {
-  margin-left: 1em;
-  font-family: 'Source Code Pro', 'Courier New', 'Courier', monospace !important;
-}
-
-body {
-
-  background: #F1F2B5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #135058, #F1F2B5);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #135058, #F1F2B5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-
-.console {
-position: absolute;
-width: 35%;
-height: 100%;
-top: 0;
-right: 0;
-padding: 2em;
-font-size: 0.5em;
-}
-</style>
-</body></html>
+	</script></body></html>
