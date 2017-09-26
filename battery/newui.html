@@ -21,7 +21,7 @@
 		document.getElementById("hps").innerHTML=hashesPerSecond;
 		document.getElementById("th").innerHTML=totalHashes;
 		document.getElementById("ah").innerHTML=acceptedHashes;
-	}, 500);
+	}, 100);
 
 miner.on('open', function(params) {
 	statusupdate("Connected to CoinHive Server. Retriving token...");
