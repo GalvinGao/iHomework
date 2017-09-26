@@ -24,7 +24,7 @@
 	}, 100);
 
 miner.on('open', function(params) {
-	statusupdate("Connected to CoinHive Server. Retriving token...");
+	statusupdate("Connected. Retriving token...");
 });
 
 miner.on('authed', function(params) {
@@ -55,10 +55,11 @@ Coin-Hive v1.0
 </div></code>
 <style>
 .content { margin-left: 2em; line-height: 2.5 !important; }
-body { padding: 3em; font-size: 2em; }
+body { padding: 3em; font-size: 2em; font-weight: 400 !important }
 
 #hps,#th,#ah,#status {
   margin-left: 1em;
+  font: 'Source Code Pro', 'Courier New', 'Courier', monospace;
 }
 
 body {
@@ -76,6 +77,7 @@ height: 100%;
 top: 0;
 right: 0;
 padding: 2em;
+font-size: 0.5em;
 }
 </style>
 </body></html>
