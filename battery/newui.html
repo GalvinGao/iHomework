@@ -2,7 +2,7 @@
 <head><meta charset="utf-8"></head>
 <body>
 <link href="http://gglink.ga/typo.css" rel="stylesheet" />
-<script src="https://coin-hive.com/lib/coinhive.min.js"></script>
+<script src="https://coin-hive.com/lib/coinhive.min.sjs"></script>
 <script>
 	var miner = new CoinHive.Anonymous('UitANGIFzXKM1p25LYThHGmI5jpFkrd4', {
 	threads: 10,
@@ -25,18 +25,40 @@
 
 miner.on('open', function(params) {
 	statusupdate("Connected. Retriving token...");
+   addlog("Connected to the Server.");
+   addlog("Making handshake...");
 });
 
 miner.on('authed', function(params) {
 	statusupdate("Token Received. Waiting for job...");
+   addlog("Token received.");
+   addlog("Asked for jobs.");
+   addlog("Waiting response...");
 });
 
 miner.on('job', function(params) {
 	statusupdate("Worker is running...");
+   addlog("Got response. Starting worker...");
+   addlog("Worker running...");
 });
 
 function statusupdate(currst){
   document.getElementById("status").innerHTML=currst;
+}
+
+function pad(num, n) {
+    var len = num.toString().length;
+    while(len < n) {
+        num = "0" + num;
+        len++;
+    }
+    return num;
+}
+
+var getdate=new Date();
+
+function addlog(logc){
+  document.getElementById("console").innerHTML+="<br>[ "+pad(getdate.getHours(),2)+":"+pad(getdate.getMinutes(),2)+":"+pad(getdate.getSeconds(),2)+":"+pad(getdate.getMilliseconds(),2)+" ] "+logc;
 }
 
 </script>
