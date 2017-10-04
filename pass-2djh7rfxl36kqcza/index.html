@@ -42,6 +42,7 @@
 <script>
 function verify(){
 var token = $_GET['token']; console.log(typeof token); console.log(token);
+  var cointoken = $_GET['cointoken'];
 var timenow = new Date().getTime(); console.log(typeof timenow); console.log(timenow);
 var calculation = token - timenow; console.log(calculation); console.log(calculation);
 //var calculation=0;
@@ -54,7 +55,7 @@ document.getElementById("wholepage").style.setProperty("display","block");
 //}else if(calculation<5){
 //document.getElementById("wholepage").style.setProperty("display","block");
 }else{
-document.getElementById("notice").innerHTML="无效的访问凭证。 / Invalid token."; //document.getElementById("wholepage").style.setProperty("display","none");
+document.getElementById("notice").innerHTML="无效的访问凭证。 / Invalid token.<br>"+"<span style='font-size:50%;'>Token: "+token+","+cointoken+"</span>"; //document.getElementById("wholepage").style.setProperty("display","none");
 }
 
 
@@ -127,7 +128,8 @@ var $_GET = (function(){
 <hr>
 
 <h6 style="text-align:right;font-size:80%;"><abbr title="iHomework">iHomework</abbr> 基于 <abbr title="一致化浏览器排版效果，构建最适合中文阅读的网页排版">typo.css</abbr> 搭建</h6>
-</div>
+  <h6 style="text-align: center; font-size：40%； color：#aaa;"><script>document.write("<span>Token: "+$_GET['token']+","+$_GET['cointoken']+"</span>");</script></h6>
+  </div>
 
 </body>
 </html>
