@@ -11,53 +11,53 @@ I hereby claim:
 To do so, I am signing this object:
 
 {
-    "body": {
-        "key": {
-            "eldest_kid": "01015adbcf760174b725d6f386180454df84d217121a35c4a2ded30653421a87f77d0a",
-            "fingerprint": "323ce81380cea0de910785e644e839dad9275f4d",
-            "host": "keybase.io",
-            "key_id": "44e839dad9275f4d",
-            "kid": "01015adbcf760174b725d6f386180454df84d217121a35c4a2ded30653421a87f77d0a",
-            "uid": "02f0906d04d14d3e3a08b1129fa13119",
-            "username": "galving"
-        },
-        "service": {
-            "hostname": "ihw.today",
-            "protocol": "https:"
-        },
-        "type": "web_service_binding",
-        "version": 1
+  "body": {
+    "key": {
+      "eldest_kid": "01015adbcf760174b725d6f386180454df84d217121a35c4a2ded30653421a87f77d0a",
+      "fingerprint": "323ce81380cea0de910785e644e839dad9275f4d",
+      "host": "keybase.io",
+      "key_id": "44e839dad9275f4d",
+      "kid": "01015adbcf760174b725d6f386180454df84d217121a35c4a2ded30653421a87f77d0a",
+      "uid": "02f0906d04d14d3e3a08b1129fa13119",
+      "username": "galving"
     },
-    "ctime": 1494508417,
-    "expire_in": 157680000,
-    "prev": "fee5e1a34cea6ebf78e435fdb60d3ff6824ac6369da048f0ccfb73d86fb10fa1",
-    "seqno": 5,
-    "tag": "signature"
+    "service": {
+      "hostname": "ihw.today",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1507788114,
+  "expire_in": 157680000,
+  "prev": "d723e34b496a2b719bd65a88a592963cddbb288cab17e1f52bf9e14dceaa0fa2",
+  "seqno": 11,
+  "tag": "signature"
 }
 
 which yields the signature:
 
 -----BEGIN PGP MESSAGE-----
-Version: Keybase OpenPGP v2.0.70
+Version: Keybase OpenPGP v2.0.74
 Comment: https://keybase.io/crypto
 
-yMIqAnicrVJZaBNBGE7rHSu2IN4HDHiHMrM7u7OJrWixxasKHm0UMezuzCRrajbd
-bHrQihcqKrWiYpGqRSyKD15VfKiIB2krVimCqKgQsV5QVFQQfBFnPd58dF6G+ef7
-vv/7fv7MqEE+f878SRVnBrqvR3J6b7ekfevGmNsbgGHTehBqAHH262JVlKXcSNyi
-IAQggkjRqWFyokJEsEEkhapc1lSkQaxgyjVMJUSQhHRZMbEuUUZlqCoyFhWNcEIo
-1EEAcCsRZU7SsRKukJUl2WQakjVoMh1SFkSQaApTMWaaHKQ6DUpE4ZgKYsxOeQxh
-ztBTrNCyRU08Ir/s/QP/n32nf8tJHAahSiGmCFOZyTrUDISkINeRjFDQA6aYk9A3
-M4GO6lU1Ii7YEgCiWGOZzJurF+QPwIrZm1mt7cQLXTspuEnHdm3TrhJfMddNpkIe
-1a1PethaZkT+qEQMK0E94QCoYU7KshMghATSdC1PFuEgVqCGEQkAVpe0HBaxPIRC
-VA2K4/VhNUKSM6YwkRuL4avM4ERjWFY4NVRIZc5VTcK6qcqqGCzEGoemyQ0iU03l
-BoIiMfByVSdsEFKETT0qJFNWNKG7aYeBLXdubRjsy/H7hg7J9fbL5x+R/3frGjuG
-+1q/lnZkjt5bvpsdzHy7vxa+TfHubxMe9hjhxUufTsl82dd0Ie9S+9Yri2IVmwLn
-LtaPrTxY3vUJHJ/zbvvozPmTxrhlZXU3M60bc8m8rvLsjGcHpqdfFfsfze+bPnJW
-z5uzHwoLyN1YaV/28umrPXsnvtgf3XHiyJLeE+G+gcGvk4cXdlZf789G0/xhyUey
-pmXbu2vZZ6tJ79K5p2Bee3O2uayt7tE05c6NJevz1uWPbBoYtrOr7eauyIKJRctK
-GtyZ1bMvj6/dU/ny5Y9j/etPbQwXzyr6HH7VtqKxrODxk+jszv5VL645qyd/B1rx
-ofaLd/O7XcOMlyQegJUVYPzOqc/f32v+CWnoQKY=
-=9ydc
+yMIlAnicrVJbSBVBGF4tQ43Kh5SorJhuVGYzu7O7s6e7mQRZSoEgBafZndlztvTs
+6Zz16PGCURHRDbpAINIFtR7CkO5ghpXdoYLEHrIbUj6I9hIERtCs2VuPzcswH9/3
+zffN/D1TJkiZKWtmlV0aetwZTHlx/0yVVP4xbVsdMF2WBIE6sIePbbyC8bgX3OMw
+EAAQQaRSZlq2rkGkY1OXVabZCtEQgVjFzCaYyUhHMqKKamEqM84UqKkKFgjRbV1n
+kII8YDuREI9FY07EE7aKrFicIIVAi1PIuIGgTlSuYcyJYjDKDFlXbcyEMOzGfYUI
+Z9I4z3dcgYlDcCzeP/j/OXfVHzvZhgbUGMQMYaZwhUJiIiQbNkUKQoZPjPNYhFZy
+wQ7RioSoCxrygAATjsX9d/WLjBOccHW+5zKaFLpozPVcy60QcNjzovGAL/OSUZ9X
+zc3guEPQdCLMN80DCR6LO24EBJBgWp7jWyIV6johCOE8wGuiTowHHZ+h6hqBYvn3
+8ISwZLos4mMTGxqVTR0ZJtNUSghVDdnQFIsx05QJsaiJdI5sVTZtg4vO4p8otKkM
+/E57I67wRiInDQnPuBOKUK8qxkHDg+6dE6WUTGlSWqo/XFJmRtbfkSstSJcuzxj+
+dPJ21sWOmV7R0d6FWa/Lr/aQ1Nr6BW/DD8t2rxp5dnfF/rZNH4oXVz5dVrhr+MeG
+5t6czUXFR7vztwztPd4K3ttk9VoH9G4/PtR2oK91/dmi3EItvHxO/enmhDnQj6fu
++vk1LZs4A33Spovnl+/YWNf5uvBHy81rUiOem1GMbw0uSvTtnJzxLtD+Jdj26VDy
+XmnX11uZn2OXy08svpBzeBkdXbfyRvP1gm9dNZ0H+r8fm/byyOnslg0HG0teTtaa
+7pXU0TtvUpt6hkPZ7cNbX+Uubf12rvLBlfkjv9oepY86+4rnDb16NjtOl0yHDVJH
+86mHYF1ytKmlduvzFZMGdz+RfwO6mzvM
+=ab2y
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
