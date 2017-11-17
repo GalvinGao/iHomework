@@ -12,6 +12,7 @@ line-height: 2;
 font-size: 120%;
 color: #333;
 text-indent: 2em;
+-webkit-tap-highlight-color: rgba(0,0,0,0.15)
 }
 special {
 color: #f44336;
@@ -57,6 +58,11 @@ font-size: 110%;
 	z-index: -99;
 	//transform: scale(1);
 }
+
+.still {
+	text-align: center;
+	opacity: 0;
+}
 </style>
 </head>
 <body>
@@ -75,6 +81,7 @@ font-size: 110%;
 <br /><p style="text-align: right;">iHomework 2017.11.8</p>
 </div>
 <div id="output"></div>
+<div class="still"><a href="#">我还想用！还我 iHomework!</a></div>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
 <script src="http://static.qn.iblueg.cn/typing.min.js"></script>
 <script>
@@ -85,8 +92,12 @@ $(document).ready(function(){
     $(".status").delay(3000).fadeOut("slow");
     $(".preloader").delay(3500).fadeOut("slow");
     $("circle").delay(4500).animate({r: 3000, opacity: 0.3}, 2000);
+    //$("#output").delay(4500).animate({color: "#fff"},2000)
    // $("circle").delay(5500).animate({opacity: 0.4}, 4000);
+   $(".still").delay(17000).animate({opacity: 1}, 2000);
+   $(".still").click(function(){$(this).html("谢谢支持！<a href='ihw.html'>点我进行时空穿梭~</a>")})
 });
+
 
 $(function(){ 
 var $inputs = $('circle') 
