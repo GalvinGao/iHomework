@@ -1,0 +1,121 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Goodbye | iHomework</title>
+<link href="http://static.qn.iblueg.cn/typo.css" rel="stylesheet" />
+<link href="http://static.qn.iblueg.cn/sf2017/fonts/FZQingKeBenYueSongS-R-GB.css" rel="stylesheet" />
+<style>
+body {
+margin: 5em 8em;
+font-family: "FZQingKeBenYueSongS-R-GB";
+line-height: 2;
+font-size: 120%;
+color: #333;
+text-indent: 2em;
+-webkit-tap-highlight-color: rgba(0,0,0,0.15)
+}
+special {
+color: #f44336;
+text-decoration: underline;
+font-size: 110%;
+}
+/* special:before, special:after{
+	content: '[ ]';
+}*/
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    z-index: 999999;
+    height: 100%;
+    width: 100%;
+    overflow: hidden !important;
+}
+
+.status {
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url(http://tlboat.iblueg.cn/images/preloader.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+            background-size: cover;
+    margin: -70px 0 0 -70px;
+}
+.circle {
+	position: fixed;
+	top: -3em;
+	left: -6em;
+	//right: 3em;
+	//bottom: 6em;
+	//transition: all 0.5s cubic-bezier(.69,.02,.3,.99);
+	z-index: -99;
+	//transform: scale(1);
+}
+
+.still {
+	text-align: center;
+	opacity: 0;
+}
+</style>
+</head>
+<body>
+<div class="circle" style="opacity: 1;"><svg width="3000" height="2000" version="1.1"><circle cx="0" cy="0" r="80" style="fill:#039be5;"/></svg></div>
+<div class="preloader" id="preloader"><div class="status"></div></div>
+<div id="source" style="display: none;">
+	<p>Hello there!</p>
+	<p>我又是那个你们熟悉的 iHomework 哈哈哈</p>
+	<p>因为已经 10 年级了，作业比较分散</p>
+	<p>我又喜欢摸鱼 所以很长时间都没更新了qvq</p>
+	<p>然后我感觉 iHomework 已经发挥了他的所有意义了</p>
+	<p>所以，非常抱歉的和大家宣布</p>
+<p>iHomework 要和大家说再见了。</p>
+<p>感谢大家的陪伴。</p>
+<p>我以后会更加努力的！</p>
+<br /><p style="text-align: right;">iHomework 2017.11.8</p>
+</div>
+<div id="output"></div>
+<div class="still"><a href="#">我还想用！还我 iHomework!</a></div>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
+<script src="http://static.qn.iblueg.cn/typing.min.js"></script>
+<script>
+// Pace.once("done", function(){jQuery(".status").fadeOut();jQuery(".preloader").delay(1000).fadeOut("slow");});
+// $(window).load(function(){jQuery(".status").fadeOut();jQuery(".preloader").delay(1000).fadeOut("slow");})
+
+$(document).ready(function(){
+    $(".status").delay(3000).fadeOut("slow");
+    $(".preloader").delay(3500).fadeOut("slow");
+    $("circle").delay(4500).animate({r: 3000, opacity: 0.3}, 2000);
+    //$("#output").delay(4500).animate({color: "#fff"},2000)
+   // $("circle").delay(5500).animate({opacity: 0.4}, 4000);
+   $(".still").delay(17000).animate({opacity: 1}, 2000);
+   $(".still").click(function(){$(this).html("谢谢支持！<a href='ihw.html'>点我进行时空穿梭~</a>")})
+});
+
+
+$(function(){ 
+var $inputs = $('circle') 
+.delay(3500)
+.queue(function(){$('circle').animate({r: 2000, opacity: 0.3}, 2000)}) 
+}); 
+/*
+$( "circle" ).animate({
+	r: 2000,
+	opacity: 0.3
+}, 2000)*/
+
+  var typing = new Typing({
+    source: document.getElementById('source'),
+    output: document.getElementById('output'),
+    delay: 80
+  });
+  typing.start();
+</script>
+</body>
+</html>
